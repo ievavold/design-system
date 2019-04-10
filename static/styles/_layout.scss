@@ -1,0 +1,86 @@
+@import 'constants';
+@import 'mixins';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.uw-container {
+  max-width: 100%;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--small {
+    max-width: 640px;
+  }
+
+  &--medium {
+    max-width: 1024px;
+  }
+
+  &--large {
+    max-width: 1140px;
+  }
+
+  &--jumbo {
+    max-width: 1380px;
+  }
+}
+
+.uw-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  // Counteracts the horizontal padding of grid items.
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+
+.uw-grid__item {
+  max-width: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 0 0.75rem;
+  position: relative;
+
+  @for $col from 1 to 12 {
+    &-#{$col} {
+      width: 100%;
+      @include flex-column($col);
+    }
+  }
+}
+
+@each $size, $threshold in $breakpoints {
+  // When a more specific size doesn't apply to
+  // the grid item, fallback to a width of 100%
+  @for $col from 1 to 12 {
+    .uw-grid__item-#{$col}-#{$size}-up,
+    .uw-grid__item-#{$col}-#{$size}-down {
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up($size) {
+    @for $col from 1 to 12 {
+      .uw-grid__item-#{$col}-#{$size}-up {
+        @include flex-column($col);
+      }
+    }
+  }
+
+  @include media-breakpoint-down($size) {
+    @for $col from 1 to 12 {
+      .uw-grid__item-#{$col}-#{$size}-down {
+        @include flex-column($col);
+      }
+    }
+  }
+}

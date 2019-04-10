@@ -1,0 +1,63 @@
+@import 'constants';
+@import 'mixins';
+
+$dirs: (top, right, bottom, left);
+
+$properties: (
+  mar: margin,
+  pad: padding
+);
+
+@each $abbr, $property in $properties {
+  @each $name, $size in $spacing {
+    // Ex: .uw-mar-all-xl, uw-pad-all-none
+    .uw-#{$abbr}-all-#{$name} {
+      #{$property}: $size;
+    }
+
+    @each $dir in $dirs {
+      // Ex: .uw-pad-left-sm, .uw-mar-bottom-none
+      .uw-#{$abbr}-#{$dir}-#{$name} {
+        #{$property}-#{$dir}: $size;
+      }
+    }
+  }
+}
+
+@each $bp-name, $bp-size in $breakpoints {
+  @include media-breakpoint-up($bp-name) {
+    @each $abbr, $prop in $properties {
+      @each $sp-name, $sp-size in $spacing {
+        // Ex: .uw-mar-all-xxl-md-up
+        .uw-#{$abbr}-all-#{$sp-name}-#{$bp-name}-up {
+          #{$prop}: $sp-size;
+        }
+
+        // Ex: .uw-pad-left-none-sm-up
+        @each $dir in $dirs {
+          .uw-#{$abbr}-#{$dir}-#{$sp-name}-#{$bp-name}-up {
+            #{$prop}-#{$dir}: $sp-size;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down($bp-name) {
+    @each $abbr, $prop in $properties {
+      @each $sp-name, $sp-size in $spacing {
+        // Ex: .uw-mar-all-xxl-md-down
+        .uw-#{$abbr}-all-#{$sp-name}-#{$bp-name}-down {
+          #{$prop}: $sp-size;
+        }
+
+        // Ex: .uw-pad-right-none-lg-down
+        @each $dir in $dirs {
+          .uw-#{$abbr}-#{$dir}-#{$sp-name}-#{$bp-name}-down {
+            #{$prop}-#{$dir}: $sp-size;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+$breakpoints: (
+  sm: 30rem,
+  md: 46.25rem,
+  lg: 67.5rem
+);
+
+$unit: 0.5rem;
+$spacing: (
+  none: 0,
+  xxs: $unit / 2,
+  xs: $unit,
+  sm: $unit * 2,
+  md: $unit * 3,
+  lg: $unit * 4,
+  xl: $unit * 5,
+  xxl: $unit * 8
+);
+
+$typescale: (
+  14: 0.875rem,
+  16: 1rem,
+  18: 1.125rem,
+  20: 1.25rem,
+  23: 1.4375rem,
+  26: 1.625rem,
+  29: 1.8125rem,
+  32: 2rem,
+  36: 2.25rem,
+  41: 2.5625rem,
+  46: 2.875rem
+);

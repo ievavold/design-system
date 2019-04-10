@@ -1,0 +1,44 @@
+@import 'constants';
+@import 'mixins';
+
+html,
+body {
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-family: 'Public Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 0;
+}
+
+@each $name, $size in $typescale {
+  .uw-ts-#{$name} {
+    font-size: $size;
+  }
+}
+
+@each $bp-name in map-keys($breakpoints) {
+  @include media-breakpoint-up($bp-name) {
+    @each $ts-name, $ts-size in $typescale {
+      .uw-ts-#{$ts-name}-#{$bp-name}-up {
+        font-size: $ts-size;
+      }
+    }
+  }
+
+  @include media-breakpoint-down($bp-name) {
+    @each $ts-name, $ts-size in $typescale {
+      .uw-ts-#{$ts-name}-#{$bp-name}-down {
+        font-size: $ts-size;
+      }
+    }
+  }
+}
