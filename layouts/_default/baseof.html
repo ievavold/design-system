@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>{{ block "title" . }}{{ .Page.Title }} - {{ .Site.Title }}{{ end }}</title>
+    {{ $style := resources.Get "sass/styles.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
+  </head>
+  <body>
+    <header>
+      {{ block "header" . }}
+        <h1>{{ .Title }} (fallback)</h1>
+      {{ end }}
+    </header>
+    <aside>
+      {{ block "aside" . }}
+        <!-- Empty aside block -->
+      {{ end }}
+    </aside>
+    <main>
+    {{ block "main" . }}
+      <!-- Empty main block -->
+    {{ end }}
+    </main>
+    <footer>
+      {{ block "footer" . }}
+        <!-- Empty footer block -->
+      {{ end }}
+    </footer>
+  </body>
+</html>
