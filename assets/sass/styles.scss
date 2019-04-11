@@ -2,3 +2,7 @@
 @import 'spacing';
 @import 'borders';
 @import 'layout';
+
+.highlight > pre {
+  padding: 1rem;
+}
