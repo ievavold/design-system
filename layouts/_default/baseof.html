@@ -5,25 +5,18 @@
     <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
   </head>
   <body>
-    <header>
-      {{ block "header" . }}
-        <h1>{{ .Title }} (fallback)</h1>
-      {{ end }}
-    </header>
-    <aside>
-      {{ block "aside" . }}
-        <!-- Empty aside block -->
-      {{ end }}
-    </aside>
-    <main>
-    {{ block "main" . }}
-      <!-- Empty main block -->
-    {{ end }}
+    <main class="uw-container uw-container--center uw-container--large">
+      <header>
+        {{ block "header" . }}
+          <p class="uw-h1">{{ .Site.Title }}</p>
+        {{ end }}
+      </header>
+
+      <aside>{{ partial "sidebar" . }}</aside>
+
+      <article>{{ block "main" . }}{{ end }}</article>
+
+      <footer>{{ block "footer" . }}{{ end }}</footer>
     </main>
-    <footer>
-      {{ block "footer" . }}
-        <!-- Empty footer block -->
-      {{ end }}
-    </footer>
   </body>
 </html>
