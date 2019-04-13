@@ -1,0 +1,12 @@
+{
+  "Example_Block": {
+    "prefix": "example",
+    "body": ["{{< example >}}", "", "$0", "", "{{< /example >}}"],
+    "description": "Insert 'example' shortcode"
+  },
+  "Typeset_Block": {
+    "prefix": "typeset",
+    "body": ["{{< typeset >}}", "", "$0", "", "{{< /typeset >}}"],
+    "description": "Insert 'typeset' shortcode"
+  }
+}
