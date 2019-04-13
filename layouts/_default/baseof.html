@@ -5,18 +5,28 @@
     <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
   </head>
   <body>
-    <main class="uw-container uw-container--center uw-container--large">
-      <header>
-        {{ block "header" . }}
-          <p class="uw-h1">{{ .Site.Title }}</p>
-        {{ end }}
+    <main>
+      <header class="uw-border-bottom uw-pad-top-sm uw-pad-bottom-sm uw-mar-bottom-lg">
+        <nav class="uw-container uw-container--large uw-container--center">
+          <p id="site" class="uw-font-size-md">
+            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+          </p>
+        </nav>
       </header>
 
-      <aside>{{ partial "sidebar" . }}</aside>
+      <article class="uw-container uw-container--large uw-container--center">
+        {{ block "main" . }}
+          <div class="uw-typeset uw-grid__item-8-md-up uw-grid__item-6-lg-up">
+            <p><em>No content</em></p>
+          </div>
+        {{ end }}
+      </article>
 
-      <article>{{ block "main" . }}{{ end }}</article>
-
-      <footer>{{ block "footer" . }}{{ end }}</footer>
+      <footer class="uw-border-top uw-pad-top-sm uw-pad-bottom-sm uw-mar-top-lg">
+        <div class="uw-container uw-container--large uw-container--center">
+          <p class="uw-text-center"><em>A copyright notice</em></p>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
