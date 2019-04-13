@@ -29,41 +29,41 @@ justo a commodo.
 
 ### Evenly Spaced Columns
 
-An evenly spaced grid can be built by placing one or more `.uw-grid__item`
-elements inside of a container with the `.uw-grid` class. By default, space will
-be allocated evenly between all `.uw-grid__item` elements:
+An evenly spaced grid can be built by placing one or more `.uw-col` elements
+inside of a container with the `.uw-grid` class. By default, space will be
+allocated evenly between all `.uw-col` elements:
 
 {{< /typeset >}}
 
 {{< example >}}
 
 <div class="uw-grid">
-  <div class="uw-grid__item">
-    <div class="inner"><code>.uw-grid__item</code></div>
+  <div class="uw-col">
+    <div class="inner"><code>.uw-col</code></div>
   </div>
 </div>
 
 <div class="uw-grid">
-  <div class="uw-grid__item">
-    <div class="inner"><code>.uw-grid__item</code></div>
+  <div class="uw-col">
+    <div class="inner"><code>.uw-col</code></div>
   </div>
-  <div class="uw-grid__item">
-    <div class="inner"><code>.uw-grid__item</code></div>
+  <div class="uw-col">
+    <div class="inner"><code>.uw-col</code></div>
   </div>
 </div>
 
 <div class="uw-grid">
-  <div class="uw-grid__item">
-    <div class="inner"><code>.uw-grid__item</code></div>
+  <div class="uw-col">
+    <div class="inner"><code>.uw-col</code></div>
   </div>
-  <div class="uw-grid__item">
-    <div class="inner"><code>.uw-grid__item</code></div>
+  <div class="uw-col">
+    <div class="inner"><code>.uw-col</code></div>
   </div>
-  <div class="uw-grid__item">
-    <div class="inner"><code>.uw-grid__item</code></div>
+  <div class="uw-col">
+    <div class="inner"><code>.uw-col</code></div>
   </div>
-  <div class="uw-grid__item">
-    <div class="inner"><code>.uw-grid__item</code></div>
+  <div class="uw-col">
+    <div class="inner"><code>.uw-col</code></div>
   </div>
 </div>
 
@@ -82,20 +82,20 @@ column item class:
 {{< example >}}
 
 <div class="uw-grid">
-  <div class="uw-grid__item-3">
-    <div class="inner"><code>.uw-grid__item-3</code></div>
+  <div class="uw-col-3">
+    <div class="inner"><code>.uw-col-3</code></div>
   </div>
 </div>
 
 <div class="uw-grid">
-  <div class="uw-grid__item-6">
-    <div class="inner"><code>.uw-grid__item-6</code></div>
+  <div class="uw-col-6">
+    <div class="inner"><code>.uw-col-6</code></div>
   </div>
 </div>
 
 <div class="uw-grid">
-  <div class="uw-grid__item-12">
-    <div class="inner"><code>.uw-grid__item-12</code></div>
+  <div class="uw-col-12">
+    <div class="inner"><code>.uw-col-12</code></div>
   </div>
 </div>
 
@@ -114,35 +114,35 @@ been given to the weighted columns.
 {{< example >}}
 
 <div class="uw-grid">
-  <div class="uw-grid__item-4">
-    <div class="inner"><code>.uw-grid__item-4</code></div>
+  <div class="uw-col-4">
+    <div class="inner"><code>.uw-col-4</code></div>
   </div>
-  <div class="uw-grid__item">
-    <div class="inner"><code>.uw-grid__item</code></div>
+  <div class="uw-col">
+    <div class="inner"><code>.uw-col</code></div>
   </div>
-  <div class="uw-grid__item">
-    <div class="inner"><code>.uw-grid__item</code></div>
-  </div>
-</div>
-
-<div class="uw-grid">
-  <div class="uw-grid__item">
-    <div class="inner"><code>.uw-grid__item</code></div>
-  </div>
-  <div class="uw-grid__item-6">
-    <div class="inner"><code>.uw-grid__item-6</code></div>
-  </div>
-  <div class="uw-grid__item">
-    <div class="inner"><code>.uw-grid__item</code></div>
+  <div class="uw-col">
+    <div class="inner"><code>.uw-col</code></div>
   </div>
 </div>
 
 <div class="uw-grid">
-  <div class="uw-grid__item">
-    <div class="inner"><code>.uw-grid__item</code></div>
+  <div class="uw-col">
+    <div class="inner"><code>.uw-col</code></div>
   </div>
-  <div class="uw-grid__item-8">
-    <div class="inner"><code>.uw-grid__item-8</code></div>
+  <div class="uw-col-6">
+    <div class="inner"><code>.uw-col-6</code></div>
+  </div>
+  <div class="uw-col">
+    <div class="inner"><code>.uw-col</code></div>
+  </div>
+</div>
+
+<div class="uw-grid">
+  <div class="uw-col">
+    <div class="inner"><code>.uw-col</code></div>
+  </div>
+  <div class="uw-col-8">
+    <div class="inner"><code>.uw-col-8</code></div>
   </div>
 </div>
 
@@ -160,25 +160,25 @@ The suffix `-up` indicates that the rule should only apply to screens _larger_
 than the breakpoint. The suffix `-down` indicates that the rule should only
 apply to screens _smaller_ than the breakpoint.
 
-- `.uw-grid__item-<span>-<breakpoint>-up`
-- `.uw-grid__item-<span>-<breakpoint>-down`
+- `.uw-col-<span>-<breakpoint>-up`
+- `.uw-col-<span>-<breakpoint>-down`
 
 {{< /typeset >}}
 
 {{< example >}}
 
 <div class="uw-grid">
-  <div class="uw-grid__item-12 uw-grid__item-6-md-up">
+  <div class="uw-col-12 uw-col-6-md-up">
     <div class="inner">
       <span>
-        <code>.uw-grid__item-12</code>
-        <code>.uw-grid__item-6-md-up</code>
+        <code>.uw-col-12</code>
+        <code>.uw-col-6-md-up</code>
       </span>
     </div>
   </div>
-  <div class="uw-grid__item">
+  <div class="uw-col">
     <div class="inner">
-      <code>.uw-grid__item</code>
+      <code>.uw-col</code>
     </div>
   </div>
 </div>
