@@ -1,3 +1,5 @@
+@import 'constants';
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -69,6 +71,7 @@ button:-moz-focusring,
 [type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
+
 textarea {
   overflow: auto;
 }
@@ -81,4 +84,13 @@ textarea {
 
 [hidden] {
   display: none;
+}
+
+pre,
+code {
+  font-family: $font-family-mono;
+}
+
+pre {
+  margin: 0;
 }

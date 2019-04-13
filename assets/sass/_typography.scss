@@ -1,3 +1,5 @@
+@import 'constants';
+
 a:link {
   text-decoration: none;
 }
@@ -30,7 +32,7 @@ a:link {
 
   code {
     font-size: inherit;
-    font-family: 'Roboto Mono', monospace;
+    font-family: $font-family-mono;
     white-space: nowrap;
     background-color: rgba(27, 31, 35, 0.05);
     border-radius: 3px;
