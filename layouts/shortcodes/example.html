@@ -1,3 +1,7 @@
-<div class="uw-grid__item-12">{{ .Inner }}</div>
+<div class="docs-example">
+  <div class="docs-example__live uw-grid__item-12">{{ .Inner }}</div>
 
-{{/* Highlighted and copyable code will be displayed here */}}
+  <div class="docs-example__code uw-grid__item-12 uw-border-all uw-border-radius uw-mar-top-sm">
+    {{ highlight (trim .Inner "\n") "html" "" }}
+  </div>
+</div>

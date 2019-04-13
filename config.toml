@@ -1,3 +1,4 @@
 languageCode = "en-us"
 title = "Design System"
 pygmentsCodeFences = true
+pygmentsUseClasses = true

@@ -1,0 +1,36 @@
+.docs-example {
+  &__live {
+    [class^='uw-grid__item'] {
+      background: #dbeaff;
+      outline: 1px dashed #97c1ff;
+    }
+
+    .uw-grid + .uw-grid {
+      margin-top: 1rem;
+    }
+
+    .inner {
+      min-height: 80px;
+      background: #edf4ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__code {
+    background: #fafafa;
+
+    pre {
+      box-sizing: content-box;
+      display: block;
+    }
+
+    code {
+      padding: 1rem;
+      box-sizing: content-box;
+      display: block;
+      overflow-y: scroll;
+    }
+  }
+}

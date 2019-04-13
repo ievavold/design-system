@@ -37,33 +37,33 @@ be allocated evenly between all `.uw-grid__item` elements:
 
 {{< example >}}
 
-<div class="uw-grid docs-grid-example">
+<div class="uw-grid">
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item</code></div>
+    <div class="inner"><code>.uw-grid__item</code></div>
   </div>
 </div>
 
-<div class="uw-grid docs-grid-example">
+<div class="uw-grid">
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item</code></div>
+    <div class="inner"><code>.uw-grid__item</code></div>
   </div>
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item</code></div>
+    <div class="inner"><code>.uw-grid__item</code></div>
   </div>
 </div>
 
-<div class="uw-grid docs-grid-example">
+<div class="uw-grid">
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item</code></div>
+    <div class="inner"><code>.uw-grid__item</code></div>
   </div>
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item</code></div>
+    <div class="inner"><code>.uw-grid__item</code></div>
   </div>
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item</code></div>
+    <div class="inner"><code>.uw-grid__item</code></div>
   </div>
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item</code></div>
+    <div class="inner"><code>.uw-grid__item</code></div>
   </div>
 </div>
 
@@ -81,21 +81,21 @@ column item class:
 
 {{< example >}}
 
-<div class="uw-grid docs-grid-example">
+<div class="uw-grid">
   <div class="uw-grid__item-3">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item-3</code></div>
+    <div class="inner"><code>.uw-grid__item-3</code></div>
   </div>
 </div>
 
-<div class="uw-grid docs-grid-example">
+<div class="uw-grid">
   <div class="uw-grid__item-6">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item-6</code></div>
+    <div class="inner"><code>.uw-grid__item-6</code></div>
   </div>
 </div>
 
-<div class="uw-grid docs-grid-example">
+<div class="uw-grid">
   <div class="uw-grid__item-12">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item-12</code></div>
+    <div class="inner"><code>.uw-grid__item-12</code></div>
   </div>
 </div>
 
@@ -113,36 +113,36 @@ been given to the weighted columns.
 
 {{< example >}}
 
-<div class="uw-grid docs-grid-example">
+<div class="uw-grid">
   <div class="uw-grid__item-4">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item-4</code></div>
+    <div class="inner"><code>.uw-grid__item-4</code></div>
   </div>
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item</code></div>
+    <div class="inner"><code>.uw-grid__item</code></div>
   </div>
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item</code></div>
+    <div class="inner"><code>.uw-grid__item</code></div>
   </div>
 </div>
 
-<div class="uw-grid docs-grid-example">
+<div class="uw-grid">
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item</code></div>
+    <div class="inner"><code>.uw-grid__item</code></div>
   </div>
   <div class="uw-grid__item-6">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item-6</code></div>
+    <div class="inner"><code>.uw-grid__item-6</code></div>
   </div>
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item</code></div>
+    <div class="inner"><code>.uw-grid__item</code></div>
   </div>
 </div>
 
-<div class="uw-grid docs-grid-example">
+<div class="uw-grid">
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item</code></div>
+    <div class="inner"><code>.uw-grid__item</code></div>
   </div>
   <div class="uw-grid__item-8">
-    <div class="docs-grid-example-inside"><code>.uw-grid__item-8</code></div>
+    <div class="inner"><code>.uw-grid__item-8</code></div>
   </div>
 </div>
 
@@ -167,9 +167,9 @@ apply to screens _smaller_ than the breakpoint.
 
 {{< example >}}
 
-<div class="uw-grid docs-grid-example">
+<div class="uw-grid">
   <div class="uw-grid__item-12 uw-grid__item-6-md-up">
-    <div class="docs-grid-example-inside">
+    <div class="inner">
       <span>
         <code>.uw-grid__item-12</code>
         <code>.uw-grid__item-6-md-up</code>
@@ -177,10 +177,8 @@ apply to screens _smaller_ than the breakpoint.
     </div>
   </div>
   <div class="uw-grid__item">
-    <div class="docs-grid-example-inside">
-      <span>
-        <code>.uw-grid__item</code>
-      </span>
+    <div class="inner">
+      <code>.uw-grid__item</code>
     </div>
   </div>
 </div>
