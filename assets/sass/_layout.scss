@@ -43,25 +43,26 @@ body {
   margin-left: -0.75rem;
 }
 
-.uw-grid__item {
+.uw-grid__item,
+[class^='uw-grid__item'] {
   max-width: 100%;
   flex-basis: 0;
   flex-grow: 1;
   padding: 0 0.75rem;
   position: relative;
+}
 
-  @for $col from 1 to 12 {
-    &-#{$col} {
-      width: 100%;
-      @include flex-column($col);
-    }
+@for $col from 1 through 12 {
+  .uw-grid__item-#{$col} {
+    width: 100%;
+    @include flex-column($col);
   }
 }
 
 @each $size, $threshold in $breakpoints {
   // When a more specific size doesn't apply to
   // the grid item, fallback to a width of 100%
-  @for $col from 1 to 12 {
+  @for $col from 1 through 12 {
     .uw-grid__item-#{$col}-#{$size}-up,
     .uw-grid__item-#{$col}-#{$size}-down {
       width: 100%;
@@ -69,7 +70,7 @@ body {
   }
 
   @include media-breakpoint-up($size) {
-    @for $col from 1 to 12 {
+    @for $col from 1 through 12 {
       .uw-grid__item-#{$col}-#{$size}-up {
         @include flex-column($col);
       }
@@ -77,7 +78,7 @@ body {
   }
 
   @include media-breakpoint-down($size) {
-    @for $col from 1 to 12 {
+    @for $col from 1 through 12 {
       .uw-grid__item-#{$col}-#{$size}-down {
         @include flex-column($col);
       }

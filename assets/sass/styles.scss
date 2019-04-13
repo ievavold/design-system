@@ -1,8 +1,42 @@
+body {
+  font-family: 'Public Sans', sans-serif;
+}
+
+@import 'normalize';
 @import 'typography';
 @import 'spacing';
 @import 'borders';
 @import 'layout';
+@import 'tables';
 
 .highlight > pre {
   padding: 1rem;
+}
+
+.docs-grid-example {
+  [class^='uw-grid__item'] {
+    background: #dbeaff;
+    outline: 1px dashed #97c1ff;
+  }
+
+  & + & {
+    margin-top: 1rem;
+  }
+
+  code {
+    background: none;
+    border-radius: none;
+  }
+}
+
+.docs-grid-example-inside {
+  min-height: 80px;
+  background: #edf4ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#site {
+  margin: 0;
 }

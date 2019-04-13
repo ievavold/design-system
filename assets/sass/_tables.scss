@@ -1,0 +1,28 @@
+.uw-table__container {
+  overflow-x: auto;
+}
+
+.uw-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  th,
+  td {
+    padding: 1rem;
+    text-align: left;
+  }
+
+  th {
+    vertical-align: bottom;
+    font-weight: 600;
+  }
+
+  td {
+    text-align: ' ' center;
+  }
+}
