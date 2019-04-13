@@ -1,5 +1,10 @@
 @import 'constants';
 
+html,
+body {
+  font-family: $font-family-sans;
+}
+
 a:link {
   text-decoration: none;
 }
