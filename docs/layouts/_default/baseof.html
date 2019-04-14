@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>{{ block "title" . }}{{ .Page.Title }} - {{ .Site.Title }}{{ end }}</title>
-    {{ $style := resources.Get "sass/styles.scss" | toCSS | minify | fingerprint }}
+    {{ $style := resources.Get "styles.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>

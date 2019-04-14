@@ -1,3 +1,11 @@
+@import '../../src/styles/normalize';
+@import '../../src/styles/typography';
+@import '../../src/styles/spacing';
+@import '../../src/styles/borders';
+@import '../../src/styles/layout';
+@import '../../src/styles/tables';
+@import '../../src/styles/highlight';
+
 .docs-example {
   &__live {
     [class^='uw-col'] {
