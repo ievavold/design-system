@@ -1,0 +1,12 @@
+{
+  "name": "design-system",
+  "version": "0.1.0",
+  "description": "a design system",
+  "directories": {
+    "doc": "docs",
+    "lib": "src"
+  },
+  "repository": "github:ievavold/design-system",
+  "author": "Isaac Evavold <ievavold@wisc.edu>",
+  "license": "MIT"
+}
