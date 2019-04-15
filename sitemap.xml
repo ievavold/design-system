@@ -3,16 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
+    <loc>/design-system/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/forms/</loc>
+    <loc>/design-system/forms/</loc>
   </url>
   
   <url>
-    <loc>/layout/</loc>
+    <loc>/design-system/layout/</loc>
   </url>
   
 </urlset>
