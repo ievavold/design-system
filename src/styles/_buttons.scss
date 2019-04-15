@@ -1,0 +1,51 @@
+@mixin uw-button($background, $text) {
+  $hover: darken($background, 10%);
+  $active: darken($background, 20%);
+
+  background: $background;
+  color: $text;
+
+  &:hover,
+  &.uw-button--hover {
+    background: $hover;
+    color: $text;
+  }
+
+  &:active,
+  &.uw-button--active {
+    background: $active;
+    color: $text;
+  }
+
+  &:focus,
+  &.uw-button--focus {
+    outline: none;
+    box-shadow: 0 0 0 0.125rem white, 0 0 0 0.25rem $background;
+  }
+}
+
+[class^='uw-button'] {
+  font-size: 1rem;
+  line-height: 0.9;
+  border: 0;
+  border-radius: 0.25rem;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  margin-right: 0.5rem;
+  background: gray;
+
+  @include uw-button(#2980b9, white);
+
+  &:disabled {
+    background-color: silver;
+    color: white;
+    pointer-events: none;
+  }
+}
+
+.uw-button--secondary {
+  @include uw-button(#8e44ad, white);
+}
