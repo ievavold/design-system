@@ -8,6 +8,10 @@
 
 .docs-example {
   &__live {
+    & > :first-child {
+      margin-top: 0;
+    }
+
     [class^='uw-col'] {
       background: #dbeaff;
       outline: 1px dashed #97c1ff;
