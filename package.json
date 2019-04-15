@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "a design system",
   "scripts": {
+    "start": "hugo server -s docs",
     "deploy": "hugo -s docs -b /design-system && gh-pages --dist docs/public"
   },
   "directories": {
