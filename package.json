@@ -2,6 +2,9 @@
   "name": "design-system",
   "version": "0.1.0",
   "description": "a design system",
+  "scripts": {
+    "deploy": "hugo -s docs -b /design-system && gh-pages --dist docs/public"
+  },
   "directories": {
     "doc": "docs",
     "lib": "src"
@@ -10,6 +13,7 @@
   "author": "Isaac Evavold <ievavold@wisc.edu>",
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "sass": "^1.18.0"
   }
 }
