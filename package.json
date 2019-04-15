@@ -8,5 +8,8 @@
   },
   "repository": "github:ievavold/design-system",
   "author": "Isaac Evavold <ievavold@wisc.edu>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.18.0"
+  }
 }
