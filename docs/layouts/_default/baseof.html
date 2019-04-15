@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
   <head>
     <title>{{ block "title" . }}{{ .Page.Title }} - {{ .Site.Title }}{{ end }}</title>
     {{ $style := resources.Get "styles.scss" | toCSS | minify | fingerprint }}
