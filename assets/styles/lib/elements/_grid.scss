@@ -4,6 +4,10 @@
 .uw-grid {
   display: flex;
   flex-wrap: wrap;
+
+  hr {
+    width: 100%;
+  }
 }
 
 @include any-with-class-prefix('uw-col') {

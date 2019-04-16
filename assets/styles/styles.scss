@@ -1,5 +1,12 @@
 @import 'lib/main.scss';
 
+#page-summary + hr {
+  height: 3px;
+  border-style: none;
+  margin: 0;
+  background: $color-gray-lighter;
+}
+
 .docs-example {
   &__live {
     & > :first-child {
