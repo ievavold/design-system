@@ -21,12 +21,14 @@
         </nav>
       </header>
 
-      <article class="uw-grid uw-container--lg uw-container--center">
-        {{ block "main" . }}
-          <div class="uw-prose uw-col-8-md-up uw-col-6-lg-up">
-            <p><em>No content</em></p>
-          </div>
-        {{ end }}
+      <article class="uw-container--lg uw-container--center">
+        <div class="uw-grid">
+          {{ block "main" . }}
+            <div class="uw-prose uw-col-8-md-up uw-col-6-lg-up">
+              <p><em>No content</em></p>
+            </div>
+          {{ end }}
+        </div>
       </article>
 
       <footer class="uw-border-top uw-pad-top-sm uw-pad-bottom-sm uw-mar-top-lg">

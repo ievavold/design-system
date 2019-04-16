@@ -4,6 +4,8 @@
 .uw-grid {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
 
   hr {
     width: 100%;
@@ -15,6 +17,7 @@
   flex-basis: 0;
   flex-grow: 1;
   position: relative;
+  padding: 0 0.75rem;
 }
 
 @for $span from 12 through 1 {
