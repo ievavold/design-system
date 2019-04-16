@@ -19,3 +19,9 @@ a:link {
     font-size: $size;
   }
 }
+
+@each $alignment in (left, center, right, justify) {
+  .uw-text-align-#{$alignment} {
+    text-align: $alignment;
+  }
+}
