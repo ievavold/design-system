@@ -9,3 +9,9 @@ code,
 pre {
   font-family: $font-family-monospace;
 }
+
+@each $name, $size in $type-scale {
+  .uw-font-size-#{$name} {
+    font-size: $size;
+  }
+}

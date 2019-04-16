@@ -45,6 +45,26 @@ $type-scale-md: $type-scale-26;
 $type-scale-lg: $type-scale-32;
 $type-scale-xl: $type-scale-41;
 
+$type-scale: (
+  14: $type-scale-14,
+  xs: $type-scale-xs,
+  16: $type-scale-16,
+  base: $type-scale-base,
+  18: $type-scale-18,
+  20: $type-scale-20,
+  sm: $type-scale-sm,
+  23: $type-scale-23,
+  26: $type-scale-26,
+  md: $type-scale-md,
+  29: $type-scale-29,
+  32: $type-scale-32,
+  lg: $type-scale-lg,
+  36: $type-scale-36,
+  41: $type-scale-41,
+  xl: $type-scale-xl,
+  46: $type-scale-46
+);
+
 /**
  * FONT FAMILIES
  * =============
