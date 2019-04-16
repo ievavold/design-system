@@ -1,16 +1,15 @@
 ---
 title: Forms
+summary: This is the summary
+links:
+  - Buttons
+  - Text Inputs
+  - Checkboxes
+  - Radio Buttons
+  - Labels and Validation
 ---
 
 {{< typeset >}}
-
-# Forms
-
-- Buttons
-- Text Inputs
-- Checkboxes
-- Radio Buttons
-- Labels and Validation
 
 ## Buttons
 
