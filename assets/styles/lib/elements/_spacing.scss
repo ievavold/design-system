@@ -1,0 +1,23 @@
+@import '../variables/spacing';
+
+@each $name, $size in $spacing {
+  .uw-pad-all-#{$name} {
+    padding: $size;
+  }
+
+  @each $direction in (top, right, bottom, left) {
+    .uw-pad-#{$direction}-#{$name} {
+      padding-#{$direction}: $size;
+    }
+  }
+
+  .uw-mar-all-#{$name} {
+    margin: $size;
+  }
+
+  @each $direction in (top, right, bottom, left) {
+    .uw-mar-#{$direction}-#{$name} {
+      margin-#{$direction}: $size;
+    }
+  }
+}
