@@ -1,0 +1,38 @@
+@import '../variables/breakpoints';
+
+@mixin breakpoint-up($name) {
+  $threshold: map-get($breakpoints, $name);
+  @if $threshold {
+    @media (min-width: $threshold) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($name) {
+  $threshold: map-get($breakpoints, $name);
+  @if $threshold {
+    // Subtract 2% of a unit makes sure that the 'up' and 'down' media queries
+    // don't conflict when the screen is exactly the width of the threshold.
+    @media (max-width: $threshold - 0.02) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin any-with-class-prefix($prefix) {
+  [class^='#{$prefix}'],
+  [class*=' #{$prefix}'] {
+    @content;
+  }
+}
+
+@mixin column-span($span, $grid: 12) {
+  $percent: ($span / $grid) * 100%;
+  flex-basis: $percent;
+  max-width: $percent;
+}

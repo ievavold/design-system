@@ -1,0 +1,75 @@
+/**
+ * PRIMARY COLORS
+ * ==============
+ *
+ * The primary colors should be used in all applications and are core to the UW
+ * brand identity.
+ */
+
+$color-primary: #c50505;
+$color-accent: #047918;
+
+/**
+ * SECONDARY COLORS
+ * ================
+ *
+ * The secondary color palette is designed to provide creative flexibility.
+ * These colors are complementary to the primary colors. They should be used
+ * sparingly and never draw the eye to more than one piece of information at a time.
+ */
+
+$color-orange-light: #ffb74d;
+$color-orange-medium: #ff9800;
+$color-orange-dark: #ef6c00;
+
+/**
+ * Yellow may be used to highlight an element on a page or show focus.
+ */
+$color-yellow-light: #ffe082;
+$color-yellow-medium: #ffc82c;
+$color-yellow-dark: #f8b700;
+
+/**
+ * Green conveys a successful outcome or a pathway to success (ex: a "Submit" button).
+ */
+$color-green-light: #81b184;
+$color-green-medium: #2e7d32;
+$color-green-dark: #1b4b1e;
+
+/**
+ * Red is often used for error message icons or in small amounts of text. Be
+ * aware that too much red is distracting and alarming for users, impairing
+ * focus on a page.
+ */
+$color-red-light: #d79999;
+$color-red-dark: #9b0000;
+
+/**
+ * Blue is typically used as a link color or button color to mark the beginning
+ * of transactions.
+ */
+$color-blue-light: #9ac9dc;
+$color-blue-dark: #034e6c;
+
+/**
+ * BACKGROUND COLORS
+ * =================
+ *
+ * These colors are used for background blocks and large content areas. When
+ * alternating between tones, pay attention to contrast between adjacent colors.
+ * (Use the [WebAIM Contract Checker tool](https://webaim.org/resources/contrastchecker)
+ * to check accessibility).
+ */
+$color-gray-dark: #494949;
+$color-gray-light: #adadad;
+$color-gray-lighter: #dadfe1;
+$color-gray-lightest: #f7f7f7;
+
+/**
+ * FOREGROUND COLORS
+ * =================
+ *
+ * These colors are used for foreground text or defining features on an icon.
+ */
+$color-black: #282728;
+$color-white: #f9f9f9;

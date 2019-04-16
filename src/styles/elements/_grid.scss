@@ -1,0 +1,40 @@
+@import '../functions/mixins';
+@import '../variables/breakpoints';
+
+.uw-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@include any-with-class-prefix('uw-col') {
+  max-width: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+  position: relative;
+}
+
+@for $span from 1 through 12 {
+  .uw-col-#{$span} {
+    width: 100%;
+    @include column-span($span);
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    .uw-col-#{$span}-#{$breakpoint}-up,
+    .uw-col-#{$span}-#{$breakpoint}-down {
+      width: 100%;
+    }
+
+    @include breakpoint-up($breakpoint) {
+      .uw-col-#{$span}-#{$breakpoint}-up {
+        @include column-span($span);
+      }
+    }
+
+    @include breakpoint-down($breakpoint) {
+      .uw-col-#{$span}-#{$breakpoint}-down {
+        @include column-span($span);
+      }
+    }
+  }
+}

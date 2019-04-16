@@ -5,21 +5,23 @@
     {{ $fonts := resources.Get "fonts.scss" | toCSS }}
     <link rel="stylesheet" href="{{ $fonts.Permalink }}" media="screen">
 
-    {{ $style := resources.Get "styles.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
+    {{ $opts := (dict "includePaths" (slice "../node_modules")) }}
+    {{ $styles := resources.Get "styles.scss" | resources.ToCSS $opts }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <main>
       <header class="uw-border-bottom uw-pad-top-sm uw-pad-bottom-sm uw-mar-bottom-lg">
-        <nav class="uw-container uw-container--large uw-container--center">
+        <nav class="uw-container--lg uw-container--center">
           <p class="uw-font-size-md uw-mar-all-none">
             <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
           </p>
         </nav>
       </header>
 
-      <article class="uw-container uw-container--large uw-container--center">
+      <article class="uw-container--lg uw-container--center">
         {{ block "main" . }}
           <div class="uw-typeset uw-col-8-md-up uw-col-6-lg-up">
             <p><em>No content</em></p>
@@ -28,7 +30,7 @@
       </article>
 
       <footer class="uw-border-top uw-pad-top-sm uw-pad-bottom-sm uw-mar-top-lg">
-        <div class="uw-container uw-container--large uw-container--center">
+        <div class="uw-container--lg uw-container--center">
           <p class="uw-text-center"><em>A copyright notice</em></p>
         </div>
       </footer>
