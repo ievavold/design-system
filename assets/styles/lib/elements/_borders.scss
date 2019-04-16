@@ -1,0 +1,15 @@
+@import '../variables/borders';
+
+@each $direction in (top, right, bottom, left) {
+  .uw-border-#{$direction} {
+    border-#{$direction}: $border-width solid $border-color !important;
+  }
+}
+
+.uw-border {
+  border: $border-width solid $border-color !important;
+}
+
+.uw-border-radius {
+  border-radius: $border-radius;
+}
