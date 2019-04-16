@@ -418,7 +418,9 @@ a:link {
 
 .uw-grid {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem; }
   .uw-grid hr {
     width: 100%; }
 
@@ -427,7 +429,8 @@ a:link {
   max-width: 100%;
   flex-basis: 0;
   flex-grow: 1;
-  position: relative; }
+  position: relative;
+  padding: 0 0.75rem; }
 
 .uw-col-12 {
   width: 100%;
