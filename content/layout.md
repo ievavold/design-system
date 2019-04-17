@@ -149,16 +149,26 @@ been given to the weighted columns.
 
 ### Responsive Columns
 
-Responsive columns can change weight based on the width of the screen. These
-columns can have the following forms where _span_ is a number from 1 to 12 and
-_breakpoint_ is one of the breakpoint names.
+Responsive columns can change weight based on the width of the screen and are
+specified with the form:
 
-The suffix `-up` indicates that the rule should only apply to screens _larger_
-than the breakpoint. The suffix `-down` indicates that the rule should only
-apply to screens _smaller_ than the breakpoint.
+`.uw-col-{span}-{breakpoint}-{comparison}`
 
-- `.uw-col-<span>-<breakpoint>-up`
-- `.uw-col-<span>-<breakpoint>-down`
+Where _span_ is a number from `1` to `12` setting the width of the column when
+the class is applied.
+
+Where _breakpoint_ is one of:
+
+- `sm` for screens larger or smaller than `30rem`
+- `md` for screens larger or smaller than `46.25rem`
+- `lg` for screens larger or smaller than `67.5rem`
+
+Where _comparison_ is one of:
+
+- `up` if the class should only apply on screens **larger than or equal to** the
+  breakpoint
+- `down` if the class should only apply on screens **smaller** than the
+  breakpoint
 
 {{< /typeset >}}
 
