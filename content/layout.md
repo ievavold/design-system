@@ -152,34 +152,27 @@ been given to the weighted columns.
 Responsive columns can change weight based on the width of the screen and are
 specified with the form:
 
-`.uw-col-{span}-{breakpoint}-{comparison}`
+`.uw-col-{span}-{breakpoint}`
 
-Where _span_ is a number from `1` to `12` setting the width of the column when
-the class is applied.
+Where _span_ is a number from `1` to `12`. This sets the width of the column
+when the screen is larger than the breakpoint.
 
 Where _breakpoint_ is one of:
 
-- `sm` for screens larger or smaller than `30rem`
-- `md` for screens larger or smaller than `46.25rem`
-- `lg` for screens larger or smaller than `67.5rem`
-
-Where _comparison_ is one of:
-
-- `up` if the class should only apply on screens **larger than or equal to** the
-  breakpoint
-- `down` if the class should only apply on screens **smaller** than the
-  breakpoint
+- `sm` for screens larger than `30rem`
+- `md` for screens larger than `46.25rem`
+- `lg` for screens larger than `67.5rem`
 
 {{< /typeset >}}
 
 {{< example >}}
 
 <div class="uw-grid">
-  <div class="uw-col-12 uw-col-6-md-up">
+  <div class="uw-col-12 uw-col-6-md">
     <div class="inner">
       <span>
         <code>.uw-col-12</code>
-        <code>.uw-col-6-md-up</code>
+        <code>.uw-col-6-md</code>
       </span>
     </div>
   </div>

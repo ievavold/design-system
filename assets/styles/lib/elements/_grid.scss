@@ -20,26 +20,17 @@
   padding: 0 0.75rem;
 }
 
-@for $span from 12 through 1 {
+@for $span from 1 through 12 {
   .uw-col-#{$span} {
     width: 100%;
     @include column-span($span);
   }
+}
 
-  @each $breakpoint in map-keys($breakpoints) {
-    .uw-col-#{$span}-#{$breakpoint}-up,
-    .uw-col-#{$span}-#{$breakpoint}-down {
-      width: 100%;
-    }
-
+@each $breakpoint in map-keys($breakpoints) {
+  @for $span from 1 through 12 {
     @include breakpoint-up($breakpoint) {
-      .uw-col-#{$span}-#{$breakpoint}-up {
-        @include column-span($span);
-      }
-    }
-
-    @include breakpoint-down($breakpoint) {
-      .uw-col-#{$span}-#{$breakpoint}-down {
+      .uw-col-#{$span}-#{$breakpoint} {
         @include column-span($span);
       }
     }
