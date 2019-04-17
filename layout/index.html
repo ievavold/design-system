@@ -24,7 +24,7 @@
       <article class="uw-container--lg uw-container--center">
         <div class="uw-grid">
           
-  <div id="page-summary" class="uw-prose uw-col-8-md-up uw-col-6-lg-up">
+  <div id="page-summary" class="uw-prose uw-col-8-md uw-col-6-lg">
     <h1>Layout</h1>
     <p class="uw-font-size-sm">Sed mattis egestas metus, scelerisque viverra lectus dignissim ut. Cras auctor metus nunc, ac maximus sem dictum pellentesque. Finibus rutrum. Integer cursus mollis lectus nec maximus.</p>
     
@@ -42,7 +42,7 @@
 
   <hr>
 
-  <div class="uw-prose uw-col-8-md-up uw-col-6-lg-up">
+  <div class="uw-prose uw-col-8-md uw-col-6-lg">
   <h2 id="grid-system">Grid System</h2>
 
 <p>Donec faucibus quis lacus aliquam placerat. Cras est turpis, hendrerit ut est
@@ -133,7 +133,7 @@ allocated evenly between all <code>.uw-col</code> elements:</p>
 </div>
 
 
-<div class="uw-prose uw-col-8-md-up uw-col-6-lg-up">
+<div class="uw-prose uw-col-8-md uw-col-6-lg">
   <h3 id="weighted-columns">Weighted Columns</h3>
 
 <p>The grid layout layouts where some columns are wider or narrower than others.
@@ -187,7 +187,7 @@ column item class:
 </div>
 
 
-<div class="uw-prose uw-col-8-md-up uw-col-6-lg-up">
+<div class="uw-prose uw-col-8-md uw-col-6-lg">
   <h3 id="mixing-weighted-and-unweighted-columns">Mixing Weighted and Unweighted Columns</h3>
 
 <p>If a grid layout uses both weighted and unweighted columns, the unweighted
@@ -271,20 +271,23 @@ been given to the weighted columns.
 </div>
 
 
-<div class="uw-prose uw-col-8-md-up uw-col-6-lg-up">
+<div class="uw-prose uw-col-8-md uw-col-6-lg">
   <h3 id="responsive-columns">Responsive Columns</h3>
 
-<p>Responsive columns can change weight based on the width of the screen. These
-columns can have the following forms where <em>span</em> is a number from 1 to 12 and
-<em>breakpoint</em> is one of the breakpoint names.</p>
+<p>Responsive columns can change weight based on the width of the screen and are
+specified with the form:</p>
 
-<p>The suffix <code>-up</code> indicates that the rule should only apply to screens <em>larger</em>
-than the breakpoint. The suffix <code>-down</code> indicates that the rule should only
-apply to screens <em>smaller</em> than the breakpoint.</p>
+<p><code>.uw-col-{span}-{breakpoint}</code></p>
+
+<p>Where <em>span</em> is a number from <code>1</code> to <code>12</code>. This sets the width of the column
+when the screen is larger than the breakpoint.</p>
+
+<p>Where <em>breakpoint</em> is one of:</p>
 
 <ul>
-<li><code>.uw-col-&lt;span&gt;-&lt;breakpoint&gt;-up</code></li>
-<li><code>.uw-col-&lt;span&gt;-&lt;breakpoint&gt;-down</code></li>
+<li><code>sm</code> for screens larger than <code>30rem</code></li>
+<li><code>md</code> for screens larger than <code>46.25rem</code></li>
+<li><code>lg</code> for screens larger than <code>67.5rem</code></li>
 </ul>
 
 </div>
@@ -294,11 +297,11 @@ apply to screens <em>smaller</em> than the breakpoint.</p>
   <div class="docs-example__live uw-prose">
 
 <div class="uw-grid">
-  <div class="uw-col-12 uw-col-6-md-up">
+  <div class="uw-col-12 uw-col-6-md">
     <div class="inner">
       <span>
         <code>.uw-col-12</code>
-        <code>.uw-col-6-md-up</code>
+        <code>.uw-col-6-md</code>
       </span>
     </div>
   </div>
@@ -313,11 +316,11 @@ apply to screens <em>smaller</em> than the breakpoint.</p>
 
   <div class="docs-example__code uw-border uw-border-radius uw-mar-top-sm">
     <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-grid&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-col-12 uw-col-6-md-up&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-col-12 uw-col-6-md&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;inner&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.uw-col-12<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.uw-col-6-md-up<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.uw-col-6-md<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>
       <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -331,15 +334,15 @@ apply to screens <em>smaller</em> than the breakpoint.</p>
 </div>
 
 
-<div class="uw-prose uw-col-8-md-up uw-col-6-lg-up">
+<div class="uw-prose uw-col-8-md uw-col-6-lg">
   <h2 id="spacing">Spacing</h2>
 
-<p>Margins and padding can be customized with builtin utility classes.</p>
+<p>Element margins and padding can be changed with built-in utility classes.</p>
 
 <h3 id="notation">Notation</h3>
 
 <p>If spacing utility classes don&rsquo;t specify a breakpoint the class will be applied
-at all breakpoints. The classes are written with the format:</p>
+at all breakpoints. The classes are written in the form:</p>
 
 <p><code>.uw-{property}-{sides}-{size}</code></p>
 
@@ -353,24 +356,25 @@ at all breakpoints. The classes are written with the format:</p>
 <p>Where <em>sides</em> is one of:</p>
 
 <ul>
-<li><code>all</code></li>
 <li><code>top</code></li>
 <li><code>right</code></li>
 <li><code>bottom</code></li>
 <li><code>left</code></li>
+<li><code>x</code> for classes that set both <code>top</code> and <code>bottom</code></li>
+<li><code>y</code> for classes that set both <code>left</code> and <code>right</code></li>
+<li><code>all</code> for classes that set all sides</li>
 </ul>
 
 <p>Where <em>size</em> is one of:</p>
 
 <ul>
-<li><code>none</code> for classes that set the margin or padding to 0</li>
-<li><code>xss</code> for classes that set the margin or padding to <code>0.25rem / 4px</code></li>
-<li><code>xs</code> for classes that set the margin or padding to <code>0.5rem / 8px</code></li>
-<li><code>sm</code> for classes that set the margin or padding to <code>1rem / 16px</code></li>
-<li><code>md</code> for classes that set the margin or padding to <code>1.5rem / 24px</code></li>
-<li><code>lg</code> for classes that set the margin or padding to <code>2rem / 32px</code></li>
-<li><code>xl</code> for classes that set the margin or padding to <code>2.5rem / 40px</code></li>
-<li><code>xxl</code> for classes that set the margin or padding to <code>3rem / 48px</code></li>
+<li><code>0</code> for classes that remove the margin or padding</li>
+<li><code>1</code> for classes that set the margin or padding to <code>0.5rem</code></li>
+<li><code>2</code> for classes that set the margin or padding to <code>1rem</code></li>
+<li><code>3</code> for classes that set the margin or padding to <code>1.5rem</code></li>
+<li><code>4</code> for classes that set the margin or padding to <code>2rem</code></li>
+<li><code>5</code> for classes that set the margin or padding to <code>2.5rem</code></li>
+<li><code>6</code> for classes that set the margin or padding to <code>3rem</code></li>
 </ul>
 
 </div>
