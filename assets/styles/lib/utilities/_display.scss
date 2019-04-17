@@ -1,0 +1,30 @@
+@import '../functions/mixins';
+@import '../variables/breakpoints';
+
+$displays: (
+  none,
+  inline,
+  inline-block,
+  block,
+  table,
+  table-cell,
+  table-row,
+  flex,
+  inline-flex
+);
+
+@each $display in $displays {
+  .uw-display-#{$display} {
+    display: $display;
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @each $display in $displays {
+    @include breakpoint-up($breakpoint) {
+      .uw-display-#{$display}-#{$breakpoint} {
+        display: $display;
+      }
+    }
+  }
+}
