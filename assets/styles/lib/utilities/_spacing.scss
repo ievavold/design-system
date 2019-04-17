@@ -1,23 +1,27 @@
 @import '../variables/spacing';
 
-@each $name, $size in $spacing {
-  .uw-pad-all-#{$name} {
-    padding: $size;
-  }
+@for $i from 0 through 6 {
+  $size: $spacer * $i;
 
-  @each $direction in (top, right, bottom, left) {
-    .uw-pad-#{$direction}-#{$name} {
-      padding-#{$direction}: $size;
+  @each $abbr, $prop in (mar: margin, pad: padding) {
+    .uw-#{$abbr}-all-#{$i} {
+      #{$prop}: $size;
     }
-  }
 
-  .uw-mar-all-#{$name} {
-    margin: $size;
-  }
+    .uw-#{$abbr}-x-#{$i} {
+      #{$prop}-top: $size;
+      #{$prop}-bottom: $size;
+    }
 
-  @each $direction in (top, right, bottom, left) {
-    .uw-mar-#{$direction}-#{$name} {
-      margin-#{$direction}: $size;
+    .uw-#{$abbr}-y-#{$i} {
+      #{$prop}-left: $size;
+      #{$prop}-right: $size;
+    }
+
+    @each $direction in (top, right, bottom, left) {
+      .uw-#{$abbr}-#{$direction}-#{$i} {
+        #{$prop}-#{$direction}: $size;
+      }
     }
   }
 }
