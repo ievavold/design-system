@@ -8,6 +8,13 @@
 }
 
 .docs-example {
+  &__screen-indicator {
+    margin-top: 0;
+    text-align: right;
+    color: $color-gray-dark;
+    font-size: $type-scale-14;
+  }
+
   &__live {
     & > :first-child {
       margin-top: 0;

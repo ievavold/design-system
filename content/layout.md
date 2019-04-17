@@ -164,7 +164,7 @@ Where _breakpoint_ is one of:
 
 {{< /typeset >}}
 
-{{< example >}}
+{{< example responsive >}}
 
 <div class="uw-grid">
   <div class="uw-col-12 uw-col-6-md">
