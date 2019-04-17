@@ -218,7 +218,7 @@ Where _size_ is one of:
 - `5` for classes that set the margin or padding to `2.5rem`
 - `6` for classes that set the margin or padding to `3rem`
 
-### Responsive Spacing
+### Responsive Margins and Padding
 
 Element margins and padding can be tailored to specific screen sizes by adding a
 breakpoint to a spacing utility class. Responsive spacing utility classes are
