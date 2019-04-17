@@ -21,9 +21,10 @@ used:
 
 ## Font Sizes
 
-The design system uses a [major second](https://type-scale.com/?size=16&scale=1.125&font=Roboto)
-type scale that has been rounded to the nearest whole pixel. The body font size
-is set to `16px`.
+The design system uses a
+[major second](https://type-scale.com/?size=16&scale=1.125&font=Roboto) type
+scale that has been rounded to the nearest whole pixel. The body font size is
+set to `16px`.
 
 To maintain consistency when using the design system, font sizes shouldn't be
 set to a size not represented by this type scale. In order to make it easy to
