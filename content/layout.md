@@ -191,3 +191,43 @@ Where _comparison_ is one of:
 </div>
 
 {{< /example >}}
+
+{{< typeset >}}
+
+## Spacing
+
+Element margins and padding can be changed with built-in utility classes.
+
+### Notation
+
+If spacing utility classes don't specify a breakpoint the class will be applied
+at all breakpoints. The classes are written in the form:
+
+`.uw-{property}-{sides}-{size}`
+
+Where _property_ is one of:
+
+- `mar` for classes that set `margin`
+- `pad` for classes that set `padding`
+
+Where _sides_ is one of:
+
+- `top`
+- `right`
+- `bottom`
+- `left`
+- `x` for classes that set both `top` and `bottom`
+- `y` for classes that set both `left` and `right`
+- `all` for classes that set all sides
+
+Where _size_ is one of:
+
+- `0` for classes that remove the margin or padding
+- `1` for classes that set the margin or padding to `0.5rem`
+- `2` for classes that set the margin or padding to `1rem`
+- `3` for classes that set the margin or padding to `1.5rem`
+- `4` for classes that set the margin or padding to `2rem`
+- `5` for classes that set the margin or padding to `2.5rem`
+- `6` for classes that set the margin or padding to `3rem`
+
+{{< /typeset >}}
