@@ -397,24 +397,159 @@ a:link {
 .uw-text-align-justify {
   text-align: justify; }
 
-[class^='uw-container'],
-[class*=' uw-container'] {
-  max-width: 100%;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; }
+/**
+ * PRIMARY COLORS
+ * ==============
+ *
+ * The primary colors should be used in all applications and are core to the UW
+ * brand identity.
+ */
+/**
+ * SECONDARY COLORS
+ * ================
+ *
+ * The secondary color palette is designed to provide creative flexibility.
+ * These colors are complementary to the primary colors. They should be used
+ * sparingly and never draw the eye to more than one piece of information at a time.
+ */
+/**
+ * Yellow may be used to highlight an element on a page or show focus.
+ */
+/**
+ * Green conveys a successful outcome or a pathway to success (ex: a "Submit" button).
+ */
+/**
+ * Red is often used for error message icons or in small amounts of text. Be
+ * aware that too much red is distracting and alarming for users, impairing
+ * focus on a page.
+ */
+/**
+ * Blue is typically used as a link color or button color to mark the beginning
+ * of transactions.
+ */
+/**
+ * BACKGROUND COLORS
+ * =================
+ *
+ * These colors are used for background blocks and large content areas. When
+ * alternating between tones, pay attention to contrast between adjacent colors.
+ * (Use the [WebAIM Contract Checker tool](https://webaim.org/resources/contrastchecker)
+ * to check accessibility).
+ */
+/**
+ * FOREGROUND COLORS
+ * =================
+ *
+ * These colors are used for foreground text or defining features on an icon.
+ */
+/**
+ * BORDERS
+ * =======
+ */
+.uw-border-top {
+  border-top: 1px solid #dadfe1 !important; }
 
-.uw-container--center {
-  margin-left: auto;
-  margin-right: auto; }
+.uw-border-right {
+  border-right: 1px solid #dadfe1 !important; }
 
-.uw-container--sm {
-  max-width: 30rem; }
+.uw-border-bottom {
+  border-bottom: 1px solid #dadfe1 !important; }
 
-.uw-container--md {
-  max-width: 46.25rem; }
+.uw-border-left {
+  border-left: 1px solid #dadfe1 !important; }
 
-.uw-container--lg {
-  max-width: 67.5rem; }
+.uw-border {
+  border: 1px solid #dadfe1 !important; }
+
+.uw-border-radius {
+  border-radius: 0.25rem; }
+
+.uw-display-none {
+  display: none; }
+
+.uw-display-inline {
+  display: inline; }
+
+.uw-display-inline-block {
+  display: inline-block; }
+
+.uw-display-block {
+  display: block; }
+
+.uw-display-table {
+  display: table; }
+
+.uw-display-table-cell {
+  display: table-cell; }
+
+.uw-display-table-row {
+  display: table-row; }
+
+.uw-display-flex {
+  display: flex; }
+
+.uw-display-inline-flex {
+  display: inline-flex; }
+
+@media (min-width: 30rem) {
+  .uw-display-none-sm {
+    display: none; }
+  .uw-display-inline-sm {
+    display: inline; }
+  .uw-display-inline-block-sm {
+    display: inline-block; }
+  .uw-display-block-sm {
+    display: block; }
+  .uw-display-table-sm {
+    display: table; }
+  .uw-display-table-cell-sm {
+    display: table-cell; }
+  .uw-display-table-row-sm {
+    display: table-row; }
+  .uw-display-flex-sm {
+    display: flex; }
+  .uw-display-inline-flex-sm {
+    display: inline-flex; } }
+
+@media (min-width: 46.25rem) {
+  .uw-display-none-md {
+    display: none; }
+  .uw-display-inline-md {
+    display: inline; }
+  .uw-display-inline-block-md {
+    display: inline-block; }
+  .uw-display-block-md {
+    display: block; }
+  .uw-display-table-md {
+    display: table; }
+  .uw-display-table-cell-md {
+    display: table-cell; }
+  .uw-display-table-row-md {
+    display: table-row; }
+  .uw-display-flex-md {
+    display: flex; }
+  .uw-display-inline-flex-md {
+    display: inline-flex; } }
+
+@media (min-width: 67.5rem) {
+  .uw-display-none-lg {
+    display: none; }
+  .uw-display-inline-lg {
+    display: inline; }
+  .uw-display-inline-block-lg {
+    display: inline-block; }
+  .uw-display-block-lg {
+    display: block; }
+  .uw-display-table-lg {
+    display: table; }
+  .uw-display-table-cell-lg {
+    display: table-cell; }
+  .uw-display-table-row-lg {
+    display: table-row; }
+  .uw-display-flex-lg {
+    display: flex; }
+  .uw-display-inline-flex-lg {
+    display: inline-flex; } }
 
 .uw-grid {
   display: flex;
@@ -495,59 +630,37 @@ a:link {
 @media (min-width: 30rem) {
   .uw-col-1-sm {
     flex-basis: 8.33333333%;
-    max-width: 8.33333333%; } }
-
-@media (min-width: 30rem) {
+    max-width: 8.33333333%; }
   .uw-col-2-sm {
     flex-basis: 16.66666667%;
-    max-width: 16.66666667%; } }
-
-@media (min-width: 30rem) {
+    max-width: 16.66666667%; }
   .uw-col-3-sm {
     flex-basis: 25%;
-    max-width: 25%; } }
-
-@media (min-width: 30rem) {
+    max-width: 25%; }
   .uw-col-4-sm {
     flex-basis: 33.33333333%;
-    max-width: 33.33333333%; } }
-
-@media (min-width: 30rem) {
+    max-width: 33.33333333%; }
   .uw-col-5-sm {
     flex-basis: 41.66666667%;
-    max-width: 41.66666667%; } }
-
-@media (min-width: 30rem) {
+    max-width: 41.66666667%; }
   .uw-col-6-sm {
     flex-basis: 50%;
-    max-width: 50%; } }
-
-@media (min-width: 30rem) {
+    max-width: 50%; }
   .uw-col-7-sm {
     flex-basis: 58.33333333%;
-    max-width: 58.33333333%; } }
-
-@media (min-width: 30rem) {
+    max-width: 58.33333333%; }
   .uw-col-8-sm {
     flex-basis: 66.66666667%;
-    max-width: 66.66666667%; } }
-
-@media (min-width: 30rem) {
+    max-width: 66.66666667%; }
   .uw-col-9-sm {
     flex-basis: 75%;
-    max-width: 75%; } }
-
-@media (min-width: 30rem) {
+    max-width: 75%; }
   .uw-col-10-sm {
     flex-basis: 83.33333333%;
-    max-width: 83.33333333%; } }
-
-@media (min-width: 30rem) {
+    max-width: 83.33333333%; }
   .uw-col-11-sm {
     flex-basis: 91.66666667%;
-    max-width: 91.66666667%; } }
-
-@media (min-width: 30rem) {
+    max-width: 91.66666667%; }
   .uw-col-12-sm {
     flex-basis: 100%;
     max-width: 100%; } }
@@ -555,59 +668,37 @@ a:link {
 @media (min-width: 46.25rem) {
   .uw-col-1-md {
     flex-basis: 8.33333333%;
-    max-width: 8.33333333%; } }
-
-@media (min-width: 46.25rem) {
+    max-width: 8.33333333%; }
   .uw-col-2-md {
     flex-basis: 16.66666667%;
-    max-width: 16.66666667%; } }
-
-@media (min-width: 46.25rem) {
+    max-width: 16.66666667%; }
   .uw-col-3-md {
     flex-basis: 25%;
-    max-width: 25%; } }
-
-@media (min-width: 46.25rem) {
+    max-width: 25%; }
   .uw-col-4-md {
     flex-basis: 33.33333333%;
-    max-width: 33.33333333%; } }
-
-@media (min-width: 46.25rem) {
+    max-width: 33.33333333%; }
   .uw-col-5-md {
     flex-basis: 41.66666667%;
-    max-width: 41.66666667%; } }
-
-@media (min-width: 46.25rem) {
+    max-width: 41.66666667%; }
   .uw-col-6-md {
     flex-basis: 50%;
-    max-width: 50%; } }
-
-@media (min-width: 46.25rem) {
+    max-width: 50%; }
   .uw-col-7-md {
     flex-basis: 58.33333333%;
-    max-width: 58.33333333%; } }
-
-@media (min-width: 46.25rem) {
+    max-width: 58.33333333%; }
   .uw-col-8-md {
     flex-basis: 66.66666667%;
-    max-width: 66.66666667%; } }
-
-@media (min-width: 46.25rem) {
+    max-width: 66.66666667%; }
   .uw-col-9-md {
     flex-basis: 75%;
-    max-width: 75%; } }
-
-@media (min-width: 46.25rem) {
+    max-width: 75%; }
   .uw-col-10-md {
     flex-basis: 83.33333333%;
-    max-width: 83.33333333%; } }
-
-@media (min-width: 46.25rem) {
+    max-width: 83.33333333%; }
   .uw-col-11-md {
     flex-basis: 91.66666667%;
-    max-width: 91.66666667%; } }
-
-@media (min-width: 46.25rem) {
+    max-width: 91.66666667%; }
   .uw-col-12-md {
     flex-basis: 100%;
     max-width: 100%; } }
@@ -615,105 +706,40 @@ a:link {
 @media (min-width: 67.5rem) {
   .uw-col-1-lg {
     flex-basis: 8.33333333%;
-    max-width: 8.33333333%; } }
-
-@media (min-width: 67.5rem) {
+    max-width: 8.33333333%; }
   .uw-col-2-lg {
     flex-basis: 16.66666667%;
-    max-width: 16.66666667%; } }
-
-@media (min-width: 67.5rem) {
+    max-width: 16.66666667%; }
   .uw-col-3-lg {
     flex-basis: 25%;
-    max-width: 25%; } }
-
-@media (min-width: 67.5rem) {
+    max-width: 25%; }
   .uw-col-4-lg {
     flex-basis: 33.33333333%;
-    max-width: 33.33333333%; } }
-
-@media (min-width: 67.5rem) {
+    max-width: 33.33333333%; }
   .uw-col-5-lg {
     flex-basis: 41.66666667%;
-    max-width: 41.66666667%; } }
-
-@media (min-width: 67.5rem) {
+    max-width: 41.66666667%; }
   .uw-col-6-lg {
     flex-basis: 50%;
-    max-width: 50%; } }
-
-@media (min-width: 67.5rem) {
+    max-width: 50%; }
   .uw-col-7-lg {
     flex-basis: 58.33333333%;
-    max-width: 58.33333333%; } }
-
-@media (min-width: 67.5rem) {
+    max-width: 58.33333333%; }
   .uw-col-8-lg {
     flex-basis: 66.66666667%;
-    max-width: 66.66666667%; } }
-
-@media (min-width: 67.5rem) {
+    max-width: 66.66666667%; }
   .uw-col-9-lg {
     flex-basis: 75%;
-    max-width: 75%; } }
-
-@media (min-width: 67.5rem) {
+    max-width: 75%; }
   .uw-col-10-lg {
     flex-basis: 83.33333333%;
-    max-width: 83.33333333%; } }
-
-@media (min-width: 67.5rem) {
+    max-width: 83.33333333%; }
   .uw-col-11-lg {
     flex-basis: 91.66666667%;
-    max-width: 91.66666667%; } }
-
-@media (min-width: 67.5rem) {
+    max-width: 91.66666667%; }
   .uw-col-12-lg {
     flex-basis: 100%;
     max-width: 100%; } }
-
-.uw-prose > h1 {
-  margin-top: 0; }
-
-.uw-prose > h2,
-.uw-prose > h3 {
-  margin-top: 2.5rem; }
-
-.uw-prose > h4,
-.uw-prose > h5,
-.uw-prose > h6 {
-  margin-top: 1.5em; }
-
-.uw-prose > h1,
-.uw-prose > h2,
-.uw-prose > h3,
-.uw-prose > h4,
-.uw-prose > h5,
-.uw-prose > h6 {
-  margin-bottom: 0; }
-
-.uw-prose > h1 + *,
-.uw-prose > h2 + *,
-.uw-prose > h3 + *,
-.uw-prose > h4 + *,
-.uw-prose > h5 + *,
-.uw-prose > h6 + * {
-  margin-top: 1em; }
-
-.uw-prose > p,
-.uw-prose > ul,
-.uw-prose > ol {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-  line-height: 1.5; }
-
-.uw-prose code {
-  font-size: inherit;
-  background-color: rgba(27, 31, 35, 0.05);
-  border-radius: 3px;
-  font-size: 85%;
-  margin: 0;
-  padding: 0.2em 0.4em; }
 
 .uw-pad-all-none {
   padding: 0; }
@@ -955,6 +981,68 @@ a:link {
 .uw-mar-left-xxl {
   margin-left: 3rem; }
 
+[class^='uw-container'],
+[class*=' uw-container'] {
+  max-width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+
+.uw-container--center {
+  margin-left: auto;
+  margin-right: auto; }
+
+.uw-container--sm {
+  max-width: 30rem; }
+
+.uw-container--md {
+  max-width: 46.25rem; }
+
+.uw-container--lg {
+  max-width: 67.5rem; }
+
+.uw-prose > h1 {
+  margin-top: 0; }
+
+.uw-prose > h2,
+.uw-prose > h3 {
+  margin-top: 2.5rem; }
+
+.uw-prose > h4,
+.uw-prose > h5,
+.uw-prose > h6 {
+  margin-top: 1.5em; }
+
+.uw-prose > h1,
+.uw-prose > h2,
+.uw-prose > h3,
+.uw-prose > h4,
+.uw-prose > h5,
+.uw-prose > h6 {
+  margin-bottom: 0; }
+
+.uw-prose > h1 + *,
+.uw-prose > h2 + *,
+.uw-prose > h3 + *,
+.uw-prose > h4 + *,
+.uw-prose > h5 + *,
+.uw-prose > h6 + * {
+  margin-top: 1em; }
+
+.uw-prose > p,
+.uw-prose > ul,
+.uw-prose > ol {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  line-height: 1.5; }
+
+.uw-prose code {
+  font-size: inherit;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: 0.2em 0.4em; }
+
 /**
  * PRIMARY COLORS
  * ==============
@@ -1000,33 +1088,33 @@ a:link {
  *
  * These colors are used for foreground text or defining features on an icon.
  */
-/**
- * BORDERS
- * =======
- */
-.uw-border-top {
-  border-top: 1px solid #dadfe1 !important; }
-
-.uw-border-right {
-  border-right: 1px solid #dadfe1 !important; }
-
-.uw-border-bottom {
-  border-bottom: 1px solid #dadfe1 !important; }
-
-.uw-border-left {
-  border-left: 1px solid #dadfe1 !important; }
-
-.uw-border {
-  border: 1px solid #dadfe1 !important; }
-
-.uw-border-radius {
-  border-radius: 0.25rem; }
+.uw-table__container {
+  overflow-x: auto; }
+  .uw-table__container table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse; }
+  .uw-table__container tr {
+    border-bottom: 1px solid #dadfe1; }
+  .uw-table__container th,
+  .uw-table__container td {
+    padding: 1rem;
+    text-align: left; }
+  .uw-table__container th {
+    vertical-align: bottom;
+    font-weight: 600; }
 
 #page-summary + hr {
   height: 3px;
   border-style: none;
   margin: 0;
   background: #dadfe1; }
+
+.docs-example__screen-indicator {
+  margin-top: 0;
+  text-align: right;
+  color: #494949;
+  font-size: 0.875rem; }
 
 .docs-example__live > :first-child {
   margin-top: 0; }

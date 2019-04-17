@@ -32,9 +32,7 @@
         
           <li><a href="#grid-system">Grid System</a></li>
         
-          <li><a href="#spacing">Spacing</a></li>
-        
-          <li><a href="#breakpoints">Breakpoints</a></li>
+          <li><a href="#margins-and-padding">Margins and Padding</a></li>
         
       </ul>
     
@@ -65,6 +63,8 @@ allocated evenly between all <code>.uw-col</code> elements:</p>
 
 
 <div class="docs-example uw-col-12">
+  
+
   <div class="docs-example__live uw-prose">
 
 <div class="uw-grid">
@@ -143,6 +143,8 @@ column item class:
 
 
 <div class="docs-example uw-col-12">
+  
+
   <div class="docs-example__live uw-prose">
 
 <div class="uw-grid">
@@ -197,6 +199,8 @@ been given to the weighted columns.
 
 
 <div class="docs-example uw-col-12">
+  
+
   <div class="docs-example__live uw-prose">
 
 <div class="uw-grid">
@@ -294,6 +298,23 @@ when the screen is larger than the breakpoint.</p>
 
 
 <div class="docs-example uw-col-12">
+  
+    <p class="docs-example__screen-indicator">
+      <span class="uw-display-block uw-display-none-sm">
+        <code>screen &lt; sm</code>
+      </span>
+      <span class="uw-display-none uw-display-block-sm uw-display-none-md">
+        <code>sm &le; screen &lt; md</code>
+      </span>
+      <span class="uw-display-none uw-display-block-md uw-display-none-lg">
+        <code>md &le; screen &lt; lg</code>
+      </span>
+      <span class="uw-display-none uw-display-block-lg">
+        <code>lg &le; screen</code>
+      </span>
+    </p>
+  
+
   <div class="docs-example__live uw-prose">
 
 <div class="uw-grid">
@@ -335,12 +356,10 @@ when the screen is larger than the breakpoint.</p>
 
 
 <div class="uw-prose uw-col-8-md uw-col-6-lg">
-  <h2 id="spacing">Spacing</h2>
+  <h2 id="margins-and-padding">Margins and Padding</h2>
 
-<p>Element margins and padding can be changed with built-in utility classes.</p>
-
-<p>If spacing utility classes don&rsquo;t specify a breakpoint the class will be applied
-at all breakpoints. The classes are written in the form:</p>
+<p>Element margins and padding can be set with built-in utility classes. Spacing
+utility classes are written in the form:</p>
 
 <p><code>.uw-{property}-{sides}-{size}</code></p>
 
@@ -373,6 +392,24 @@ at all breakpoints. The classes are written in the form:</p>
 <li><code>4</code> for classes that set the margin or padding to <code>2rem</code></li>
 <li><code>5</code> for classes that set the margin or padding to <code>2.5rem</code></li>
 <li><code>6</code> for classes that set the margin or padding to <code>3rem</code></li>
+</ul>
+
+<h3 id="responsive-spacing">Responsive Spacing</h3>
+
+<p>Element margins and padding can be tailored to specific screen sizes by adding a
+breakpoint to a spacing utility class. Responsive spacing utility classes are
+written in the form:</p>
+
+<p><code>.uw-{property}-{sides}-{size}-{breakpoint}</code></p>
+
+<p>Where <em>property</em>, <em>sides</em>, and <em>size</em> are the same as above.</p>
+
+<p>Where <em>breakpoint</em> is one of:</p>
+
+<ul>
+<li><code>sm</code> for screens larger than <code>30rem</code></li>
+<li><code>md</code> for screens larger than <code>46.25rem</code></li>
+<li><code>lg</code> for screens larger than <code>67.5rem</code></li>
 </ul>
 
 </div>
