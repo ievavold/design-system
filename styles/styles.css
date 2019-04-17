@@ -1050,7 +1050,7 @@ a:link {
   .docs-example__code pre {
     box-sizing: content-box;
     display: block;
-    margin-bottom: 0; }
+    margin: 0; }
   .docs-example__code code {
     padding: 1rem;
     line-height: 1.3;
