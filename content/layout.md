@@ -158,9 +158,9 @@ when the screen is larger than the breakpoint.
 
 Where _breakpoint_ is one of:
 
-- `sm` for screens larger than `30rem`
-- `md` for screens larger than `46.25rem`
-- `lg` for screens larger than `67.5rem`
+- `sm` for screens larger than `32em`
+- `md` for screens larger than `48rem`
+- `lg` for screens larger than `64rem`
 
 {{< /typeset >}}
 
@@ -230,8 +230,8 @@ Where _property_, _sides_, and _size_ are the same as above.
 
 Where _breakpoint_ is one of:
 
-- `sm` for screens larger than `30rem`
-- `md` for screens larger than `46.25rem`
-- `lg` for screens larger than `67.5rem`
+- `sm` for screens larger than `32em`
+- `md` for screens larger than `48rem`
+- `lg` for screens larger than `64rem`
 
 {{< /typeset >}}
