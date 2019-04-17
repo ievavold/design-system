@@ -1,8 +1,9 @@
 ---
 title: Layout
-summary: Sed mattis egestas metus, scelerisque viverra lectus dignissim ut.
-  Cras auctor metus nunc, ac maximus sem dictum pellentesque. Finibus
-  rutrum. Integer cursus mollis lectus nec maximus.
+summary:
+  Sed mattis egestas metus, scelerisque viverra lectus dignissim ut. Cras auctor
+  metus nunc, ac maximus sem dictum pellentesque. Finibus rutrum. Integer cursus
+  mollis lectus nec maximus.
 links:
   - Grid System
   - Spacing
