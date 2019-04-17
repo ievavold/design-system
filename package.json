@@ -4,7 +4,8 @@
   "description": "a design system",
   "scripts": {
     "start": "hugo server",
-    "deploy": "hugo -b /design-system && gh-pages --dist public"
+    "clean": "rimraf public",
+    "deploy": "npm run clean && hugo -b /design-system && gh-pages -d public"
   },
   "repository": "github:ievavold/design-system",
   "author": "Isaac Evavold <ievavold@wisc.edu>",
@@ -12,6 +13,7 @@
   "devDependencies": {
     "gh-pages": "^2.0.1",
     "normalize.css": "^8.0.1",
+    "rimraf": "^2.6.3",
     "sass": "^1.18.0"
   }
 }
