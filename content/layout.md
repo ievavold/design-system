@@ -6,7 +6,7 @@ summary:
   mollis lectus nec maximus.
 links:
   - Grid System
-  - Spacing
+  - Margins and Padding
 ---
 
 {{< typeset >}}
@@ -186,12 +186,10 @@ Where _breakpoint_ is one of:
 
 {{< typeset >}}
 
-## Spacing
+## Margins and Padding
 
-Element margins and padding can be changed with built-in utility classes.
-
-If spacing utility classes don't specify a breakpoint the class will be applied
-at all breakpoints. The classes are written in the form:
+Element margins and padding can be set with built-in utility classes. Spacing
+utility classes are written in the form:
 
 `.uw-{property}-{sides}-{size}`
 
