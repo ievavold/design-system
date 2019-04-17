@@ -218,4 +218,20 @@ Where _size_ is one of:
 - `5` for classes that set the margin or padding to `2.5rem`
 - `6` for classes that set the margin or padding to `3rem`
 
+### Responsive Spacing
+
+Element margins and padding can be tailored to specific screen sizes by adding a
+breakpoint to a spacing utility class. Responsive spacing utility classes are
+written in the form:
+
+`.uw-{property}-{sides}-{size}-{breakpoint}`
+
+Where _property_, _sides_, and _size_ are the same as above.
+
+Where _breakpoint_ is one of:
+
+- `sm` for screens larger than `30rem`
+- `md` for screens larger than `46.25rem`
+- `lg` for screens larger than `67.5rem`
+
 {{< /typeset >}}
