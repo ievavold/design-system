@@ -191,8 +191,6 @@ Where _breakpoint_ is one of:
 
 Element margins and padding can be changed with built-in utility classes.
 
-### Notation
-
 If spacing utility classes don't specify a breakpoint the class will be applied
 at all breakpoints. The classes are written in the form:
 
