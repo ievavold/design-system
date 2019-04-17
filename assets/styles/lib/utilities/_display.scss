@@ -20,8 +20,8 @@ $displays: (
 }
 
 @each $breakpoint in map-keys($breakpoints) {
-  @each $display in $displays {
-    @include breakpoint-up($breakpoint) {
+  @include breakpoint-up($breakpoint) {
+    @each $display in $displays {
       .uw-display-#{$display}-#{$breakpoint} {
         display: $display;
       }
