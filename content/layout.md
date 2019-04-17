@@ -1,9 +1,6 @@
 ---
 title: Layout
-summary:
-  Sed mattis egestas metus, scelerisque viverra lectus dignissim ut. Cras auctor
-  metus nunc, ac maximus sem dictum pellentesque. Finibus rutrum. Integer cursus
-  mollis lectus nec maximus.
+summary: A collection of tools and utilities for building pages for apps and websites.
 links:
   - Grid System
   - Margins and Padding
@@ -13,15 +10,8 @@ links:
 
 ## Grid System
 
-Donec faucibus quis lacus aliquam placerat. Cras est turpis, hendrerit ut est
-in, tristique molestie magna. Maecenas non faucibus risus. Pellentesque habitant
-morbi tristique senectus et netus et malesuada fames ac turpis egestas. Orci
-varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-mus.
-
-Donec leo magna, dapibus non tristique quis, sodales non est. Sapien nibh,
-consectetur id consectetur sit amet, egestas a dolor. Proin sollicitudin vel
-justo a commodo.
+The grid system is based around a 12 column layout. Layouts built with this
+system are responsive by default and will adapt to mobile and desktop screens.
 
 ### Evenly Spaced Columns
 
