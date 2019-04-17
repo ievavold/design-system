@@ -7,7 +7,6 @@ summary:
 links:
   - Grid System
   - Spacing
-  - Breakpoints
 ---
 
 {{< typeset >}}
