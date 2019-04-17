@@ -35,7 +35,7 @@ classes:
 
 {{< table >}}
 
-| CSS classes                                | rem         | px     | Example                                      |
+| CSS classes                                | rem         | px     |                                              |
 | ------------------------------------------ | ----------- | ------ | -------------------------------------------- |
 | `.uw-font-size-14`<br>`.uw-font-size-xs`   | `0.875rem`  | `14px` | <span class="uw-font-size-14">Example</span> |
 | `.uw-font-size-16`<br>`.uw-font-size-base` | `1rem`      | `16px` | <span class="uw-font-size-16">Example</span> |
