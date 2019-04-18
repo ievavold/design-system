@@ -5,6 +5,7 @@ summary: Guidelines for consistent typography accross apps and websites.
 links:
   - Typefaces
   - Font Sizes
+  - Font Weights
 ---
 
 {{< typeset >}}
@@ -50,3 +51,28 @@ classes:
 | `.uw-font-size-46`                         | `2.875rem`  | `46px` | <span class="uw-font-size-46">Example</span> |
 
 {{< /table >}}
+
+{{< typeset >}}
+
+### Responsive Font Sizes
+
+Each font size class also has responsive variants that only apply when the
+screen is wider than the breakpoint. All of the font size classes above can
+become responsive by adding a breakpoint suffix:
+
+`.uw-font-size-{size}-{breakpoint}`
+
+Where _size_ is one of the font sizes from the type scale.
+
+Where _breakpoint_ is one of:
+
+- `sm` for screens larger than `32em`
+- `md` for screens larger than `48rem`
+- `lg` for screens larger than `64rem`
+
+## Font Weights
+
+The design system uses `400` as the default font weight and the `700` weight for
+bold text.
+
+{{< /typeset >}}
