@@ -1,5 +1,5 @@
 <div class="docs-example uw-col-12">
-  {{ if (len .Params | eq 1) and eq (.Get 0) "responsive" }}
+  {{ if and (len .Params | eq 1) (eq (.Get 0) "responsive") }}
     <p class="docs-example__screen-indicator">
       <span class="uw-display-block uw-display-none-sm">
         <code>screen &lt; sm</code>
