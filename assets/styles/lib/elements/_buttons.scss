@@ -1,0 +1,80 @@
+@import '../variables/borders';
+
+@mixin button-filled($background, $text: white) {
+  background: $background;
+  border-color: $background;
+  color: $text;
+
+  &:hover {
+    background: darken($background, 8%);
+    border-color: darken($background, 8%);
+  }
+
+  &:active {
+    background: darken($background, 16%);
+    border-color: darken($background, 16%);
+  }
+}
+
+@mixin button-outlined($border) {
+  background: transparent;
+  border-color: $border;
+  color: $border;
+
+  &:hover {
+    border-color: darken($border, 8%);
+    color: darken($border, 8%);
+  }
+
+  &:active {
+    border-color: darken($border, 16%);
+    color: darken($border, 16%);
+  }
+}
+
+.uw-button-filled,
+.uw-button-outlined {
+  margin-right: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  display: inline-block;
+  border-width: 0.125rem;
+  border-style: solid;
+  border-radius: $border-radius;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 0.9;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  &[disabled] {
+    background: transparent;
+    border-color: $color-gray-light;
+    color: $color-gray-light;
+    pointer-events: none;
+  }
+}
+
+.uw-button-filled {
+  @include button-filled($color-accent, $color-white);
+
+  &.uw-button--success {
+    @include button-filled($color-green-medium, $color-white);
+  }
+
+  &.uw-button--danger {
+    @include button-filled($color-red-dark, $color-white);
+  }
+}
+
+.uw-button-outlined {
+  @include button-outlined($color-accent);
+
+  &.uw-button--success {
+    @include button-outlined($color-green-medium);
+  }
+
+  &.uw-button--danger {
+    @include button-outlined($color-red-dark);
+  }
+}

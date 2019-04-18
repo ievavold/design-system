@@ -1,35 +1,51 @@
 ---
-draft: true
 title: Forms
-summary: This is the summary
+summary: Components that allow users to enter and submit information
 links:
   - Buttons
-  - Text Inputs
-  - Checkboxes
-  - Radio Buttons
-  - Labels and Validation
 ---
 
 {{< typeset >}}
 
 ## Buttons
 
+Buttons can be used to draw attention to important actions.
+
+### When to use a button
+
+- Important actions like signing up
+- Opening or closing modals and dialogs
+- Submitting data to the server
+
+### When to use a regular link
+
+- Navigating between pages
+- Less popular or less important actions
+
+### Filled variations
+
 {{< /typeset >}}
 
 {{< example >}}
 
-<h6>Default</h6>
-<button class="uw-button">Normal</button>
-<button class="uw-button uw-button--hover">Hover</button>
-<button class="uw-button uw-button--active">Active</button>
-<button class="uw-button uw-button--focus">Focus</button>
-<button class="uw-button" disabled>Disabled</button>
+<button class="uw-button-filled">Default</button>
+<button class="uw-button-filled uw-button--success">Success</button>
+<button class="uw-button-filled uw-button--danger">Danger</button>
+<button class="uw-button-filled" disabled>Disabled</button>
 
-<h6>Secondary</h6>
-<button class="uw-button--secondary">Normal</button>
-<button class="uw-button--secondary uw-button--hover">Hover</button>
-<button class="uw-button--secondary uw-button--active">Active</button>
-<button class="uw-button--secondary uw-button--focus">Focus</button>
-<button class="uw-button--secondary" disabled>Disabled</button>
+{{< /example >}}
+
+{{< typeset >}}
+
+### Outlined variations
+
+{{< /typeset >}}
+
+{{< example >}}
+
+<button class="uw-button-outlined">Default</button>
+<button class="uw-button-outlined uw-button--success">Success</button>
+<button class="uw-button-outlined uw-button--danger">Danger</button>
+<button class="uw-button-outlined" disabled>Disabled</button>
 
 {{< /example >}}
