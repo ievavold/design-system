@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Forms - Design System</title>
+
+    
+    <link rel="stylesheet" href="/design-system/styles/fonts.min.css" media="screen">
+
+    
+    
+    <link rel="stylesheet" href="/design-system/styles/styles.min.css" media="screen">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <main>
+      <header class="uw-border-bottom uw-pad-x-2 uw-mar-bottom-4">
+        <nav class="uw-container--lg uw-container--center">
+          <p class="uw-font-size-sm uw-mar-all-0">
+            <a href="/design-system">Design System</a>
+          </p>
+        </nav>
+      </header>
+
+      <article class="uw-container--lg uw-container--center">
+        <div class="uw-grid">
+          
+  <div id="page-summary" class="uw-prose uw-col-8-md uw-col-6-lg">
+    <h1>Forms</h1>
+    
+      <p class="uw-font-size-sm">Components that allow users to enter and submit information</p>
+    
+    
+      <ul class="uw-font-size-sm">
+        
+          <li><a href="#buttons">Buttons</a></li>
+        
+      </ul>
+    
+  </div>
+
+  <hr>
+
+  <div class="uw-prose uw-col-8-md uw-col-6-lg">
+  <h2 id="buttons">Buttons</h2>
+
+<p>Buttons can be used to draw attention to important actions.</p>
+
+<h3 id="when-to-use-a-button">When to use a button</h3>
+
+<ul>
+<li>Important actions like signing up</li>
+<li>Opening or closing modals and dialogs</li>
+<li>Submitting data to the server</li>
+</ul>
+
+<h3 id="when-to-use-a-regular-link">When to use a regular link</h3>
+
+<ul>
+<li>Navigating between pages</li>
+<li>Less popular or less important actions</li>
+</ul>
+
+<h3 id="filled-variations">Filled variations</h3>
+</div>
+
+
+<div class="docs-example uw-col-12">
+  
+
+  <div class="docs-example__live uw-prose">
+
+<button class="uw-button">Default</button>
+<button class="uw-button uw-button--success">Success</button>
+<button class="uw-button uw-button--danger">Danger</button>
+<button class="uw-button" disabled>Disabled</button>
+
+</div>
+
+  <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+    <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button&#34;</span><span class="p">&gt;</span>Default<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button uw-button--success&#34;</span><span class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button uw-button--danger&#34;</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
+  </div>
+</div>
+
+
+<div class="uw-prose uw-col-8-md uw-col-6-lg">
+  <h3 id="outlined-variations">Outlined variations</h3>
+</div>
+
+
+<div class="docs-example uw-col-12">
+  
+
+  <div class="docs-example__live uw-prose">
+
+<button class="uw-button--outlined">Default</button>
+<button class="uw-button--outlined uw-button--success">Success</button>
+<button class="uw-button--outlined uw-button--danger">Danger</button>
+<button class="uw-button--outlined" disabled>Disabled</button>
+
+</div>
+
+  <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+    <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button--outlined&#34;</span><span class="p">&gt;</span>Default<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button--outlined uw-button--success&#34;</span><span class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button--outlined uw-button--danger&#34;</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button--outlined&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
+  </div>
+</div>
+
+
+
+        </div>
+      </article>
+
+      <footer class="uw-border-top uw-pad-x-2 uw-mar-top-4">
+        <div class="uw-container--lg uw-container--center">
+          <p class="uw-text-align-center"><em>A copyright notice</em></p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
