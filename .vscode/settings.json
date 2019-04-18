@@ -1,4 +1,5 @@
 {
   "prettier.proseWrap": "always",
+  "prettier.disableLanguages": ["html"],
   "prettier.singleQuote": true
 }
