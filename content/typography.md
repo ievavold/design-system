@@ -1,7 +1,7 @@
 ---
 draft: true
 title: Typography
-summary: Documentation for consistent typography accross apps and websites.
+summary: Guidelines for consistent typography accross apps and websites.
 links:
   - Typefaces
   - Font Sizes

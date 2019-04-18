@@ -1,7 +1,6 @@
 ---
 title: Layout
-summary:
-  A collection of tools and utilities for building pages for apps and websites.
+summary: Utilities for structuring app and website pages.
 links:
   - Grid System
   - Margins and Padding
