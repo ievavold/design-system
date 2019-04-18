@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Typography - Design System</title>
+
+    
+    <link rel="stylesheet" href="/design-system/styles/fonts.min.css" media="screen">
+
+    
+    
+    <link rel="stylesheet" href="/design-system/styles/styles.min.css" media="screen">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <main>
+      <header class="uw-border-bottom uw-pad-x-2 uw-mar-bottom-4">
+        <nav class="uw-container--lg uw-container--center">
+          <p class="uw-font-size-sm uw-mar-all-0">
+            <a href="/design-system">Design System</a>
+          </p>
+        </nav>
+      </header>
+
+      <article class="uw-container--lg uw-container--center">
+        <div class="uw-grid">
+          
+  <div id="page-summary" class="uw-prose uw-col-8-md uw-col-6-lg">
+    <h1>Typography</h1>
+    
+      <p class="uw-font-size-sm">Guidelines for consistent typography accross apps and websites.</p>
+    
+    
+      <ul class="uw-font-size-sm">
+        
+          <li><a href="#typefaces">Typefaces</a></li>
+        
+          <li><a href="#font-sizes">Font Sizes</a></li>
+        
+          <li><a href="#font-weights">Font Weights</a></li>
+        
+      </ul>
+    
+  </div>
+
+  <hr>
+
+  <div class="uw-prose uw-col-8-md uw-col-6-lg">
+  <h2 id="typefaces">Typefaces</h2>
+
+<p>The <a href="https://fonts.google.com/specimen/Roboto">Roboto</a> typeface is used by the
+design system. If Roboto cannot be used, the following fallback typefaces may be
+used:</p>
+
+<ul>
+<li><code>Helvetica</code></li>
+<li><code>Arial</code></li>
+<li><code>sans-serif</code></li>
+</ul>
+
+<h2 id="font-sizes">Font Sizes</h2>
+
+<p>The design system uses a
+<a href="https://type-scale.com/?size=16&amp;scale=1.125&amp;font=Roboto">major second</a> type
+scale that has been rounded to the nearest whole pixel. The body font size is
+set to <code>16px</code>.</p>
+
+<p>To maintain consistency when using the design system, font sizes shouldn&rsquo;t be
+set to a size not represented by this type scale. In order to make it easy to
+use the font sizes in this scale, the design system provides the following CSS
+classes:</p>
+
+</div>
+
+
+<div class="uw-table__container uw-prose uw-col-12">
+  <table>
+<thead>
+<tr>
+<th>CSS classes</th>
+<th>rem</th>
+<th>px</th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>.uw-font-size-14</code><br><code>.uw-font-size-xs</code></td>
+<td><code>0.875rem</code></td>
+<td><code>14px</code></td>
+<td><span class="uw-font-size-14">Example</span></td>
+</tr>
+
+<tr>
+<td><code>.uw-font-size-16</code><br><code>.uw-font-size-base</code></td>
+<td><code>1rem</code></td>
+<td><code>16px</code></td>
+<td><span class="uw-font-size-16">Example</span></td>
+</tr>
+
+<tr>
+<td><code>.uw-font-size-18</code></td>
+<td><code>1.125rem</code></td>
+<td><code>18px</code></td>
+<td><span class="uw-font-size-18">Example</span></td>
+</tr>
+
+<tr>
+<td><code>.uw-font-size-20</code><br><code>.uw-font-size-sm</code></td>
+<td><code>1.25rem</code></td>
+<td><code>20px</code></td>
+<td><span class="uw-font-size-20">Example</span></td>
+</tr>
+
+<tr>
+<td><code>.uw-font-size-23</code></td>
+<td><code>1.4375rem</code></td>
+<td><code>23px</code></td>
+<td><span class="uw-font-size-23">Example</span></td>
+</tr>
+
+<tr>
+<td><code>.uw-font-size-26</code><br><code>.uw-font-size-md</code></td>
+<td><code>1.625rem</code></td>
+<td><code>26px</code></td>
+<td><span class="uw-font-size-26">Example</span></td>
+</tr>
+
+<tr>
+<td><code>.uw-font-size-29</code></td>
+<td><code>1.8125rem</code></td>
+<td><code>29px</code></td>
+<td><span class="uw-font-size-29">Example</span></td>
+</tr>
+
+<tr>
+<td><code>.uw-font-size-32</code><br><code>.uw-font-size-lg</code></td>
+<td><code>2rem</code></td>
+<td><code>32px</code></td>
+<td><span class="uw-font-size-32">Example</span></td>
+</tr>
+
+<tr>
+<td><code>.uw-font-size-36</code></td>
+<td><code>2.25rem</code></td>
+<td><code>36px</code></td>
+<td><span class="uw-font-size-36">Example</span></td>
+</tr>
+
+<tr>
+<td><code>.uw-font-size-41</code><br><code>.uw-font-size-xl</code></td>
+<td><code>2.5625rem</code></td>
+<td><code>41px</code></td>
+<td><span class="uw-font-size-41">Example</span></td>
+</tr>
+
+<tr>
+<td><code>.uw-font-size-46</code></td>
+<td><code>2.875rem</code></td>
+<td><code>46px</code></td>
+<td><span class="uw-font-size-46">Example</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+<div class="uw-prose uw-col-8-md uw-col-6-lg">
+  <h3 id="responsive-font-sizes">Responsive Font Sizes</h3>
+
+<p>Each font size class also has responsive variants that only apply when the
+screen is wider than the breakpoint. All of the font size classes above can
+become responsive by adding a breakpoint suffix:</p>
+
+<p><code>.uw-font-size-{size}-{breakpoint}</code></p>
+
+<p>Where <em>size</em> is one of the font sizes from the type scale.</p>
+
+<p>Where <em>breakpoint</em> is one of:</p>
+
+<ul>
+<li><code>sm</code> for screens larger than <code>32em</code></li>
+<li><code>md</code> for screens larger than <code>48rem</code></li>
+<li><code>lg</code> for screens larger than <code>64rem</code></li>
+</ul>
+
+<h2 id="font-weights">Font Weights</h2>
+
+<p>The design system uses <code>400</code> as the default font weight and the <code>700</code> weight for
+bold text.</p>
+
+</div>
+
+
+
+        </div>
+      </article>
+
+      <footer class="uw-border-top uw-pad-x-2 uw-mar-top-2">
+        <div class="uw-container--lg uw-container--center">
+          <p class="uw-text-align-center"><em>A copyright notice</em></p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
