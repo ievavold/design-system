@@ -3,9 +3,11 @@
 {{ end }}
 
 {{ define "main" }}
-  <ul class="uw-font-size-sm">
-    {{ range .Pages }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-    {{ end }}
-  </ul>
+  <div class="uw-prose">
+    <ul class="uw-font-size-sm">
+      {{ range .Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
 {{ end }}
