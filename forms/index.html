@@ -159,6 +159,118 @@ be used to style <code>&lt;a&gt;</code> tags.
 </div>
 
 
+<div class="uw-prose uw-col-8-md uw-col-6-lg">
+  <h2 id="checkboxes">Checkboxes</h2>
+</div>
+
+
+<div class="docs-example uw-col-12">
+  
+
+  <div class="docs-example__live uw-prose">
+
+<form class="uw-form">
+  <fieldset class="uw-fieldset">
+    <legend>Types of plants</legend>
+    <div class="uw-checkbox">
+      <input class="uw-checkbox__input" type="checkbox" id="tree" checked />
+      <label class="uw-checkbox__label" for="tree">Tree</label>
+    </div>
+    <div class="uw-checkbox">
+      <input class="uw-checkbox__input" type="checkbox" id="grass" />
+      <label class="uw-checkbox__label" for="grass">Grass</label>
+    </div>
+    <div class="uw-checkbox">
+      <input class="uw-checkbox__input" type="checkbox" id="moss" disabled />
+      <label class="uw-checkbox__label" for="moss">Moss</label>
+    </div>
+    <div class="uw-checkbox">
+      <input class="uw-checkbox__input" type="checkbox" id="flower" checked disabled />
+      <label class="uw-checkbox__label" for="flower">Flower</label>
+    </div>
+  </fieldset>
+</form>
+
+</div>
+
+  <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+    <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-form&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">fieldset</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-fieldset&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>Types of plants<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-checkbox&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-checkbox__input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tree&#34;</span> <span class="na">checked</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-checkbox__label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;tree&#34;</span><span class="p">&gt;</span>Tree<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-checkbox&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-checkbox__input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grass&#34;</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-checkbox__label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;grass&#34;</span><span class="p">&gt;</span>Grass<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-checkbox&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-checkbox__input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;moss&#34;</span> <span class="na">disabled</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-checkbox__label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;moss&#34;</span><span class="p">&gt;</span>Moss<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-checkbox&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-checkbox__input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;flower&#34;</span> <span class="na">checked</span> <span class="na">disabled</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-checkbox__label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;flower&#34;</span><span class="p">&gt;</span>Flower<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
+  </div>
+</div>
+
+
+<div class="uw-prose uw-col-8-md uw-col-6-lg">
+  <h2 id="radio-buttons">Radio buttons</h2>
+</div>
+
+
+<div class="docs-example uw-col-12">
+  
+
+  <div class="docs-example__live uw-prose">
+
+<form class="uw-form">
+  <fieldset class="uw-fieldset">
+    <legend>Types of livestock</legend>
+    <div class="uw-radio">
+      <input class="uw-radio__input" type="radio" name="livestock" value="cow" id="cow" checked />
+      <label class="uw-radio__label" for="cow">Cow</label>
+    </div>
+    <div class="uw-radio">
+      <input class="uw-radio__input" type="radio" name="livestock" value="sheep" id="sheep" />
+      <label class="uw-radio__label" for="sheep">Sheep</label>
+    </div>
+    <div class="uw-radio">
+      <input class="uw-radio__input" type="radio" name="livestock" value="chicken" id="chicken" disabled />
+      <label class="uw-radio__label" for="chicken">Chicken</label>
+    </div>
+  </fieldset>
+</form>
+
+</div>
+
+  <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+    <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-form&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">fieldset</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-fieldset&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>Types of livestock<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-radio&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-radio__input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;livestock&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;cow&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;cow&#34;</span> <span class="na">checked</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-radio__label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;cow&#34;</span><span class="p">&gt;</span>Cow<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-radio&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-radio__input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;livestock&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;sheep&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;sheep&#34;</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-radio__label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;sheep&#34;</span><span class="p">&gt;</span>Sheep<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-radio&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-radio__input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;livestock&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;chicken&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;chicken&#34;</span> <span class="na">disabled</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-radio__label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;chicken&#34;</span><span class="p">&gt;</span>Chicken<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
+  </div>
+</div>
+
+
 
         </div>
       </article>
