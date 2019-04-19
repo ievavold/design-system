@@ -64,7 +64,6 @@ be used to style `<a>` tags.
 <a href="#" class="uw-button-filled">Default</a>
 <a href="#" class="uw-button-filled uw-button--success">Success</a>
 <a href="#" class="uw-button-filled uw-button--danger">Danger</a>
-<a href="#" class="uw-button-filled" disabled>Disabled</a>
 
 {{< /example >}}
 
@@ -73,6 +72,5 @@ be used to style `<a>` tags.
 <a href="#" class="uw-button-outlined">Default</a>
 <a href="#" class="uw-button-outlined uw-button--success">Success</a>
 <a href="#" class="uw-button-outlined uw-button--danger">Danger</a>
-<a href="#" class="uw-button-outlined" disabled>Disabled</a>
 
 {{< /example >}}
