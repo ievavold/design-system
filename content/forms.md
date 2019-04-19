@@ -74,3 +74,63 @@ be used to style `<a>` tags.
 <a href="#" class="uw-button-outlined uw-button--danger">Danger</a>
 
 {{< /example >}}
+
+{{< typeset >}}
+
+## Checkboxes
+
+{{< /typeset >}}
+
+{{< example >}}
+
+<form class="uw-form">
+  <fieldset class="uw-fieldset">
+    <legend>Types of plants</legend>
+    <div class="uw-checkbox">
+      <input class="uw-checkbox__input" type="checkbox" id="tree" checked />
+      <label class="uw-checkbox__label" for="tree">Tree</label>
+    </div>
+    <div class="uw-checkbox">
+      <input class="uw-checkbox__input" type="checkbox" id="grass" />
+      <label class="uw-checkbox__label" for="grass">Grass</label>
+    </div>
+    <div class="uw-checkbox">
+      <input class="uw-checkbox__input" type="checkbox" id="moss" disabled />
+      <label class="uw-checkbox__label" for="moss">Moss</label>
+    </div>
+    <div class="uw-checkbox">
+      <input class="uw-checkbox__input" type="checkbox" id="flower" checked disabled />
+      <label class="uw-checkbox__label" for="flower">Flower</label>
+    </div>
+  </fieldset>
+</form>
+
+{{< /example >}}
+
+{{< typeset >}}
+
+## Radio buttons
+
+{{< /typeset >}}
+
+{{< example >}}
+
+<form class="uw-form">
+  <fieldset class="uw-fieldset">
+    <legend>Types of livestock</legend>
+    <div class="uw-radio">
+      <input class="uw-radio__input" type="radio" name="livestock" value="cow" id="cow" checked />
+      <label class="uw-radio__label" for="cow">Cow</label>
+    </div>
+    <div class="uw-radio">
+      <input class="uw-radio__input" type="radio" name="livestock" value="sheep" id="sheep" />
+      <label class="uw-radio__label" for="sheep">Sheep</label>
+    </div>
+    <div class="uw-radio">
+      <input class="uw-radio__input" type="radio" name="livestock" value="chicken" id="chicken" disabled />
+      <label class="uw-radio__label" for="chicken">Chicken</label>
+    </div>
+  </fieldset>
+</form>
+
+{{< /example >}}

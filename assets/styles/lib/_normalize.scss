@@ -4,7 +4,13 @@ body * {
   box-sizing: border-box;
 }
 
-*:focus {
+*:focus,
+.uw-checkbox__input:focus + .uw-checkbox__label:before,
+.uw-radio__input:focus + .uw-radio__label:before {
   outline: 0.25rem solid #2491ff;
   outline-offset: 0;
+}
+
+.uw-radio__input:focus + .uw-radio__label:before {
+  outline-offset: 0.25rem;
 }

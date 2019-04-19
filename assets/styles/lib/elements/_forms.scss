@@ -1,0 +1,80 @@
+@import '../variables/colors';
+@import '../assets/icons';
+
+.uw-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.uw-fieldset > legend {
+  display: none;
+}
+
+.uw-checkbox,
+.uw-radio {
+  &__input {
+    position: absolute;
+    left: -999em;
+  }
+
+  &__label {
+    display: inherit;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    padding-left: 2rem;
+    position: relative;
+    text-indent: -2rem;
+    cursor: pointer;
+
+    &:before {
+      content: '\a0'; // non-breaking space
+      display: inline-block;
+      position: relative;
+      left: 2px;
+      background: white;
+      margin-right: 0.75rem;
+      line-height: 1.25rem;
+      box-shadow: 0 0 0 2px $color-gray-dark;
+    }
+  }
+
+  &__input:checked + &__label:before {
+    background-color: $color-accent;
+    box-shadow: 0 0 0 2px $color-accent;
+  }
+
+  &__input:disabled + &__label {
+    color: $color-gray-light;
+
+    &:before {
+      background: $color-gray-lighter;
+      box-shadow: 0 0 0 2px $color-gray-light;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.uw-checkbox__label:before {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 2px;
+}
+
+.uw-checkbox__input:checked + .uw-checkbox__label:before {
+  background-image: $icon-check, linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.uw-radio {
+  &__label:before {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 99em;
+  }
+
+  &__input:checked + &__label:before {
+    box-shadow: 0 0 0 2px $color-accent, inset 0 0 0 2px #fff;
+  }
+}
