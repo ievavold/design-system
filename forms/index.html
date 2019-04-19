@@ -117,7 +117,21 @@
   <h3 id="button-styled-links">Button-styled links</h3>
 
 <p>In addition to the <code>&lt;button&gt;</code> elements used above, the <code>.uw-button</code> classes can
-be used to style <code>&lt;a&gt;</code> tags.
+be used to style <code>&lt;a&gt;</code> tags.</p>
+
+<p>Be aware when styling links to look like buttons that there are significant
+behavioral differences between the two elements, even if they look similar:</p>
+
+<ul>
+<li>When focused, <code>&lt;a&gt;</code> tags are activated with the <strong>Enter</strong> key while <code>&lt;button&gt;</code>
+tags are activated with the <strong>Space</strong> key.</li>
+<li>When the <code>disabled</code> attribute is set on a <code>&lt;button&gt;</code>, the element cannot be
+focused and all mouse and keyboard inputs to the element are ignored by the
+browser. When the <code>disabled</code> attribute is added to an <code>&lt;a&gt;</code> tag, the element
+ignores the attribute and continues to respond to all mouse and keyboard
+inputs.</li>
+</ul>
+
 </div>
 
 
