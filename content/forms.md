@@ -85,7 +85,7 @@ be used to style `<a>` tags.
 
 <form class="uw-form">
   <fieldset class="uw-fieldset">
-    <legend>Types of plants</legend>
+    <legend class="uw-sr-only">Types of plants</legend>
     <div class="uw-checkbox">
       <input class="uw-checkbox__input" type="checkbox" id="tree" checked />
       <label class="uw-checkbox__label" for="tree">Tree</label>
@@ -117,7 +117,7 @@ be used to style `<a>` tags.
 
 <form class="uw-form">
   <fieldset class="uw-fieldset">
-    <legend>Types of livestock</legend>
+    <legend class="uw-sr-only">Types of livestock</legend>
     <div class="uw-radio">
       <input class="uw-radio__input" type="radio" name="livestock" value="cow" id="cow" checked />
       <label class="uw-radio__label" for="cow">Cow</label>
