@@ -57,6 +57,17 @@ Buttons can be used to draw attention to important actions.
 In addition to the `<button>` elements used above, the `.uw-button` classes can
 be used to style `<a>` tags.
 
+Be aware when styling links to look like buttons that there are significant
+behavioral differences between the two elements, even if they look similar:
+
+- When focused, `<a>` tags are activated with the **Enter** key while `<button>`
+  tags are activated with the **Space** key.
+- When the `disabled` attribute is set on a `<button>`, the element cannot be
+  focused and all mouse and keyboard inputs to the element are ignored by the
+  browser. When the `disabled` attribute is added to an `<a>` tag, the element
+  ignores the attribute and continues to respond to all mouse and keyboard
+  inputs.
+
 {{< /typeset >}}
 
 {{< example >}}
