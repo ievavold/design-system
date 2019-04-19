@@ -47,7 +47,7 @@
 
 <p>Buttons can be used to draw attention to important actions.</p>
 
-<h3 id="when-to-use-a-button">When to use a button</h3>
+<h3 id="when-to-use-a-button">When to use a <code>&lt;button&gt;</code></h3>
 
 <ul>
 <li>Important actions like signing up</li>
@@ -55,7 +55,7 @@
 <li>Submitting data to the server</li>
 </ul>
 
-<h3 id="when-to-use-a-regular-link">When to use a regular link</h3>
+<h3 id="when-to-use-a-link">When to use a link</h3>
 
 <ul>
 <li>Navigating between pages</li>
@@ -109,6 +109,56 @@
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-outlined uw-button--success&#34;</span><span class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-outlined uw-button--danger&#34;</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-outlined&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
+  </div>
+</div>
+
+
+<div class="uw-prose uw-col-8-md uw-col-6-lg">
+  <h3 id="button-styled-links">Button-styled links</h3>
+
+<p>In addition to the <code>&lt;button&gt;</code> elements used above, the <code>.uw-button</code> classes can
+be used to style <code>&lt;a&gt;</code> tags.
+</div>
+
+
+<div class="docs-example uw-col-12">
+  
+
+  <div class="docs-example__live uw-prose">
+
+<a href="#" class="uw-button-filled">Default</a>
+<a href="#" class="uw-button-filled uw-button--success">Success</a>
+<a href="#" class="uw-button-filled uw-button--danger">Danger</a>
+<a href="#" class="uw-button-filled" disabled>Disabled</a>
+
+</div>
+
+  <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+    <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-filled&#34;</span><span class="p">&gt;</span>Default<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-filled uw-button--success&#34;</span><span class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-filled uw-button--danger&#34;</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-filled&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
+  </div>
+</div>
+
+
+<div class="docs-example uw-col-12">
+  
+
+  <div class="docs-example__live uw-prose">
+
+<a href="#" class="uw-button-outlined">Default</a>
+<a href="#" class="uw-button-outlined uw-button--success">Success</a>
+<a href="#" class="uw-button-outlined uw-button--danger">Danger</a>
+<a href="#" class="uw-button-outlined" disabled>Disabled</a>
+
+</div>
+
+  <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+    <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-outlined&#34;</span><span class="p">&gt;</span>Default<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-outlined uw-button--success&#34;</span><span class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-outlined uw-button--danger&#34;</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-outlined&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
   </div>
 </div>
 
