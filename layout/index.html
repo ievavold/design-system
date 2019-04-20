@@ -24,28 +24,28 @@
       </header>
 
       <article class="uw-container--lg uw-container--center">
-        <div class="uw-grid">
+        
+  <div class="uw-grid">
+    <div id="page-summary" class="uw-prose uw-col-8-md uw-col-6-lg">
+      <h1>Layout</h1>
+      
+        <p class="uw-font-size-sm">Utilities for structuring app and website pages.</p>
+      
+      
+        <ul class="uw-font-size-sm">
           
-  <div id="page-summary" class="uw-prose uw-col-8-md uw-col-6-lg">
-    <h1>Layout</h1>
-    
-      <p class="uw-font-size-sm">Utilities for structuring app and website pages.</p>
-    
-    
-      <ul class="uw-font-size-sm">
-        
-          <li><a href="#grid-system">Grid System</a></li>
-        
-          <li><a href="#margins-and-padding">Margins and Padding</a></li>
-        
-      </ul>
-    
+            <li><a href="#grid-system">Grid System</a></li>
+          
+            <li><a href="#margins-and-padding">Margins and Padding</a></li>
+          
+        </ul>
+      
+    </div>
+    <hr>
   </div>
-
-  <hr>
-
+  <div class="uw-grid">
   <div class="uw-prose uw-col-8-md uw-col-6-lg">
-  <h2 id="grid-system">Grid System</h2>
+    <h2 id="grid-system">Grid System</h2>
 
 <p>The grid system is based around a 12 column layout. Layouts built with this
 system are responsive by default and will adapt to mobile and desktop screens.</p>
@@ -56,13 +56,15 @@ system are responsive by default and will adapt to mobile and desktop screens.</
 inside of a container with the <code>.uw-grid</code> class. By default, space will be
 allocated evenly between all <code>.uw-col</code> elements:</p>
 
+  </div>
 </div>
 
 
-<div class="docs-example uw-col-12">
-  
+<div class="uw-grid">
+  <div class="docs-example uw-col-12">
+    
 
-  <div class="docs-example__live uw-prose">
+    <div class="docs-example__live uw-prose">
 
 <div class="uw-grid">
   <div class="uw-col">
@@ -96,8 +98,8 @@ allocated evenly between all <code>.uw-col</code> elements:</p>
 
 </div>
 
-  <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
-    <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-grid&#34;</span><span class="p">&gt;</span>
+    <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+      <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-grid&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-col&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;inner&#34;</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.uw-col<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -126,23 +128,27 @@ allocated evenly between all <code>.uw-col</code> elements:</p>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;inner&#34;</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.uw-col<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+    </div>
   </div>
 </div>
 
 
-<div class="uw-prose uw-col-8-md uw-col-6-lg">
-  <h3 id="weighted-columns">Weighted Columns</h3>
+<div class="uw-grid">
+  <div class="uw-prose uw-col-8-md uw-col-6-lg">
+    <h3 id="weighted-columns">Weighted Columns</h3>
 
 <p>The grid layout layouts where some columns are wider or narrower than others.
 Weighted columns are configured by appending a number between 1 and 12 to the
 column item class:
+  </div>
 </div>
 
 
-<div class="docs-example uw-col-12">
-  
+<div class="uw-grid">
+  <div class="docs-example uw-col-12">
+    
 
-  <div class="docs-example__live uw-prose">
+    <div class="docs-example__live uw-prose">
 
 <div class="uw-grid">
   <div class="uw-col-3">
@@ -164,8 +170,8 @@ column item class:
 
 </div>
 
-  <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
-    <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-grid&#34;</span><span class="p">&gt;</span>
+    <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+      <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-grid&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-col-3&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;inner&#34;</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.uw-col-3<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -182,23 +188,27 @@ column item class:
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;inner&#34;</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.uw-col-12<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+    </div>
   </div>
 </div>
 
 
-<div class="uw-prose uw-col-8-md uw-col-6-lg">
-  <h3 id="mixing-weighted-and-unweighted-columns">Mixing Weighted and Unweighted Columns</h3>
+<div class="uw-grid">
+  <div class="uw-prose uw-col-8-md uw-col-6-lg">
+    <h3 id="mixing-weighted-and-unweighted-columns">Mixing Weighted and Unweighted Columns</h3>
 
 <p>If a grid layout uses both weighted and unweighted columns, the unweighted
 columns will evenly occupy whatever amount of space is leftover after space has
 been given to the weighted columns.
+  </div>
 </div>
 
 
-<div class="docs-example uw-col-12">
-  
+<div class="uw-grid">
+  <div class="docs-example uw-col-12">
+    
 
-  <div class="docs-example__live uw-prose">
+    <div class="docs-example__live uw-prose">
 
 <div class="uw-grid">
   <div class="uw-col-4">
@@ -235,8 +245,8 @@ been given to the weighted columns.
 
 </div>
 
-  <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
-    <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-grid&#34;</span><span class="p">&gt;</span>
+    <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+      <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-grid&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-col-4&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;inner&#34;</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.uw-col-4<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -268,12 +278,14 @@ been given to the weighted columns.
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;inner&#34;</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.uw-col-8<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+    </div>
   </div>
 </div>
 
 
-<div class="uw-prose uw-col-8-md uw-col-6-lg">
-  <h3 id="responsive-columns">Responsive Columns</h3>
+<div class="uw-grid">
+  <div class="uw-prose uw-col-8-md uw-col-6-lg">
+    <h3 id="responsive-columns">Responsive Columns</h3>
 
 <p>Responsive columns can change weight based on the width of the screen and are
 specified with the form:</p>
@@ -291,28 +303,30 @@ when the screen is larger than the breakpoint.</p>
 <li><code>lg</code> for screens larger than <code>64rem</code></li>
 </ul>
 
+  </div>
 </div>
 
 
-<div class="docs-example uw-col-12">
-  
-    <p class="docs-example__screen-indicator">
-      <span class="uw-display-block uw-display-none-sm">
-        <code>screen &lt; sm</code>
-      </span>
-      <span class="uw-display-none uw-display-block-sm uw-display-none-md">
-        <code>sm &le; screen &lt; md</code>
-      </span>
-      <span class="uw-display-none uw-display-block-md uw-display-none-lg">
-        <code>md &le; screen &lt; lg</code>
-      </span>
-      <span class="uw-display-none uw-display-block-lg">
-        <code>lg &le; screen</code>
-      </span>
-    </p>
-  
+<div class="uw-grid">
+  <div class="docs-example uw-col-12">
+    
+      <p class="docs-example__screen-indicator">
+        <span class="uw-display-block uw-display-none-sm">
+          <code>screen &lt; sm</code>
+        </span>
+        <span class="uw-display-none uw-display-block-sm uw-display-none-md">
+          <code>sm &le; screen &lt; md</code>
+        </span>
+        <span class="uw-display-none uw-display-block-md uw-display-none-lg">
+          <code>md &le; screen &lt; lg</code>
+        </span>
+        <span class="uw-display-none uw-display-block-lg">
+          <code>lg &le; screen</code>
+        </span>
+      </p>
+    
 
-  <div class="docs-example__live uw-prose">
+    <div class="docs-example__live uw-prose">
 
 <div class="uw-grid">
   <div class="uw-col-12 uw-col-6-md">
@@ -332,8 +346,8 @@ when the screen is larger than the breakpoint.</p>
 
 </div>
 
-  <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
-    <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-grid&#34;</span><span class="p">&gt;</span>
+    <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+      <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-grid&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-col-12 uw-col-6-md&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;inner&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
@@ -348,12 +362,14 @@ when the screen is larger than the breakpoint.</p>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+    </div>
   </div>
 </div>
 
 
-<div class="uw-prose uw-col-8-md uw-col-6-lg">
-  <h2 id="margins-and-padding">Margins and Padding</h2>
+<div class="uw-grid">
+  <div class="uw-prose uw-col-8-md uw-col-6-lg">
+    <h2 id="margins-and-padding">Margins and Padding</h2>
 
 <p>Element margins and padding can be set with built-in utility classes. Spacing
 utility classes are written in the form:</p>
@@ -409,11 +425,11 @@ written in the form:</p>
 <li><code>lg</code> for screens larger than <code>64rem</code></li>
 </ul>
 
+  </div>
 </div>
 
 
 
-        </div>
       </article>
 
       <footer class="uw-border-top uw-pad-x-2 uw-mar-top-4">
