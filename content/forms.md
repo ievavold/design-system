@@ -3,6 +3,8 @@ title: Forms
 summary: Components that allow users to enter and submit information
 links:
   - Buttons
+  - Checkboxes
+  - Radio Buttons
 ---
 
 {{< typeset >}}
