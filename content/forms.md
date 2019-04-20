@@ -68,26 +68,6 @@ behavioral differences between the two elements, even if they look similar:
   ignores the attribute and continues to respond to all mouse and keyboard
   inputs.
 
-{{< /typeset >}}
-
-{{< example >}}
-
-<a href="#" class="uw-button-filled">Default</a>
-<a href="#" class="uw-button-filled uw-button--success">Success</a>
-<a href="#" class="uw-button-filled uw-button--danger">Danger</a>
-
-{{< /example >}}
-
-{{< example >}}
-
-<a href="#" class="uw-button-outlined">Default</a>
-<a href="#" class="uw-button-outlined uw-button--success">Success</a>
-<a href="#" class="uw-button-outlined uw-button--danger">Danger</a>
-
-{{< /example >}}
-
-{{< typeset >}}
-
 ## Checkboxes
 
 {{< /typeset >}}
