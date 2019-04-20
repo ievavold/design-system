@@ -1,0 +1,23 @@
+{{ $name := .Get "name" }}
+{{ $hex := .Get "hex" }}
+{{ $text := .Get "text" }}
+<div class="docs-swatch uw-col-12 uw-col-4-md uw-mar-top-2">
+  <div class="uw-border uw-border-radius">
+    <div class="docs-swatch__color" style="background:{{ $hex }}">
+      <div class="docs-swatch__text">
+        {{ if eq $text "light" }}
+          <div class="docs-swatch__text--light"></div>
+        {{ else if eq $text "dark" }}
+          <div class="docs-swatch__text--dark"></div>
+        {{ else if eq $text "both" }}
+          <div class="docs-swatch__text--light"></div>
+          <div class="docs-swatch__text--dark"></div>
+        {{ end }}
+      </div>
+    </div>
+    <div class="docs-swatch__description uw-pad-left-2">
+      <p><strong>{{ $name }}</strong></p>
+      <p><code>{{ $hex }}</code></p>
+    </div>
+  </div>
+</div>
