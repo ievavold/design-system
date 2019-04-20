@@ -24,13 +24,13 @@
       </header>
 
       <article class="uw-container--lg uw-container--center">
-        <div class="uw-grid">
-          {{ block "main" . }}
+        {{ block "main" . }}
+          <div class="uw-grid">
             <div class="uw-prose uw-col-8-md uw-col-6-lg">
               <p><em>No content</em></p>
             </div>
-          {{ end }}
-        </div>
+          </div>
+        {{ end }}
       </article>
 
       <footer class="uw-border-top uw-pad-x-2 uw-mar-top-4">

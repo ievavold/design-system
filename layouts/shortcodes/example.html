@@ -1,24 +1,26 @@
-<div class="docs-example uw-col-12">
-  {{ if and (len .Params | eq 1) (eq (.Get 0) "responsive") }}
-    <p class="docs-example__screen-indicator">
-      <span class="uw-display-block uw-display-none-sm">
-        <code>screen &lt; sm</code>
-      </span>
-      <span class="uw-display-none uw-display-block-sm uw-display-none-md">
-        <code>sm &le; screen &lt; md</code>
-      </span>
-      <span class="uw-display-none uw-display-block-md uw-display-none-lg">
-        <code>md &le; screen &lt; lg</code>
-      </span>
-      <span class="uw-display-none uw-display-block-lg">
-        <code>lg &le; screen</code>
-      </span>
-    </p>
-  {{ end }}
+<div class="uw-grid">
+  <div class="docs-example uw-col-12">
+    {{ if and (len .Params | eq 1) (eq (.Get 0) "responsive") }}
+      <p class="docs-example__screen-indicator">
+        <span class="uw-display-block uw-display-none-sm">
+          <code>screen &lt; sm</code>
+        </span>
+        <span class="uw-display-none uw-display-block-sm uw-display-none-md">
+          <code>sm &le; screen &lt; md</code>
+        </span>
+        <span class="uw-display-none uw-display-block-md uw-display-none-lg">
+          <code>md &le; screen &lt; lg</code>
+        </span>
+        <span class="uw-display-none uw-display-block-lg">
+          <code>lg &le; screen</code>
+        </span>
+      </p>
+    {{ end }}
 
-  <div class="docs-example__live uw-prose">{{ .Inner }}</div>
+    <div class="docs-example__live uw-prose">{{ .Inner }}</div>
 
-  <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
-    {{ highlight (trim .Inner "\n") "html" "" }}
+    <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+      {{ highlight (trim .Inner "\n") "html" "" }}
+    </div>
   </div>
 </div>
