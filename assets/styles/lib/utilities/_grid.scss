@@ -12,6 +12,22 @@
   }
 }
 
+$alignments: (
+  stretch,
+  center,
+  flex-start,
+  flex-end,
+  baseline,
+  initial,
+  inherit
+);
+
+@each $alignment in $alignments {
+  .uw-grid-align-#{$alignment} {
+    align-items: $alignment;
+  }
+}
+
 @include any-with-class-prefix('uw-col') {
   max-width: 100%;
   flex-basis: 0;
