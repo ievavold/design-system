@@ -44,9 +44,9 @@ more than one piece of information at a time.
 
 {{< swatches title="Green" >}}
 
-{{< swatch name="Light Green"   hex="#81b184" text="dark"  >}}
-{{< swatch name="Medium Green"  hex="#2e7d32" text="light" >}}
-{{< swatch name="Dark Green"    hex="#1b4b1e" text="light" >}}
+{{< swatch name="Light Green"  hex="#81b184" text="dark"  >}}
+{{< swatch name="Medium Green" hex="#2e7d32" text="light" >}}
+{{< swatch name="Dark Green"   hex="#1b4b1e" text="light" >}}
 
 {{< /swatches >}}
 
@@ -68,15 +68,15 @@ more than one piece of information at a time.
 
 {{< swatches title="Red" >}}
 
-{{< swatch name="Light Red"     hex="#d79999" text="dark"  >}}
-{{< swatch name="Dark Red"      hex="#9b0000" text="light" >}}
+{{< swatch name="Light Red" hex="#d79999" text="dark"  >}}
+{{< swatch name="Dark Red"  hex="#9b0000" text="light" >}}
 
 {{< /swatches >}}
 
 {{< swatches title="Blue" >}}
 
-{{< swatch name="Light Blue"    hex="#9ac9dc" text="dark"  >}}
-{{< swatch name="Dark Blue"     hex="#034e6c" text="light" >}}
+{{< swatch name="Light Blue" hex="#9ac9dc" text="dark"  >}}
+{{< swatch name="Dark Blue"  hex="#034e6c" text="light" >}}
 
 {{< /swatches >}}
 
