@@ -32,6 +32,18 @@
   }
 }
 
+@mixin button-unstyled($text) {
+  color: $text;
+
+  &:hover {
+    color: darken($text, 8%);
+  }
+
+  &:active {
+    color: darken($text, 16%);
+  }
+}
+
 .uw-button-filled,
 .uw-button-outlined {
   margin-right: 0.5rem;
@@ -82,8 +94,7 @@
 }
 
 .uw-button-unstyled {
-  color: $color-accent;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
   border: 0;
   border-radius: 0;
@@ -97,18 +108,21 @@
   appearance: none;
   -webkit-appearance: none;
 
-  &:hover,
-  &:active {
-    background-color: transparent;
-    box-shadow: none;
-    text-decoration: underline;
+  &[disabled] {
+    background: transparent;
+    color: $color-gray-light;
+    pointer-events: none;
+  }
+}
+
+.uw-button-unstyled {
+  @include button-unstyled($color-accent);
+
+  &.uw-button--success {
+    @include button-unstyled($color-green-medium);
   }
 
-  &:hover {
-    color: darken($color-accent, 8%);
-  }
-
-  &:active {
-    color: darken($color-accent, 16%);
+  &.uw-button--danger {
+    @include button-unstyled($color-red-dark);
   }
 }
