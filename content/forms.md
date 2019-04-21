@@ -54,6 +54,21 @@ Buttons can be used to draw attention to important actions.
 
 {{< typeset >}}
 
+### Unstyled buttons
+
+{{< /typeset >}}
+
+{{< example >}}
+
+<button class="uw-button-unstyled">Default</button>
+<button class="uw-button-unstyled uw-button--success">Success</button>
+<button class="uw-button-unstyled uw-button--danger">Danger</button>
+<button class="uw-button-unstyled" disabled>Disabled</button>
+
+{{< /example >}}
+
+{{< typeset >}}
+
 ### Button-styled links
 
 In addition to the `<button>` elements used above, the `.uw-button` classes can

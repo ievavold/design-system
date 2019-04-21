@@ -78,3 +78,33 @@
     @include button-outlined($color-red-dark);
   }
 }
+
+.uw-button-unstyled {
+  color: $color-accent;
+  text-decoration: underline;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  display: inline-block;
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: darken($color-accent, 8%);
+  }
+
+  &:active {
+    color: darken($color-accent, 16%);
+  }
+}
