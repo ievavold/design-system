@@ -13,16 +13,29 @@
 
 
 
-<link rel="stylesheet" href="/design-system/styles/styles.min.f6c36533660234028ff9399e27a1672474d8209e62baf483fe2818d6de7a55db.css" media="screen">
+<link rel="stylesheet" href="/design-system/styles/styles.min.56049f77d524781d80ad8bd76937d79e5fb0deef4a6f7ea2fa962ffd36fb2260.css" media="screen">
 
   </head>
   <body>
     <main>
-      <header class="uw-border-bottom uw-pad-x-2 uw-mar-bottom-4">
+      <header class="uw-border-bottom uw-pad-y-2 uw-mar-bottom-4">
         <nav class="uw-container--lg uw-container--center">
-          <p class="uw-font-size-sm uw-mar-all-0">
-            <a href="/design-system">Design System</a>
-          </p>
+          <div class="uw-grid uw-grid-align-center">
+            <p class="uw-col uw-font-size-sm uw-mar-y-0">
+              <a href="/design-system">Design System</a>
+            </p>
+            <ul class="uw-col uw-list-inline uw-mar-y-0 uw-text-align-right">
+              
+                <li class="uw-list-inline-item"><a href="/design-system/colors/">Colors</a></li>
+              
+                <li class="uw-list-inline-item"><a href="/design-system/forms/">Forms</a></li>
+              
+                <li class="uw-list-inline-item"><a href="/design-system/layout/">Layout</a></li>
+              
+                <li class="uw-list-inline-item"><a href="/design-system/typography/">Typography</a></li>
+              
+            </ul>
+          </div>
         </nav>
       </header>
 
@@ -35,6 +48,8 @@
       
         <ul class="uw-font-size-sm">
           
+            <li><a href="#accessibility">Accessibility</a></li>
+          
             <li><a href="#identity-colors">Identity Colors</a></li>
           
             <li><a href="#utility-colors">Utility Colors</a></li>
@@ -46,10 +61,20 @@
   </div>
   <div class="uw-grid">
   <div class="uw-prose uw-col-8-md uw-col-6-lg">
-    <h2 id="identity-colors">Identity Colors</h2>
+    <h2 id="accessibility">Accessibility</h2>
 
-<p>Identity colors should be used for associating applications with the larger
-design system identity.
+<p>The colors in this design system must meet
+<a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">WCAG 2.1 Level AA</a> guidelines
+(a contrast ratio of at least 4.5:1) for <code>14px</code> to <code>16px</code> text/icons.</p>
+
+<p>All color samples are accompanied by a foreground color that meets or exceeds
+WCAG 2.1 Level AA guidelines.</p>
+
+<h2 id="identity-colors">Identity Colors</h2>
+
+<p>Identity colors associate individual applications with the larger design system
+identity.</p>
+
   </div>
 </div>
 
@@ -71,7 +96,7 @@ design system identity.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>UW Red</strong></p>
       <p>
         <code>#c50505</code>
@@ -99,7 +124,7 @@ design system identity.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>UW Blue</strong></p>
       <p>
         <code>#0479a8</code>
@@ -150,7 +175,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Light Green</strong></p>
       <p>
         <code>#81b184</code>
@@ -178,7 +203,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Medium Green</strong></p>
       <p>
         <code>#2e7d32</code>
@@ -206,7 +231,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Dark Green</strong></p>
       <p>
         <code>#1b4b1e</code>
@@ -246,7 +271,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Light Yellow</strong></p>
       <p>
         <code>#ffe082</code>
@@ -274,7 +299,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Medium Yellow</strong></p>
       <p>
         <code>#ffc82c</code>
@@ -302,7 +327,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Dark Yellow</strong></p>
       <p>
         <code>#f8b700</code>
@@ -342,7 +367,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Light Orange</strong></p>
       <p>
         <code>#ffb74d</code>
@@ -370,7 +395,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Medium Orange</strong></p>
       <p>
         <code>#ff9800</code>
@@ -399,7 +424,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Dark Orange</strong></p>
       <p>
         <code>#ef6c00</code>
@@ -439,7 +464,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Light Red</strong></p>
       <p>
         <code>#d79999</code>
@@ -467,7 +492,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Dark Red</strong></p>
       <p>
         <code>#9b0000</code>
@@ -507,7 +532,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Light Blue</strong></p>
       <p>
         <code>#9ac9dc</code>
@@ -535,7 +560,7 @@ more than one piece of information at a time.
         
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-y-2">
+    <div class="docs-swatch__description uw-pad-x-2">
       <p><strong>Dark Blue</strong></p>
       <p>
         <code>#034e6c</code>
@@ -559,7 +584,7 @@ more than one piece of information at a time.
 
       </article>
 
-      <footer class="uw-border-top uw-pad-x-2 uw-mar-top-4">
+      <footer class="uw-border-top uw-pad-y-2 uw-mar-top-4">
         <div class="uw-container--lg uw-container--center">
           <p class="uw-text-align-center"><em>A copyright notice</em></p>
         </div>
