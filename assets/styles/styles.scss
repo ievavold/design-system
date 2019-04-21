@@ -104,4 +104,8 @@
       background: $color-black;
     }
   }
+
+  &__description button {
+    float: right;
+  }
 }

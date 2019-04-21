@@ -15,9 +15,18 @@
         {{ end }}
       </div>
     </div>
-    <div class="docs-swatch__description uw-pad-left-2">
+    <div class="docs-swatch__description uw-pad-y-2">
       <p><strong>{{ $name }}</strong></p>
-      <p><code>{{ $hex }}</code></p>
+      <p>
+        <code>{{ $hex }}</code>
+        <button
+          class="uw-button-unstyled docs-uses-clipboard"
+          type="button"
+          data-clipboard-text="{{ $hex }}"
+          aria-label="Copy {{ $name }} hex code to clipboard">
+          Copy
+        </button>
+      </p>
     </div>
   </div>
 </div>

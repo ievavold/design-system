@@ -39,5 +39,11 @@
         </div>
       </footer>
     </main>
+
+    {{ $clipboard := resources.Get "scripts/vendor/clipboard.2.0.4.min.js" }}
+    <script src="{{ $clipboard.Permalink }}"></script>
+    <script>
+      new ClipboardJS('.docs-uses-clipboard');
+    </script>
   </body>
 </html>
