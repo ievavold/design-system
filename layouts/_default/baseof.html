@@ -2,16 +2,10 @@
 <html lang="en">
   <head>
     <title>{{ block "title" . }}{{ .Page.Title }} - {{ .Site.Title }}{{ end }}</title>
-
-    {{ $fonts := resources.Get "styles/fonts.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $fonts.Permalink }}" media="screen">
-
-    {{ $opts := (dict "includePaths" (slice "node_modules")) }}
-    {{ $styles := resources.Get "styles/styles.scss" | resources.ToCSS $opts | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A design system built for fast, responsive, and accessible websites.">
+
+    {{ partial "styles.html" }}
   </head>
   <body>
     <main>
@@ -40,10 +34,6 @@
       </footer>
     </main>
 
-    {{ $clipboard := resources.Get "scripts/vendor/clipboard.2.0.4.min.js" | fingerprint }}
-    <script src="{{ $clipboard.Permalink }}"></script>
-    <script>
-      new ClipboardJS('.docs-uses-clipboard');
-    </script>
+    {{ partial "scripts.html" }}
   </body>
 </html>
