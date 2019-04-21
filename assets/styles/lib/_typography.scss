@@ -1,10 +1,12 @@
 @import 'variables/typography';
 @import 'variables/breakpoints';
 @import 'functions/mixins';
+@import 'variables/colors';
 
 body {
   font-size: 16px;
   font-family: $font-family-sans;
+  color: $color-black;
 }
 
 code,
