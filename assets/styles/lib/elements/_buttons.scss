@@ -32,7 +32,7 @@
   }
 }
 
-@mixin button-unstyled($text) {
+@mixin button-plain($text) {
   color: $text;
 
   &:hover {
@@ -93,7 +93,7 @@
   }
 }
 
-.uw-button-unstyled {
+.uw-button-plain {
   text-decoration: none;
   background-color: transparent;
   border: 0;
@@ -115,14 +115,14 @@
   }
 }
 
-.uw-button-unstyled {
-  @include button-unstyled($color-accent);
+.uw-button-plain {
+  @include button-plain($color-accent);
 
   &.uw-button--success {
-    @include button-unstyled($color-green-medium);
+    @include button-plain($color-green-medium);
   }
 
   &.uw-button--danger {
-    @include button-unstyled($color-red-dark);
+    @include button-plain($color-red-dark);
   }
 }

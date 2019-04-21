@@ -54,16 +54,16 @@ Buttons can be used to draw attention to important actions.
 
 {{< typeset >}}
 
-### Unstyled buttons
+### Plain buttons
 
 {{< /typeset >}}
 
 {{< example >}}
 
-<button class="uw-button-unstyled">Default</button>
-<button class="uw-button-unstyled uw-button--success">Success</button>
-<button class="uw-button-unstyled uw-button--danger">Danger</button>
-<button class="uw-button-unstyled" disabled>Disabled</button>
+<button class="uw-button-plain">Default</button>
+<button class="uw-button-plain uw-button--success">Success</button>
+<button class="uw-button-plain uw-button--danger">Danger</button>
+<button class="uw-button-plain" disabled>Disabled</button>
 
 {{< /example >}}
 
