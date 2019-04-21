@@ -1,5 +1,9 @@
 {
   "prettier.proseWrap": "always",
   "prettier.disableLanguages": ["html"],
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "files.exclude": {
+    "**/public": true,
+    "**/resources": true
+  }
 }
