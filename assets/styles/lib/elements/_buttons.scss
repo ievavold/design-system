@@ -46,6 +46,8 @@
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
 
   &[disabled] {
     background: transparent;
@@ -92,6 +94,8 @@
   text-align: left;
   cursor: pointer;
   display: inline-block;
+  appearance: none;
+  -webkit-appearance: none;
 
   &:hover,
   &:active {
