@@ -1,11 +1,21 @@
 ---
 title: Colors
 links:
+  - Accessibility
   - Identity Colors
   - Utility Colors
 ---
 
 {{< typeset >}}
+
+## Accessibility
+
+The colors in this design system must meet
+[WCAG 2.1 Level AA](https://www.w3.org/TR/WCAG21/#contrast-minimum) guidelines
+(a contrast ratio of at least 4.5:1) for `14px` to `16px` text/icons.
+
+All color samples are accompanied by a foreground color that meets or exceeds
+WCAG 2.1 Level AA guidelines.
 
 ## Identity Colors
 
