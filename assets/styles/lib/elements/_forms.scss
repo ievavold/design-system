@@ -41,11 +41,11 @@
   }
 
   &__input:disabled + &__label {
-    color: $color-gray-light;
+    color: $color-gray-medium;
 
     &:before {
-      background: $color-gray-lighter;
-      box-shadow: 0 0 0 2px $color-gray-light;
+      background: $color-gray-light;
+      box-shadow: 0 0 0 2px $color-gray-medium;
       cursor: not-allowed;
     }
   }

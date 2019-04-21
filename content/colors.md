@@ -80,6 +80,14 @@ more than one piece of information at a time.
 
 {{< /swatches >}}
 
+{{< swatches title="Gray" >}}
+
+{{< swatch name="Light Gray"  hex="#dfdfdf" text="dark" >}}
+{{< swatch name="Medium Gray" hex="#adadad" text="dark" >}}
+{{< swatch name="Dark Gray"   hex="#494949" text="light" >}}
+
+{{< /swatches >}}
+
 {{< typeset >}}
 
 ## Foreground colors

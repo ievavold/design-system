@@ -63,8 +63,8 @@
 
   &[disabled] {
     background: transparent;
-    border-color: $color-gray-light;
-    color: $color-gray-light;
+    border-color: $color-gray-medium;
+    color: $color-gray-medium;
     pointer-events: none;
   }
 }
@@ -110,7 +110,7 @@
 
   &[disabled] {
     background: transparent;
-    color: $color-gray-light;
+    color: $color-gray-medium;
     pointer-events: none;
   }
 }
