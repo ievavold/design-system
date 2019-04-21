@@ -36,6 +36,10 @@
           
             <li><a href="#buttons">Buttons</a></li>
           
+            <li><a href="#checkboxes">Checkboxes</a></li>
+          
+            <li><a href="#radio-buttons">Radio Buttons</a></li>
+          
         </ul>
       
     </div>
@@ -47,7 +51,7 @@
 
 <p>Buttons can be used to draw attention to important actions.</p>
 
-<h3 id="when-to-use-a-button">When to use a <code>&lt;button&gt;</code></h3>
+<h3 id="when-to-use-a-button">When to use a button</h3>
 
 <ul>
 <li>Important actions like signing up</li>
@@ -122,6 +126,36 @@
 
 <div class="uw-grid">
   <div class="uw-prose uw-col-8-md uw-col-6-lg">
+    <h3 id="unstyled-buttons">Unstyled buttons</h3>
+  </div>
+</div>
+
+
+<div class="uw-grid">
+  <div class="docs-example uw-col-12">
+    
+
+    <div class="docs-example__live uw-prose">
+
+<button class="uw-button-unstyled">Default</button>
+<button class="uw-button-unstyled uw-button--success">Success</button>
+<button class="uw-button-unstyled uw-button--danger">Danger</button>
+<button class="uw-button-unstyled" disabled>Disabled</button>
+
+</div>
+
+    <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+      <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-unstyled&#34;</span><span class="p">&gt;</span>Default<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-unstyled uw-button--success&#34;</span><span class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-unstyled uw-button--danger&#34;</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-unstyled&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="uw-grid">
+  <div class="uw-prose uw-col-8-md uw-col-6-lg">
     <h3 id="button-styled-links">Button-styled links</h3>
 
 <p>In addition to the <code>&lt;button&gt;</code> elements used above, the <code>.uw-button</code> classes can
@@ -140,55 +174,8 @@ ignores the attribute and continues to respond to all mouse and keyboard
 inputs.</li>
 </ul>
 
-  </div>
-</div>
+<h2 id="checkboxes">Checkboxes</h2>
 
-
-<div class="uw-grid">
-  <div class="docs-example uw-col-12">
-    
-
-    <div class="docs-example__live uw-prose">
-
-<a href="#" class="uw-button-filled">Default</a>
-<a href="#" class="uw-button-filled uw-button--success">Success</a>
-<a href="#" class="uw-button-filled uw-button--danger">Danger</a>
-
-</div>
-
-    <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
-      <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-filled&#34;</span><span class="p">&gt;</span>Default<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-filled uw-button--success&#34;</span><span class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-filled uw-button--danger&#34;</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
-    </div>
-  </div>
-</div>
-
-
-<div class="uw-grid">
-  <div class="docs-example uw-col-12">
-    
-
-    <div class="docs-example__live uw-prose">
-
-<a href="#" class="uw-button-outlined">Default</a>
-<a href="#" class="uw-button-outlined uw-button--success">Success</a>
-<a href="#" class="uw-button-outlined uw-button--danger">Danger</a>
-
-</div>
-
-    <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
-      <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-outlined&#34;</span><span class="p">&gt;</span>Default<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-outlined uw-button--success&#34;</span><span class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button-outlined uw-button--danger&#34;</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
-    </div>
-  </div>
-</div>
-
-
-<div class="uw-grid">
-  <div class="uw-prose uw-col-8-md uw-col-6-lg">
-    <h2 id="checkboxes">Checkboxes</h2>
   </div>
 </div>
 
@@ -315,5 +302,11 @@ inputs.</li>
         </div>
       </footer>
     </main>
+
+    
+    <script src="/design-system/scripts/vendor/clipboard.2.0.4.min.js"></script>
+    <script>
+      new ClipboardJS('.docs-uses-clipboard');
+    </script>
   </body>
 </html>
