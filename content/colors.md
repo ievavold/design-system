@@ -4,6 +4,7 @@ links:
   - Accessibility
   - Identity Colors
   - Utility Colors
+  - Foreground Colors
 ---
 
 {{< typeset >}}
@@ -76,5 +77,22 @@ more than one piece of information at a time.
 
 {{< swatch name="Light Blue"    hex="#9ac9dc" text="dark"  >}}
 {{< swatch name="Dark Blue"     hex="#034e6c" text="light" >}}
+
+{{< /swatches >}}
+
+{{< typeset >}}
+
+## Foreground colors
+
+Foreground colors are used for text and icons. Make sure when selecting a
+foreground color that it has enough contrast with its background. Identity and
+utility color samples indicate the appropriate foreground color to use.
+
+{{< /typeset >}}
+
+{{< swatches >}}
+
+{{< swatch name="Light Foreground" hex="#f9f9f9" >}}
+{{< swatch name="Dark Foreground" hex="#282828" >}}
 
 {{< /swatches >}}
