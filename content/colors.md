@@ -35,8 +35,8 @@ identity.
 
 ## Utility Colors
 
-Utility colors is designed to provide creative flexibility while complementing
-the identity colors. They should be used sparingly and never draw the eye to
+Utility colors provide creative flexibility while complementing the identity
+colors. Utility colors should be used sparingly and should never draw the eye to
 more than one piece of information at a time.
 
 {{< /typeset >}}
