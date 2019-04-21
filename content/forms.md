@@ -13,7 +13,7 @@ links:
 
 Buttons can be used to draw attention to important actions.
 
-### When to use a `<button>`
+### When to use a button
 
 - Important actions like signing up
 - Opening or closing modals and dialogs
