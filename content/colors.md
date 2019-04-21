@@ -90,7 +90,7 @@ more than one piece of information at a time.
 
 {{< typeset >}}
 
-## Foreground colors
+## Foreground Colors
 
 Foreground colors are used for text and icons. Make sure when selecting a
 foreground color that it has enough contrast with its background. Identity and

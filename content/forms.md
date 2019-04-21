@@ -13,18 +13,18 @@ links:
 
 Buttons can be used to draw attention to important actions.
 
-### When to use a button
+### When to Use a Button
 
 - Important actions like signing up
 - Opening or closing modals and dialogs
 - Submitting data to the server
 
-### When to use a link
+### When to Use a Link
 
 - Navigating between pages
 - Less popular or less important actions
 
-### Filled variations
+### Filled Variations
 
 {{< /typeset >}}
 
@@ -39,7 +39,7 @@ Buttons can be used to draw attention to important actions.
 
 {{< typeset >}}
 
-### Outlined variations
+### Outlined Variations
 
 {{< /typeset >}}
 
@@ -54,7 +54,7 @@ Buttons can be used to draw attention to important actions.
 
 {{< typeset >}}
 
-### Plain buttons
+### Plain Buttons
 
 {{< /typeset >}}
 
@@ -69,7 +69,7 @@ Buttons can be used to draw attention to important actions.
 
 {{< typeset >}}
 
-### Button-styled links
+### Button-Styled Links
 
 In addition to the `<button>` elements used above, the `.uw-button` classes can
 be used to style `<a>` tags.
@@ -117,7 +117,7 @@ behavioral differences between the two elements, even if they look similar:
 
 {{< typeset >}}
 
-## Radio buttons
+## Radio Buttons
 
 {{< /typeset >}}
 
