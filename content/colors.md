@@ -9,8 +9,8 @@ links:
 
 ## Identity Colors
 
-Identity colors should be used for associating applications with the larger
-design system identity.
+Identity colors associate individual applications with the larger design system
+identity.
 
 {{< /typeset >}}
 
