@@ -3,4 +3,3 @@ title = "Design System"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
-staticDir = ["static", "../src/fonts"]
