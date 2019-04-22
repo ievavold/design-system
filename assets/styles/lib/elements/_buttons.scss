@@ -62,9 +62,7 @@
   -webkit-appearance: none;
 
   &[disabled] {
-    background: transparent;
-    border-color: $color-gray-medium;
-    color: $color-gray-medium;
+    color: $color-gray-dark;
     pointer-events: none;
   }
 }
@@ -79,6 +77,11 @@
   &.uw-button--danger {
     @include button-filled($color-red-dark, $color-white);
   }
+
+  &[disabled] {
+    background: $color-gray-light;
+    border-color: $color-gray-light;
+  }
 }
 
 .uw-button-outlined {
@@ -90,6 +93,11 @@
 
   &.uw-button--danger {
     @include button-outlined($color-red-dark);
+  }
+
+  &[disabled] {
+    background: transparent;
+    border-color: $color-gray-medium;
   }
 }
 
@@ -110,7 +118,7 @@
 
   &[disabled] {
     background: transparent;
-    color: $color-gray-medium;
+    color: $color-gray-dark;
     pointer-events: none;
   }
 }
