@@ -3,7 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/design-system/components/alerts/</loc>
+  </url>
+  
+  <url>
     <loc>/design-system/colors/</loc>
+  </url>
+  
+  <url>
+    <loc>/design-system/components/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
