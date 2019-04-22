@@ -20,7 +20,7 @@ links:
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
     <p class="uw-alert__title">Info title</p>
-    <div class="uw-alert__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
+    <p class="uw-alert__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
   </div>
 </div>
 
@@ -28,7 +28,7 @@ links:
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
     <p class="uw-alert__title">Success title</p>
-    <div class="uw-alert__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
+    <p class="uw-alert__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
   </div>
 </div>
 
@@ -36,7 +36,7 @@ links:
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
     <p class="uw-alert__title">Warning title</p>
-    <div class="uw-alert__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
+    <p class="uw-alert__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
   </div>
 </div>
 
@@ -44,7 +44,7 @@ links:
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
     <p class="uw-alert__title">Danger title</p>
-    <div class="uw-alert__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
+    <p class="uw-alert__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
   </div>
 </div>
 

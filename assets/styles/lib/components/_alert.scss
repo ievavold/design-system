@@ -34,13 +34,15 @@ $alert-icon-size: 2rem;
 
   &__title {
     margin: 0;
+    padding-top: 4px;
     font-weight: 700;
     font-size: $type-scale-sm;
-    line-height: $alert-icon-size;
+    line-height: 1.2;
   }
 
   &__description {
-    margin: 0;
+    margin: 0.5rem 0 0 0;
+    line-height: 1.5;
 
     &:not(.uw-prose) > :only-child {
       margin-top: 0;
