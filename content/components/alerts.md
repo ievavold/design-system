@@ -5,6 +5,7 @@ summary:
   changes.
 links:
   - Block Alerts
+  - Alert Groups
   - Alert Descriptions
 ---
 
@@ -94,6 +95,41 @@ particular input or action.
     </div>
   </div>
 </div>
+
+{{< /example >}}
+
+{{< typeset >}}
+
+## Alert Groups
+
+Alert groups are useful when a single action produces multiple alerts. The alert
+group indicates that a list of alerts was produced by a single action.
+
+{{< /typeset >}}
+
+{{< example >}}
+
+<ul class="uw-alert-group">
+  <li class="uw-alert uw-alert--danger">
+    <div class="uw-alert__icon"></div>
+    <div class="uw-alert__info">
+      <p class="uw-alert__title">Danger title</p>
+      <div class="uw-alert__description">This prevented a successful submission.</div>
+    </div>
+  </li>
+  <li class="uw-alert uw-alert--warning">
+    <div class="uw-alert__icon"></div>
+    <div class="uw-alert__info">
+      <p class="uw-alert__title">Warning title</p>
+    </div>
+  </li>
+  <li class="uw-alert uw-alert--warning">
+    <div class="uw-alert__icon"></div>
+    <div class="uw-alert__info">
+      <p class="uw-alert__title">Another warning title</p>
+    </div>
+  </li>
+</ul>
 
 {{< /example >}}
 
