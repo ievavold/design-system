@@ -89,6 +89,11 @@ about what has happened and if there is any response required from the user.
 
 {{< typeset >}}
 
+### Short Descriptions
+
+If the alert description is a single snippet of text, it doesn't matter if the
+text is wrapped by a paragraph tag. the formatting will be the same.
+
 ### Multiline Descriptions
 
 The alert component also supports much longer descriptions with formatted text,
