@@ -19,6 +19,8 @@ Block alerts should be used when the status information being shown is
 representative of the entire app's status and **is not** closely linked to a
 particular input or action.
 
+### Info Alerts
+
 {{< /typeset >}}
 
 {{< example >}}
@@ -26,39 +28,69 @@ particular input or action.
 <div class="uw-alert uw-alert--info">
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
-    <p class="uw-alert__title">Info title</p>
+    <p class="uw-alert__title">Alert title</p>
     <div class="uw-alert__description">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+      <p>Optional description</p>
     </div>
   </div>
 </div>
+
+{{< /example >}}
+
+{{< typeset >}}
+
+### Success Alerts
+
+{{< /typeset >}}
+
+{{< example >}}
 
 <div class="uw-alert uw-alert--success">
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
-    <p class="uw-alert__title">Success title</p>
+    <p class="uw-alert__title">Alert title</p>
     <div class="uw-alert__description">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+      <p>Optional description</p>
     </div>
   </div>
 </div>
+
+{{< /example >}}
+
+{{< typeset >}}
+
+### Warning Alerts
+
+{{< /typeset >}}
+
+{{< example >}}
 
 <div class="uw-alert uw-alert--warning">
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
-    <p class="uw-alert__title">Warning title</p>
+    <p class="uw-alert__title">Alert title</p>
     <div class="uw-alert__description">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+      <p>Optional description</p>
     </div>
   </div>
 </div>
 
+{{< /example >}}
+
+{{< typeset >}}
+
+### Danger Alerts
+
+{{< /typeset >}}
+
+{{< example >}}
+
 <div class="uw-alert uw-alert--danger">
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
-    <p class="uw-alert__title">Danger title</p>
+    <p class="uw-alert__title">Alert title</p>
     <div class="uw-alert__description">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+      <p>Optional description</p>
     </div>
   </div>
 </div>
