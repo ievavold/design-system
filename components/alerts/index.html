@@ -13,7 +13,7 @@
 
 
 
-<link rel="stylesheet" href="/design-system/styles/styles.min.1679a928ffbafd38506acb182e66782c70131cbfbe3d98c3ea4ddb57c005cf2c.css" media="screen">
+<link rel="stylesheet" href="/design-system/styles/styles.min.2c58189c9d7bbec72cea521ea781427e387ed3d2cc54d95775e53417bf3321da.css" media="screen">
 
   </head>
   <body>
@@ -39,6 +39,8 @@
           
             <li><a href="#block-alerts">Block Alerts</a></li>
           
+            <li><a href="#alert-groups">Alert Groups</a></li>
+          
             <li><a href="#alert-descriptions">Alert Descriptions</a></li>
           
         </ul>
@@ -57,6 +59,8 @@ application status information to the user.</p>
 representative of the entire app&rsquo;s status and <strong>is not</strong> closely linked to a
 particular input or action.</p>
 
+<h3 id="info-alerts">Info Alerts</h3>
+
   </div>
 </div>
 
@@ -70,39 +74,9 @@ particular input or action.</p>
 <div class="uw-alert uw-alert--info">
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
-    <p class="uw-alert__title">Info title</p>
+    <p class="uw-alert__title">Alert title</p>
     <div class="uw-alert__description">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-    </div>
-  </div>
-</div>
-
-<div class="uw-alert uw-alert--success">
-  <div class="uw-alert__icon"></div>
-  <div class="uw-alert__info">
-    <p class="uw-alert__title">Success title</p>
-    <div class="uw-alert__description">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-    </div>
-  </div>
-</div>
-
-<div class="uw-alert uw-alert--warning">
-  <div class="uw-alert__icon"></div>
-  <div class="uw-alert__info">
-    <p class="uw-alert__title">Warning title</p>
-    <div class="uw-alert__description">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-    </div>
-  </div>
-</div>
-
-<div class="uw-alert uw-alert--danger">
-  <div class="uw-alert__icon"></div>
-  <div class="uw-alert__info">
-    <p class="uw-alert__title">Danger title</p>
-    <div class="uw-alert__description">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+      <p>Optional description</p>
     </div>
   </div>
 </div>
@@ -113,42 +87,199 @@ particular input or action.</p>
       <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert uw-alert--info&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__icon&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__info&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__title&#34;</span><span class="p">&gt;</span>Info title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__title&#34;</span><span class="p">&gt;</span>Alert title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__description&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert uw-alert--success&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__icon&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__info&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__title&#34;</span><span class="p">&gt;</span>Success title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__description&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert uw-alert--warning&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__icon&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__info&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__title&#34;</span><span class="p">&gt;</span>Warning title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__description&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert uw-alert--danger&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__icon&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__info&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__title&#34;</span><span class="p">&gt;</span>Danger title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__description&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Optional description<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="uw-grid">
+  <div class="uw-prose uw-col-8-md uw-col-6-lg">
+    <h3 id="success-alerts">Success Alerts</h3>
+  </div>
+</div>
+
+
+<div class="uw-grid">
+  <div class="docs-example uw-col-12">
+    
+
+    <div class="docs-example__live uw-prose">
+
+<div class="uw-alert uw-alert--success">
+  <div class="uw-alert__icon"></div>
+  <div class="uw-alert__info">
+    <p class="uw-alert__title">Alert title</p>
+    <div class="uw-alert__description">
+      <p>Optional description</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+    <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+      <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert uw-alert--success&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__icon&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__info&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__title&#34;</span><span class="p">&gt;</span>Alert title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__description&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Optional description<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="uw-grid">
+  <div class="uw-prose uw-col-8-md uw-col-6-lg">
+    <h3 id="warning-alerts">Warning Alerts</h3>
+  </div>
+</div>
+
+
+<div class="uw-grid">
+  <div class="docs-example uw-col-12">
+    
+
+    <div class="docs-example__live uw-prose">
+
+<div class="uw-alert uw-alert--warning">
+  <div class="uw-alert__icon"></div>
+  <div class="uw-alert__info">
+    <p class="uw-alert__title">Alert title</p>
+    <div class="uw-alert__description">
+      <p>Optional description</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+    <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+      <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert uw-alert--warning&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__icon&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__info&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__title&#34;</span><span class="p">&gt;</span>Alert title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__description&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Optional description<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="uw-grid">
+  <div class="uw-prose uw-col-8-md uw-col-6-lg">
+    <h3 id="danger-alerts">Danger Alerts</h3>
+  </div>
+</div>
+
+
+<div class="uw-grid">
+  <div class="docs-example uw-col-12">
+    
+
+    <div class="docs-example__live uw-prose">
+
+<div class="uw-alert uw-alert--danger">
+  <div class="uw-alert__icon"></div>
+  <div class="uw-alert__info">
+    <p class="uw-alert__title">Alert title</p>
+    <div class="uw-alert__description">
+      <p>Optional description</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+    <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+      <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert uw-alert--danger&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__icon&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__info&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__title&#34;</span><span class="p">&gt;</span>Alert title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__description&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Optional description<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="uw-grid">
+  <div class="uw-prose uw-col-8-md uw-col-6-lg">
+    <h2 id="alert-groups">Alert Groups</h2>
+
+<p>Alert groups are useful when a single action produces multiple alerts. The alert
+group indicates that a list of alerts was produced by a single action.
+  </div>
+</div>
+
+
+<div class="uw-grid">
+  <div class="docs-example uw-col-12">
+    
+
+    <div class="docs-example__live uw-prose">
+
+<ul class="uw-alert-group">
+  <li class="uw-alert uw-alert--danger">
+    <div class="uw-alert__icon"></div>
+    <div class="uw-alert__info">
+      <p class="uw-alert__title">Danger title</p>
+      <div class="uw-alert__description">This prevented a successful submission.</div>
+    </div>
+  </li>
+  <li class="uw-alert uw-alert--warning">
+    <div class="uw-alert__icon"></div>
+    <div class="uw-alert__info">
+      <p class="uw-alert__title">Warning title</p>
+    </div>
+  </li>
+  <li class="uw-alert uw-alert--warning">
+    <div class="uw-alert__icon"></div>
+    <div class="uw-alert__info">
+      <p class="uw-alert__title">Another warning title</p>
+    </div>
+  </li>
+</ul>
+
+</div>
+
+    <div class="docs-example__code uw-border uw-border-radius uw-mar-top-2">
+      <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert-group&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert uw-alert--danger&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__icon&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__info&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__title&#34;</span><span class="p">&gt;</span>Danger title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__description&#34;</span><span class="p">&gt;</span>This prevented a successful submission.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert uw-alert--warning&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__icon&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__info&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__title&#34;</span><span class="p">&gt;</span>Warning title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert uw-alert--warning&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__icon&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__info&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-alert__title&#34;</span><span class="p">&gt;</span>Another warning title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
     </div>
   </div>
 </div>
