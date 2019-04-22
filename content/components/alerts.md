@@ -20,7 +20,9 @@ links:
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
     <p class="uw-alert__title">Info title</p>
-    <p class="uw-alert__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+    <div class="uw-alert__description">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+    </div>
   </div>
 </div>
 
@@ -28,7 +30,9 @@ links:
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
     <p class="uw-alert__title">Success title</p>
-    <p class="uw-alert__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+    <div class="uw-alert__description">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+    </div>
   </div>
 </div>
 
@@ -36,7 +40,9 @@ links:
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
     <p class="uw-alert__title">Warning title</p>
-    <p class="uw-alert__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+    <div class="uw-alert__description">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+    </div>
   </div>
 </div>
 
@@ -44,7 +50,9 @@ links:
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
     <p class="uw-alert__title">Danger title</p>
-    <p class="uw-alert__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+    <div class="uw-alert__description">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+    </div>
   </div>
 </div>
 
@@ -86,10 +94,6 @@ about what has happened and if there is any response required from the user.
 The alert component also supports much longer descriptions with formatted text,
 links, and even buttons.
 
-If an alert has a description that is more complex than a single paragraph, the
-`.uw-prose` class should be added to the description element for better
-readability.
-
 {{< /typeset >}}
 
 {{< example >}}
@@ -98,16 +102,17 @@ readability.
   <div class="uw-alert__icon"></div>
   <div class="uw-alert__info">
     <p class="uw-alert__title">Unable to load</p>
-    <div class="uw-alert__description uw-prose">
+    <div class="uw-alert__description">
       <p>
-        Nunc ullamcorper metus ac est interdum vulputate. Morbi velit risus,
-        interdum non ante et, venenatis dictum dolor. Sed dapibus rutrum gravida.
+        Mauris posuere, arcu a tincidunt tempor, ex justo semper
+        augue, et ultricies urna eros at odio. Praesent cursus
+        erat vitae dolor tempor, sit amet auctor arcu commodo.
       </p>
-      <p>
-        Mauris posuere, arcu a tincidunt tempor, ex justo semper augue, et
-        ultricies urna eros at odio. Praesent cursus erat vitae dolor tempor,
-        sit amet auctor arcu commodo.
-      </p>
+      <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </ul>
       <button class="uw-button-filled">Try again</button>
     </div>
   </div>
