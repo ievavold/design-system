@@ -4,13 +4,20 @@ summary:
   An alert keeps users informed of important and sometimes time-sensitive
   changes.
 links:
-  - Full-Width Alerts
+  - Block Alerts
   - Alert Descriptions
 ---
 
 {{< typeset >}}
 
-## Full-Width Alerts
+## Block Alerts
+
+Block alerts take up the width of the parent element and prominently display
+application status information to the user.
+
+Block alerts should be used when the status information being shown is
+representative of the entire app's status and **is not** closely linked to a
+particular input or action.
 
 {{< /typeset >}}
 
