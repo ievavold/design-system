@@ -1,6 +1,0 @@
-{{ $fonts := resources.Get "styles/fonts.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $fonts.Permalink }}" media="screen" />
-
-{{ $opts := (dict "includePaths" (slice "node_modules")) }}
-{{ $styles := resources.Get "styles/styles.scss" | toCSS $opts | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">

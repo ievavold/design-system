@@ -4,3 +4,4 @@
 /public
 /.cache
 /dist
+/static/site.css

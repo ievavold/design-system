@@ -3,15 +3,19 @@
   "version": "0.1.0",
   "description": "a design system",
   "scripts": {
-    "start": "hugo server",
-    "clean": "rimraf public",
-    "deploy": "npm run clean && hugo -b /design-system && gh-pages -d public"
+    "start": "npm run clean && concurrently 'gulp' 'hugo server'",
+    "clean": "rimraf public static/site.css",
+    "deploy": "npm run clean && gulp buildSiteStyles && hugo -b /design-system && gh-pages -d public"
   },
   "repository": "github:ievavold/design-system",
   "author": "Isaac Evavold <ievavold@wisc.edu>",
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^4.1.0",
     "gh-pages": "^2.0.1",
+    "gulp": "^4.0.1",
+    "gulp-cli": "^2.2.0",
+    "gulp-dart-sass": "^0.9.1",
     "normalize.css": "^8.0.1",
     "rimraf": "^2.6.3",
     "sass": "^1.18.0"
