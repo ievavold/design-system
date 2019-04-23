@@ -57,3 +57,9 @@ exports.default = parallel(
   ),
   series(exports.buildSiteStyles, exports.watchSiteStyles)
 );
+
+exports.buildAll = parallel(
+  exports.buildVendorScripts,
+  exports.buildSiteScripts,
+  exports.buildSiteStyles
+);

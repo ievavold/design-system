@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm run clean && concurrently 'gulp' 'hugo server'",
     "clean": "rimraf public static/site.css static/vendor.js static/site.js",
-    "deploy": "npm run clean && gulp buildSiteStyles && hugo -b /design-system && gh-pages -d public"
+    "deploy": "npm run clean && gulp buildAll && hugo -b /design-system && gh-pages -d public"
   },
   "repository": "github:ievavold/design-system",
   "author": "Isaac Evavold <ievavold@wisc.edu>",
