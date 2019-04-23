@@ -4,4 +4,7 @@
 /public
 /.cache
 /dist
+/.rpt2_cache
 /static/site.css
+/static/site.js
+/static/vendor.js

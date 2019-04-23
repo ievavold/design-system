@@ -1,5 +1,0 @@
-{{ $vendor := slice (resources.Get "scripts/vendor/clipboard.2.0.4.min.js") | resources.Concat "vendor.js" | minify | fingerprint }}
-<script src="{{ $vendor.Permalink }}"></script>
-
-{{ $custom := resources.Get "scripts/scripts.js" | minify | fingerprint }}
-<script src="{{ $custom.Permalink }}"></script>

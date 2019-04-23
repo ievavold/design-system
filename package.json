@@ -4,20 +4,26 @@
   "description": "a design system",
   "scripts": {
     "start": "npm run clean && concurrently 'gulp' 'hugo server'",
-    "clean": "rimraf public static/site.css",
+    "clean": "rimraf public static/site.css static/vendor.js static/site.js",
     "deploy": "npm run clean && gulp buildSiteStyles && hugo -b /design-system && gh-pages -d public"
   },
   "repository": "github:ievavold/design-system",
   "author": "Isaac Evavold <ievavold@wisc.edu>",
   "license": "MIT",
   "devDependencies": {
+    "@types/clipboard": "^2.0.1",
+    "clipboard": "^2.0.4",
     "concurrently": "^4.1.0",
     "gh-pages": "^2.0.1",
     "gulp": "^4.0.1",
     "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
     "gulp-dart-sass": "^0.9.1",
     "normalize.css": "^8.0.1",
     "rimraf": "^2.6.3",
-    "sass": "^1.18.0"
+    "rollup": "^1.10.1",
+    "rollup-plugin-typescript2": "^0.20.1",
+    "sass": "^1.18.0",
+    "typescript": "^3.4.4"
   }
 }
