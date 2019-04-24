@@ -24,8 +24,9 @@ within the application's framework.
 
 {{< example >}}
 
-<button data-modal-trigger="example-modal" class="uw-button-filled">Show
-modal</button>
+<button data-modal-trigger="example-modal" class="uw-button-filled">
+  Show modal
+</button>
 
 <div
   id="example-modal"
