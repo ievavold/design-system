@@ -1,48 +1,5 @@
 @import '../variables/borders';
-
-@mixin button-filled($background, $text: white) {
-  background: $background;
-  border-color: $background;
-  color: $text;
-
-  &:hover {
-    background: darken($background, 8%);
-    border-color: darken($background, 8%);
-  }
-
-  &:active {
-    background: darken($background, 16%);
-    border-color: darken($background, 16%);
-  }
-}
-
-@mixin button-outlined($border) {
-  background: transparent;
-  border-color: $border;
-  color: $border;
-
-  &:hover {
-    border-color: darken($border, 8%);
-    color: darken($border, 8%);
-  }
-
-  &:active {
-    border-color: darken($border, 16%);
-    color: darken($border, 16%);
-  }
-}
-
-@mixin button-plain($text) {
-  color: $text;
-
-  &:hover {
-    color: darken($text, 8%);
-  }
-
-  &:active {
-    color: darken($text, 16%);
-  }
-}
+@import '../functions/mixins';
 
 .uw-button-filled,
 .uw-button-outlined {

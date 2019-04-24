@@ -40,6 +40,7 @@
 
   &__close {
     $close-btn-padding: 0.25rem;
+    @include button-filled($color-accent);
 
     width: $type-scale-md + (2 * $close-btn-padding);
     height: $type-scale-md + (2 * $close-btn-padding);
@@ -58,14 +59,6 @@
       height: 22px;
       margin: 2px;
       fill: $color-gray-dark;
-    }
-
-    &:hover {
-      background: $color-accent;
-
-      svg {
-        fill: white;
-      }
     }
   }
 

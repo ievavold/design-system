@@ -34,3 +34,83 @@
   flex-basis: $percent;
   max-width: $percent;
 }
+
+@mixin button-filled($background, $text: white) {
+  background: $background;
+  border-color: $background;
+  color: $text;
+
+  svg {
+    fill: $text;
+  }
+
+  &:hover {
+    background: darken($background, 8%);
+    border-color: darken($background, 8%);
+
+    svg {
+      fill: $text;
+    }
+  }
+
+  &:active {
+    background: darken($background, 16%);
+    border-color: darken($background, 16%);
+
+    svg {
+      fill: $text;
+    }
+  }
+}
+
+@mixin button-outlined($border) {
+  background: transparent;
+  border-color: $border;
+  color: $border;
+
+  svg {
+    fill: $border;
+  }
+
+  &:hover {
+    border-color: darken($border, 8%);
+    color: darken($border, 8%);
+
+    svg {
+      fill: darken($border, 8%);
+    }
+  }
+
+  &:active {
+    border-color: darken($border, 16%);
+    color: darken($border, 16%);
+
+    svg {
+      fill: darken($border, 16%);
+    }
+  }
+}
+
+@mixin button-plain($text) {
+  color: $text;
+
+  svg {
+    fill: $text;
+  }
+
+  &:hover {
+    color: darken($text, 8%);
+
+    svg {
+      fill: darken($text, 8%);
+    }
+  }
+
+  &:active {
+    color: darken($text, 16%);
+
+    svg {
+      fill: darken($text, 16%);
+    }
+  }
+}
