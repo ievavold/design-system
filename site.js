@@ -10,6 +10,18 @@
   const CLOSE_SELECTOR = '[data-modal-close]';
   const MODAL_SELECTOR = '.uw-modal';
 
+  const MODAL_FOCUSABLES = [
+    'a[href]',
+    'area[href]',
+    'input:not([disabled])',
+    'select:not([disabled])',
+    'textarea:not([disabled])',
+    'button:not([disabled])',
+    '[tabindex="-1"]'
+  ].join(', ');
+
+  const KEY_TAB = 9;
+
   function selectModal(id) {
     return {
       trigger: document.querySelector(`[${TRIGGER_ATTR}="${id}"]`),
@@ -59,6 +71,43 @@
     }
   }
 
+  function handleKeydown(event) {
+    const currentModal = event.target.closest(MODAL_SELECTOR);
+    if (!currentModal) {
+      return;
+    }
+
+    switch (event.keyCode) {
+      case KEY_TAB: {
+        const focusableNodeList = currentModal.querySelectorAll(MODAL_FOCUSABLES);
+        const focusables = Array.from(focusableNodeList);
+        const firstFocusable = focusables[0];
+        const lastFocusable = focusables[focusables.length - 1];
+
+        if (event.shiftKey) {
+          handleBackwardTab(firstFocusable, lastFocusable, event);
+        } else {
+          handleForwardTab(firstFocusable, lastFocusable, event);
+        }
+        break;
+      }
+    }
+  }
+
+  function handleBackwardTab(firstFocusable, lastFocusable, event) {
+    if (document.activeElement === firstFocusable) {
+      event.preventDefault();
+      lastFocusable.focus();
+    }
+  }
+
+  function handleForwardTab(firstFocusable, lastFocusable, event) {
+    if (document.activeElement === lastFocusable) {
+      event.preventDefault();
+      firstFocusable.focus();
+    }
+  }
+
   function open(id = '') {
     const modal = selectModal(id);
     if (!modal.body) {
@@ -83,6 +132,7 @@
 
   function init(context = document) {
     context.addEventListener('click', handleClick, false);
+    context.addEventListener('keydown', handleKeydown, false);
   }
 
   init();
