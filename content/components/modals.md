@@ -31,7 +31,7 @@ within the application's framework.
   role="dialog"
   aria-hidden="true"
   aria-labelledby="example-modal__title"
-  tabindex=-1>
+  tabindex="-1">
   <div class="uw-modal__window">
     <button data-modal-close="example-modal" class="uw-modal__close">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
