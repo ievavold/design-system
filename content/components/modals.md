@@ -54,7 +54,7 @@ within the application's framework.
       </p>
     </div>
     <footer class="uw-modal__footer">
-      <button class="uw-button-filled">Okay</button>
+      <button data-modal-close="example-modal" class="uw-button-filled">Okay</button>
     </footer>
   </div>
 </div>
