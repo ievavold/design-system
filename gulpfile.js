@@ -47,7 +47,10 @@ exports.buildSiteScripts = function buildSiteScripts() {
 };
 
 exports.watchSiteScripts = function watchSiteScripts() {
-  return watch(['site/scripts/**/*'], exports.buildSiteScripts);
+  return watch(
+    ['site/scripts/**/*', 'lib/scripts/**/*'],
+    exports.buildSiteScripts
+  );
 };
 
 exports.default = parallel(
