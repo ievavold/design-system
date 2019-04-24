@@ -30,10 +30,10 @@ Buttons can be used to draw attention to important actions.
 
 {{< example >}}
 
-<button class="uw-button-filled">Default</button>
-<button class="uw-button-filled uw-button--success">Success</button>
-<button class="uw-button-filled uw-button--danger">Danger</button>
-<button class="uw-button-filled" disabled>Disabled</button>
+<button class="uw-button--filled">Default</button>
+<button class="uw-button--filled uw-button--success">Success</button>
+<button class="uw-button--filled uw-button--danger">Danger</button>
+<button class="uw-button--filled" disabled>Disabled</button>
 
 {{< /example >}}
 
@@ -45,10 +45,10 @@ Buttons can be used to draw attention to important actions.
 
 {{< example >}}
 
-<button class="uw-button-outlined">Default</button>
-<button class="uw-button-outlined uw-button--success">Success</button>
-<button class="uw-button-outlined uw-button--danger">Danger</button>
-<button class="uw-button-outlined" disabled>Disabled</button>
+<button class="uw-button--outlined">Default</button>
+<button class="uw-button--outlined uw-button--success">Success</button>
+<button class="uw-button--outlined uw-button--danger">Danger</button>
+<button class="uw-button--outlined" disabled>Disabled</button>
 
 {{< /example >}}
 
@@ -60,10 +60,10 @@ Buttons can be used to draw attention to important actions.
 
 {{< example >}}
 
-<button class="uw-button-plain">Default</button>
-<button class="uw-button-plain uw-button--success">Success</button>
-<button class="uw-button-plain uw-button--danger">Danger</button>
-<button class="uw-button-plain" disabled>Disabled</button>
+<button class="uw-button--plain">Default</button>
+<button class="uw-button--plain uw-button--success">Success</button>
+<button class="uw-button--plain uw-button--danger">Danger</button>
+<button class="uw-button--plain" disabled>Disabled</button>
 
 {{< /example >}}
 

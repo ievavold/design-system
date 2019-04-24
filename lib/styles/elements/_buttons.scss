@@ -1,8 +1,8 @@
 @import '../variables/borders';
 @import '../functions/mixins';
 
-.uw-button-filled,
-.uw-button-outlined {
+.uw-button--filled,
+.uw-button--outlined {
   margin: 0;
   padding: 0.75rem 1.25rem;
   display: inline-block;
@@ -24,7 +24,7 @@
   }
 }
 
-.uw-button-filled {
+.uw-button--filled {
   @include button-filled($color-accent, $color-white);
 
   &.uw-button--success {
@@ -41,7 +41,7 @@
   }
 }
 
-.uw-button-outlined {
+.uw-button--outlined {
   @include button-outlined($color-accent);
 
   &.uw-button--success {
@@ -58,7 +58,7 @@
   }
 }
 
-.uw-button-plain {
+.uw-button--plain {
   text-decoration: none;
   background-color: transparent;
   border: 0;
@@ -80,7 +80,7 @@
   }
 }
 
-.uw-button-plain {
+.uw-button--plain {
   @include button-plain($color-accent);
 
   &.uw-button--success {
@@ -92,9 +92,9 @@
   }
 }
 
-.uw-button-filled,
-.uw-button-outlined,
-.uw-button-plain {
+.uw-button--filled,
+.uw-button--outlined,
+.uw-button--plain {
   & + & {
     margin-left: 0.5rem;
   }

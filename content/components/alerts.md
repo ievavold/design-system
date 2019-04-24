@@ -193,7 +193,7 @@ links, and even buttons.
         <li>Second item</li>
         <li>Third item</li>
       </ul>
-      <button class="uw-button-filled">Try again</button>
+      <button class="uw-button--filled">Try again</button>
     </div>
   </div>
 </div>
