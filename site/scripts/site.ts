@@ -1,4 +1,5 @@
 import * as ClipboardJS from 'clipboard';
+import '../../lib/scripts/lib';
 
 const buttonTextDelay = 1500; // milliseconds
 const cb = new ClipboardJS('.docs-uses-clipboard');
