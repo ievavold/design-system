@@ -48,13 +48,9 @@ within the application's framework.
     <div class="uw-modal__body uw-prose">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius
-        luctus viverra. Aenean blandit et magna nec molestie. Ut ut blandit
-        odio. Pellentesque dui quam, facilisis ut nisi sed, suscipit congue.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius
-        luctus viverra. Aenean blandit et magna nec molestie. Ut ut blandit
-        odio. Pellentesque dui quam, facilisis ut nisi sed, suscipit congue.
+        luctus viverra. Aenean <a href="#">blandit et magna nec</a> molestie. Ut
+        ut blandit odio. Pellentesque dui quam, facilisis ut nisi sed, suscipit
+        congue.
       </p>
     </div>
     <footer class="uw-modal__footer">
