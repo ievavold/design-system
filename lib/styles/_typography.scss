@@ -31,7 +31,7 @@ a:link {
 }
 
 @each $breakpoint in map-keys($breakpoints) {
-  @include breakpoint-up($breakpoint) {
+  @include screen-wider-than($breakpoint) {
     @each $name, $size in $type-scale {
       .uw-font-size-#{$name}-#{$breakpoint} {
         font-size: $size;

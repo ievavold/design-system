@@ -1,26 +1,13 @@
 @import '../variables/breakpoints';
 
-@mixin breakpoint-up($name) {
+@mixin screen-wider-than($name) {
   $threshold: map-get($breakpoints, $name);
   @if $threshold {
-    @media (min-width: $threshold) {
+    @media screen and (min-width: $threshold) {
       @content;
     }
   } @else {
-    @content;
-  }
-}
-
-@mixin breakpoint-down($name) {
-  $threshold: map-get($breakpoints, $name);
-  @if $threshold {
-    // Subtract 2% of a unit makes sure that the 'up' and 'down' media queries
-    // don't conflict when the screen is exactly the width of the threshold.
-    @media (max-width: $threshold - 0.02) {
-      @content;
-    }
-  } @else {
-    @content;
+    @error "no breakpoint named: '#{$name}'";
   }
 }
 
