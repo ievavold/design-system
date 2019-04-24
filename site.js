@@ -21,6 +21,7 @@
   ].join(', ');
 
   const KEY_TAB = 9;
+  const KEY_ESC = 27;
 
   function selectModal(id) {
     return {
@@ -89,6 +90,10 @@
         } else {
           handleForwardTab(firstFocusable, lastFocusable, event);
         }
+        break;
+      }
+      case KEY_ESC: {
+        close(currentModal.id);
         break;
       }
     }
