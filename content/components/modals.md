@@ -5,7 +5,6 @@ summary:
   darkened background.
 links:
   - Overview
-  - Basic Modal
 ---
 
 {{< typeset >}}
@@ -17,8 +16,6 @@ application's framework. For that reason this documentation won't prescribe
 _how_ a modal should be triggered and instead describes how modals should be
 represented on a page. It will be up to developers to implement these guidelines
 within the application's framework.
-
-## Basic Modal
 
 {{< /typeset >}}
 
