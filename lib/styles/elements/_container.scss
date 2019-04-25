@@ -1,9 +1,9 @@
 @import '../functions/mixins';
+@import '../variables/spacing';
 
 @include any-with-class-prefix('uw-container') {
   max-width: 100%;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  @include padding(x, 3);
 }
 
 .uw-container--center {

@@ -1,4 +1,5 @@
 @import '../variables/colors';
+@import '../variables/spacing';
 
 .uw-table__container {
   overflow-x: auto;
@@ -16,7 +17,7 @@
 
   th,
   td {
-    padding: 1rem;
+    @include padding(all, 2);
     text-align: left;
   }
 

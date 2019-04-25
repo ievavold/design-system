@@ -10,7 +10,7 @@
 }
 
 .uw-modal {
-  padding: 1rem;
+  @include padding(all, 2);
   display: none;
   position: fixed;
   top: 0;
@@ -27,7 +27,7 @@
   &__window {
     max-width: $breakpoint-md;
     margin: 0 auto;
-    padding: 1.5rem;
+    @include padding(all, 3);
     position: relative;
     flex-grow: 0;
     background: white;
@@ -51,7 +51,7 @@
     width: $type-scale-md + (2 * $close-btn-padding);
     height: $type-scale-md + (2 * $close-btn-padding);
     padding: $close-btn-padding;
-    margin: 0;
+    @include margin(all, 0);
     position: absolute;
     top: 1.5rem - $close-btn-padding;
     right: 1.5rem - $close-btn-padding;
@@ -69,7 +69,7 @@
   }
 
   &__header {
-    margin-bottom: 1.5rem;
+    @include margin(bottom, 3);
     line-height: 1;
 
     > * {
@@ -78,7 +78,7 @@
   }
 
   &__footer {
-    margin-top: 1.5rem;
+    @include margin(top, 3);
     display: flex;
     justify-content: flex-end;
   }
@@ -87,11 +87,11 @@
   &__body,
   &__footer {
     & > :first-child {
-      margin-top: 0;
+      @include margin(top, 0);
     }
 
     & > :last-child {
-      margin-bottom: 0;
+      @include margin(bottom, 0);
     }
   }
 }
