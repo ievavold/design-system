@@ -25,7 +25,7 @@
   }
 
   &__window {
-    max-width: 40rem;
+    max-width: $breakpoint-md;
     margin: 0 auto;
     padding: 1.5rem;
     position: relative;
@@ -35,6 +35,12 @@
 
     @include screen-taller-than(md) {
       margin-top: 10rem;
+    }
+  }
+
+  @each $name, $size in $breakpoints {
+    &__window--size-#{$name} {
+      max-width: $size;
     }
   }
 
