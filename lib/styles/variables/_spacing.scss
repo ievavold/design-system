@@ -1,1 +1,49 @@
-$spacer: 0.5rem;
+$spacing-unit: 0.5rem;
+
+$spacing-tokens: 0, 1, 2, 3, 4, 5, 6;
+
+$spacing-token-values: (
+  0: 0,
+  1: $spacing-unit * 1,
+  2: $spacing-unit * 2,
+  3: $spacing-unit * 3,
+  4: $spacing-unit * 4,
+  5: $spacing-unit * 5,
+  6: $spacing-unit * 6
+);
+
+$spacing-properties: (margin, padding);
+
+$spacing-directions: (all, x, y, top, right, bottom, left);
+
+@mixin spacing($property, $direction, $token) {
+  @if index($spacing-properties, $property) == null {
+    @error "no spacing property: '#{$property}'";
+  } @else if index($spacing-directions, $direction) == null {
+    @error "no spacing direction: '#{$direction}'";
+  } @else if index($spacing-tokens, $token) == null {
+    @error "no spacing token: '#{$token}'";
+  }
+
+  $value: map-get($spacing-token-values, $token);
+
+  @if $direction == all {
+    #{$property}: $value;
+  } @else if $direction == x {
+    #{$property}-left: $value;
+    #{$property}-right: $value;
+  } @else if $direction == y {
+    #{$property}-top: $value;
+    #{$property}-bottom: $value;
+  } @else {
+    #{$property}-#{$direction}: $value;
+  }
+}
+
+@mixin margin($direction, $token) {
+  @include spacing(margin, $direction, $token);
+}
+
+@mixin padding($direction, $token) {
+  @include spacing(padding, $direction, $token);
+}

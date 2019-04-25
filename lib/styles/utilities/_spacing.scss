@@ -1,55 +1,27 @@
 @import '../variables/spacing';
 
-@for $i from 0 through 6 {
-  $size: $spacer * $i;
-
-  @each $abbr, $prop in (mar: margin, pad: padding) {
-    .uw-#{$abbr}-all-#{$i} {
-      #{$prop}: $size;
+@each $token in $spacing-tokens {
+  @each $direction in $spacing-directions {
+    .uw-mar-#{$direction}-#{$token} {
+      @include margin($direction, $token);
     }
 
-    .uw-#{$abbr}-x-#{$i} {
-      #{$prop}-left: $size;
-      #{$prop}-right: $size;
-    }
-
-    .uw-#{$abbr}-y-#{$i} {
-      #{$prop}-top: $size;
-      #{$prop}-bottom: $size;
-    }
-
-    @each $direction in (top, right, bottom, left) {
-      .uw-#{$abbr}-#{$direction}-#{$i} {
-        #{$prop}-#{$direction}: $size;
-      }
+    .uw-pad-#{$direction}-#{$token} {
+      @include padding($direction, $token);
     }
   }
 }
 
 @each $breakpoint in map-keys($breakpoints) {
   @include screen-wider-than($breakpoint) {
-    @for $i from 0 through 6 {
-      $size: $spacer * $i;
-
-      @each $abbr, $prop in (mar: margin, pad: padding) {
-        .uw-#{$abbr}-all-#{$i}-#{$breakpoint} {
-          #{$prop}: $size;
+    @each $token in $spacing-tokens {
+      @each $direction in $spacing-directions {
+        .uw-mar-#{$direction}-#{$token}-#{$breakpoint} {
+          @include margin($direction, $token);
         }
 
-        .uw-#{$abbr}-x-#{$i}-#{$breakpoint} {
-          #{$prop}-top: $size;
-          #{$prop}-bottom: $size;
-        }
-
-        .uw-#{$abbr}-y-#{$i}-#{$breakpoint} {
-          #{$prop}-left: $size;
-          #{$prop}-right: $size;
-        }
-
-        @each $direction in (top, right, bottom, left) {
-          .uw-#{$abbr}-#{$direction}-#{$i}-#{$breakpoint} {
-            #{$prop}-#{$direction}: $size;
-          }
+        .uw-pad-#{$direction}-#{$token}-#{$breakpoint} {
+          @include padding($direction, $token);
         }
       }
     }
