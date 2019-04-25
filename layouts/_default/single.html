@@ -1,19 +1,17 @@
 {{ define "main" }}
-  <div class="uw-grid">
-    <div id="page-summary" class="uw-prose uw-col-8-md uw-col-6-lg">
-      <h1>{{ .Title }}</h1>
-      {{ if isset .Params "summary" }}
-        <p class="uw-font-size-sm">{{ .Param "summary" }}</p>
-      {{ end }}
-      {{ if isset .Params "links" }}
-        <ul class="uw-font-size-sm">
-          {{ range .Param "links" }}
-            <li><a href="#{{ anchorize . }}">{{ . }}</a></li>
-          {{ end }}
-        </ul>
-      {{ end }}
-    </div>
-    <hr>
+  <div id="page-summary" class="uw-prose uw-line-length-4">
+    <h1>{{ .Title }}</h1>
+    {{ if isset .Params "summary" }}
+      <p class="uw-font-size-sm">{{ .Param "summary" }}</p>
+    {{ end }}
+    {{ if isset .Params "links" }}
+      <ul class="uw-font-size-sm">
+        {{ range .Param "links" }}
+          <li><a href="#{{ anchorize . }}">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
   </div>
+  <hr>
   {{ .Content }}
 {{ end }}
