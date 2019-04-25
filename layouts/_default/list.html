@@ -1,3 +1,19 @@
 {{ define "main" }}
-  {{ .Content }}
+  <div id="list-summary">
+    <h1>{{ .Title }}</h1>
+    {{ if isset .Params "summary" }}
+      <p class="uw-font-size-sm">{{ .Param "summary" }}</p>
+    {{ end }}
+    {{ if gt (len .Pages) 0 }}
+      <ul class="uw-font-size-sm">
+        {{ range .Pages }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+  {{ if ne .Content "" }}
+    <hr>
+    {{ .Content }}
+  {{ end }}
 {{ end }}
