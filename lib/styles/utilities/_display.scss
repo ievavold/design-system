@@ -1,4 +1,3 @@
-@import '../functions/mixins';
 @import '../variables/breakpoints';
 
 $displays: (
@@ -19,10 +18,10 @@ $displays: (
   }
 }
 
-@each $breakpoint in map-keys($breakpoints) {
-  @include screen-wider-than($breakpoint) {
+@each $breakpoint-token in $breakpoint-tokens {
+  @include screen-wider-than($breakpoint-token) {
     @each $display in $displays {
-      .uw-display-#{$display}-#{$breakpoint} {
+      .uw-display-#{$display}-#{$breakpoint-token} {
         display: $display;
       }
     }

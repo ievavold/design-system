@@ -1,4 +1,4 @@
-@import '../functions/mixins';
+@import '../variables/breakpoints';
 @import '../variables/spacing';
 
 @include any-with-class-prefix('uw-container') {
@@ -11,8 +11,8 @@
   margin-right: auto;
 }
 
-@each $breakpoint, $width in $breakpoints {
-  .uw-container--#{$breakpoint} {
-    max-width: $width;
+@each $breakpoint-token in $breakpoint-tokens {
+  .uw-container--#{$breakpoint-token} {
+    max-width: breakpoint-size($breakpoint-token);
   }
 }

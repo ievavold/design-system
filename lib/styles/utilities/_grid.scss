@@ -1,3 +1,4 @@
+@import '../variables/breakpoints';
 @import '../variables/grid';
 
 .uw-grid {
@@ -31,7 +32,7 @@
 
 // Column precedence rule 3 (treat breakpoints that don't match the current
 // screen size as `.uw-col`)
-@each $breakpoint-token in map-keys($breakpoints) {
+@each $breakpoint-token in $breakpoint-tokens {
   @for $span from 1 through $grid-columns {
     .uw-col-#{$span}-#{$breakpoint-token} {
       @extend %column;
@@ -47,7 +48,7 @@
 }
 
 // Column precedence rule 1
-@each $breakpoint-token in map-keys($breakpoints) {
+@each $breakpoint-token in $breakpoint-tokens {
   @include screen-wider-than($breakpoint-token) {
     @for $span from 1 through $grid-columns {
       .uw-col-#{$span}-#{$breakpoint-token} {

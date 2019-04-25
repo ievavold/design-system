@@ -3,7 +3,6 @@
 @import '../variables/borders';
 @import '../variables/typography';
 @import '../variables/breakpoints';
-@import '../functions/mixins';
 
 .uw-modal-open {
   overflow: hidden;
@@ -25,7 +24,7 @@
   }
 
   &__window {
-    max-width: $breakpoint-md;
+    max-width: breakpoint-size(md);
     margin: 0 auto;
     @include padding(all, 3);
     position: relative;
@@ -38,9 +37,9 @@
     }
   }
 
-  @each $name, $size in $breakpoints {
-    &__window--size-#{$name} {
-      max-width: $size;
+  @each $breakpoint-token in $breakpoint-tokens {
+    &__window--size-#{$breakpoint-token} {
+      max-width: breakpoint-size($breakpoint-token);
     }
   }
 

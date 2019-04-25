@@ -1,27 +1,3 @@
-@import '../variables/breakpoints';
-
-@mixin screen-taller-than($name) {
-  $threshold: map-get($breakpoints, $name);
-  @if $threshold {
-    @media screen and (min-height: $threshold) {
-      @content;
-    }
-  } @else {
-    @error "no breakpoint named: '#{$name}'";
-  }
-}
-
-@mixin screen-wider-than($name) {
-  $threshold: map-get($breakpoints, $name);
-  @if $threshold {
-    @media screen and (min-width: $threshold) {
-      @content;
-    }
-  } @else {
-    @error "no breakpoint named: '#{$name}'";
-  }
-}
-
 @mixin any-with-class-prefix($prefix) {
   [class^='#{$prefix}'],
   [class*=' #{$prefix}'] {
