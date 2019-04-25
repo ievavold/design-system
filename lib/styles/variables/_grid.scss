@@ -1,0 +1,31 @@
+@import './spacing';
+
+$grid-columns: 12;
+$gutter-width: spacing-units(2);
+
+@mixin grid() {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -($gutter-width / 2);
+  margin-right: -($gutter-width / 2);
+}
+
+@mixin column($span: null) {
+  @if $span == null {
+    max-width: 100%;
+    flex-basis: 0;
+  } @else if $span > $grid-columns {
+    @error "column with span: '#{$span}' is wider than: '#{$grid-columns}'";
+  } @else if $span <= 0 {
+    @error "column cannot have span of 0 or less";
+  } @else {
+    $percent: ($span / $grid-columns) * 100%;
+    max-width: $percent;
+    flex-basis: $percent;
+  }
+
+  flex-grow: 1;
+  position: relative;
+  padding-left: $gutter-width / 2;
+  padding-right: $gutter-width / 2;
+}

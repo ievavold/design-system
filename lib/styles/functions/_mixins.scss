@@ -29,12 +29,6 @@
   }
 }
 
-@mixin column-span($span, $grid: 12) {
-  $percent: ($span / $grid) * 100%;
-  flex-basis: $percent;
-  max-width: $percent;
-}
-
 @mixin button-filled($background, $text: white) {
   background: $background;
   border-color: $background;

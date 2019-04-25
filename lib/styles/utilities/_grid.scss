@@ -1,49 +1,57 @@
-@import '../functions/mixins';
-@import '../variables/breakpoints';
+@import '../variables/grid';
 
 .uw-grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
+  @include grid();
 }
 
-$alignments: (
-  stretch,
-  center,
-  flex-start,
-  flex-end,
-  baseline,
-  initial,
-  inherit
-);
+/**
+ * With multiple was to define a column size and the possibility that multiple
+ * column classes are applied to a single element it can be confusing which
+ * classes will take precedence over other classes. The column precedence rules
+ * are as follows:
+ *
+ * 1. Use breakpoint classes sorted from largest breakpoint to smallest
+ *    breakpoint. Ignore any breakpoint classes that don't apply to the current
+ *    screen size.
+ *
+ * 2. Use span classes sorted from largest span to smallest span.
+ *
+ * 3. If rules 1 and 2 failed to find a class, default to treating the element
+ *    as a basic column (same as having the class `.uw-col`).
+ */
 
-@each $alignment in $alignments {
-  .uw-grid-align-#{$alignment} {
-    align-items: $alignment;
+%column {
+  @include column();
+}
+
+// Column precedence rule 3
+.uw-col {
+  @extend %column;
+}
+
+// Column precedence rule 3 (treat breakpoints that don't match the current
+// screen size as `.uw-col`)
+@each $breakpoint-token in map-keys($breakpoints) {
+  @for $span from 1 through $grid-columns {
+    .uw-col-#{$span}-#{$breakpoint-token} {
+      @extend %column;
+    }
   }
 }
 
-@include any-with-class-prefix('uw-col') {
-  max-width: 100%;
-  flex-basis: 0;
-  flex-grow: 1;
-  position: relative;
-  padding: 0 0.75rem;
-}
-
-@for $span from 1 through 12 {
+// Column precedence rule 2
+@for $span from 1 through $grid-columns {
   .uw-col-#{$span} {
-    width: 100%;
-    @include column-span($span);
+    @include column($span);
   }
 }
 
-@each $breakpoint in map-keys($breakpoints) {
-  @include screen-wider-than($breakpoint) {
-    @for $span from 1 through 12 {
-      .uw-col-#{$span}-#{$breakpoint} {
-        @include column-span($span);
+// Column precedence rule 1
+@each $breakpoint-token in map-keys($breakpoints) {
+  @include screen-wider-than($breakpoint-token) {
+    @for $span from 1 through $grid-columns {
+      .uw-col-#{$span}-#{$breakpoint-token} {
+        @include column($span);
       }
     }
   }
