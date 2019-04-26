@@ -6,6 +6,29 @@ body {
   font-family: $typeface-sans-serif;
 }
 
+h1 {
+  @include font-size('xl');
+}
+
+h2 {
+  @include font-size('lg');
+}
+
+h3,
+h4 {
+  @include font-size('md');
+}
+
+h4 {
+  font-weight: 400;
+}
+
+h5,
+h6 {
+  @include font-size('sm');
+  font-weight: 700;
+}
+
 code,
 pre {
   font-family: $typeface-monospace;

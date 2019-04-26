@@ -35,19 +35,13 @@ classes:
 
 {{< table >}}
 
-| CSS classes                                | rem         | px     |                                              |
-| ------------------------------------------ | ----------- | ------ | -------------------------------------------- |
-| `.uw-font-size-14`<br>`.uw-font-size-xs`   | `0.875rem`  | `14px` | <span class="uw-font-size-14">Example</span> |
-| `.uw-font-size-16`<br>`.uw-font-size-base` | `1rem`      | `16px` | <span class="uw-font-size-16">Example</span> |
-| `.uw-font-size-18`                         | `1.125rem`  | `18px` | <span class="uw-font-size-18">Example</span> |
-| `.uw-font-size-20`<br>`.uw-font-size-sm`   | `1.25rem`   | `20px` | <span class="uw-font-size-20">Example</span> |
-| `.uw-font-size-23`                         | `1.4375rem` | `23px` | <span class="uw-font-size-23">Example</span> |
-| `.uw-font-size-26`<br>`.uw-font-size-md`   | `1.625rem`  | `26px` | <span class="uw-font-size-26">Example</span> |
-| `.uw-font-size-29`                         | `1.8125rem` | `29px` | <span class="uw-font-size-29">Example</span> |
-| `.uw-font-size-32`<br>`.uw-font-size-lg`   | `2rem`      | `32px` | <span class="uw-font-size-32">Example</span> |
-| `.uw-font-size-36`                         | `2.25rem`   | `36px` | <span class="uw-font-size-36">Example</span> |
-| `.uw-font-size-41`<br>`.uw-font-size-xl`   | `2.5625rem` | `41px` | <span class="uw-font-size-41">Example</span> |
-| `.uw-font-size-46`                         | `2.875rem`  | `46px` | <span class="uw-font-size-46">Example</span> |
+| CSS classes        | rem        | Use           | Sample                                             |
+| ------------------ | ---------- | ------------- | -------------------------------------------------- |
+| `.uw-font-size-xs` | `0.888rem` |               | <span class="uw-font-size-xs">Design System</span> |
+| `.uw-font-size-sm` | `1rem`     | Default       | <span class="uw-font-size-sm">Design System</span> |
+| `.uw-font-size-md` | `1.266rem` | `<h3>` `<h4>` | <span class="uw-font-size-md">Design System</span> |
+| `.uw-font-size-lg` | `2.027rem` | `<h2>`        | <span class="uw-font-size-lg">Design System</span> |
+| `.uw-font-size-xl` | `2.887rem` | `<h1>`        | <span class="uw-font-size-xl">Design System</span> |
 
 {{< /table >}}
 
