@@ -1,0 +1,27 @@
+@import '../../mixins';
+
+.uw-table__container {
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    line-height: 1.5;
+  }
+
+  tr {
+    border-bottom: 1px solid utility-color('gray', 'light');
+  }
+
+  th,
+  td {
+    @include padding('all', 2);
+    text-align: left;
+  }
+
+  th {
+    vertical-align: bottom;
+    font-weight: 600;
+  }
+}
