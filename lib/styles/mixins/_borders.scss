@@ -1,0 +1,10 @@
+@import '../tokens';
+@import 'colors';
+
+@mixin border-radius() {
+  border-radius: $border-radius;
+}
+
+@mixin border($color: utility-color('gray', 'light')) {
+  border: $border-width solid $color;
+}

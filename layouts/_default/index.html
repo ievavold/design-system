@@ -3,19 +3,21 @@
 {{ end }}
 
 {{ define "main" }}
-  <h2>Core</h2>
-  <ul class="uw-font-size-sm uw-mar-top-0">
-    {{ range where .Pages "Section" "" }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-    {{ end }}
-  </ul>
-
-  {{ range .Sections }}
-    <h2>{{ .Title }}</h2>
-    <ul class="uw-font-size-sm uw-mar-top-0">
-      {{ range .Pages }}
+  <div id="site-summary" class="uw-prose uw-font-size-md">
+    <h2>Core</h2>
+    <ul class="uw-mar-top-0">
+      {{ range where .Pages "Section" "" }}
         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
       {{ end }}
     </ul>
-  {{ end }}
+
+    {{ range .Sections }}
+      <h2>{{ .Title }}</h2>
+      <ul class="uw-mar-top-0">
+        {{ range .Pages }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
 {{ end }}

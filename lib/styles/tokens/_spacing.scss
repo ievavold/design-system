@@ -1,0 +1,21 @@
+@function spacing-units($mult: 1) {
+  @return $spacing-unit * $mult;
+}
+
+$spacing-unit: 0.5rem;
+
+$spacing-token-values: (
+  0: spacing-units(0),
+  1: spacing-units(1),
+  2: spacing-units(2),
+  3: spacing-units(3),
+  4: spacing-units(4),
+  5: spacing-units(5),
+  6: spacing-units(6)
+);
+
+$spacing-tokens: map-keys($spacing-token-values);
+
+$spacing-properties: ('margin', 'padding');
+
+$spacing-directions: ('all', 'x', 'y', 'top', 'right', 'bottom', 'left');

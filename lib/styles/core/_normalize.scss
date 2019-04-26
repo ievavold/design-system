@@ -1,7 +1,16 @@
 @import 'normalize.css/normalize';
+@import '../mixins';
+
+body {
+  color: foreground-color('dark');
+}
 
 body * {
   box-sizing: border-box;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 *:focus,

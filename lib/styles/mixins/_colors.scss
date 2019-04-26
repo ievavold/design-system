@@ -1,0 +1,28 @@
+@import '../tokens';
+
+@function identity-color($color-token) {
+  @if index($identity-color-tokens, $color-token) == null {
+    @error "unknown identity color: '#{$color-token}'";
+  }
+
+  @return map-get($identity-color-token-values, $color-token);
+}
+
+@function utility-color($color-token, $modifier-token: 'medium') {
+  @if index($utility-color-tokens, $color-token) == null {
+    @error "unknown utility color: '#{$color-token}'";
+  } @else if index($utility-modifier-tokens, $modifier-token) == null {
+    @error "unknown utility color modifier: '#{$modifier-token}'";
+  }
+
+  $color-group: map-get($utility-color-token-values, $color-token);
+  @return map-get($color-group, $modifier-token);
+}
+
+@function foreground-color($color-token) {
+  @if index($foreground-color-tokens, $color-token) == null {
+    @error "unknown foreground color: '#{$color-token}'";
+  }
+
+  @return map-get($foreground-color-token-values, $color-token);
+}

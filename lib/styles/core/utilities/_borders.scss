@@ -1,16 +1,18 @@
-@import '../variables/borders';
+@import '../../tokens';
+@import '../../mixins';
 
 @each $direction in (top, right, bottom, left) {
+  $border-color: utility-color('gray', 'light');
   .uw-border-#{$direction} {
     border-#{$direction}: $border-width solid $border-color !important;
   }
 }
 
 .uw-border {
-  border: $border-width solid $border-color !important;
+  @include border();
 }
 
 .uw-border-radius {
-  border-radius: $border-radius;
+  @include border-radius();
   overflow: hidden;
 }

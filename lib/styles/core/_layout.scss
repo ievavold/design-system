@@ -1,0 +1,169 @@
+@import '../tokens';
+@import '../mixins';
+
+/**
+ * GRID SYSTEM
+ */
+
+$grid-columns: 12;
+$grid-gutter-width: spacing-units(2);
+
+@mixin grid() {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -($grid-gutter-width / 2);
+  margin-right: -($grid-gutter-width / 2);
+}
+
+@mixin column($span: null) {
+  @if $span == null {
+    max-width: 100%;
+    flex-basis: 0;
+  } @else if $span > $grid-columns {
+    @error "column with span: '#{$span}' is wider than: '#{$grid-columns}'";
+  } @else if $span <= 0 {
+    @error "column cannot have span of 0 or less";
+  } @else {
+    $percent: ($span / $grid-columns) * 100%;
+    max-width: $percent;
+    flex-basis: $percent;
+  }
+
+  flex-grow: 1;
+  position: relative;
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
+}
+
+.uw-grid {
+  @include grid();
+}
+
+/**
+ * With multiple was to define a column size and the possibility that multiple
+ * column classes are applied to a single element it can be confusing which
+ * classes will take precedence over other classes. The column precedence rules
+ * are as follows:
+ *
+ * 1. Use breakpoint classes sorted from largest breakpoint to smallest
+ *    breakpoint. Ignore any breakpoint classes that don't apply to the current
+ *    screen size.
+ *
+ * 2. Use span classes sorted from largest span to smallest span.
+ *
+ * 3. If rules 1 and 2 failed to find a class, default to treating the element
+ *    as a basic column (same as having the class `.uw-col`).
+ */
+
+%column {
+  @include column();
+}
+
+// Column precedence rule 3
+.uw-col {
+  @extend %column;
+}
+
+// Column precedence rule 3 (treat breakpoints that don't match the current
+// screen size as `.uw-col`)
+@each $screen-size-token in $screen-size-tokens {
+  @for $span from 1 through $grid-columns {
+    .uw-col-#{$span}-#{$screen-size-token} {
+      @extend %column;
+    }
+  }
+}
+
+// Column precedence rule 2
+@for $span from 1 through $grid-columns {
+  .uw-col-#{$span} {
+    @include column($span);
+  }
+}
+
+// Column precedence rule 1
+@each $screen-size-token in $screen-size-tokens {
+  @include screen-wider-than($screen-size-token) {
+    @for $span from 1 through $grid-columns {
+      .uw-col-#{$span}-#{$screen-size-token} {
+        @include column($span);
+      }
+    }
+  }
+}
+
+/**
+ * MARGINS and PADDING
+ */
+
+@each $spacing-token in $spacing-tokens {
+  @each $direction in $spacing-directions {
+    .uw-mar-#{$direction}-#{$spacing-token} {
+      @include margin($direction, $spacing-token);
+    }
+
+    .uw-pad-#{$direction}-#{$spacing-token} {
+      @include padding($direction, $spacing-token);
+    }
+  }
+}
+
+@each $screen-size-token in $screen-size-tokens {
+  @include screen-wider-than($screen-size-token) {
+    @each $spacing-token in $spacing-tokens {
+      @each $direction in $spacing-directions {
+        .uw-mar-#{$direction}-#{$spacing-token}-#{$screen-size-token} {
+          @include margin($direction, $spacing-token);
+        }
+
+        .uw-pad-#{$direction}-#{$spacing-token}-#{$screen-size-token} {
+          @include padding($direction, $spacing-token);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * DISPLAY
+ */
+
+$display-tokens: (none, inline, inline-block, block);
+
+@each $display-token in $display-tokens {
+  .uw-display-#{$display-token} {
+    display: $display-token;
+  }
+}
+
+@each $screen-size-token in $screen-size-tokens {
+  @include screen-wider-than($screen-size-token) {
+    @each $display-token in $display-tokens {
+      .uw-display-#{$display-token}-#{$screen-size-token} {
+        display: $display-token;
+      }
+    }
+  }
+}
+
+/**
+ * CONTAINERS
+ */
+
+%container {
+  @include padding('x', 3);
+  max-width: 100%;
+}
+
+.uw-container--center {
+  @extend %container;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@each $screen-size-token in $screen-size-tokens {
+  .uw-container--#{$screen-size-token} {
+    @extend %container;
+    max-width: screen-size($screen-size-token);
+  }
+}

@@ -1,17 +1,17 @@
 .uw-prose {
   & > h1 {
-    @include margin(top, 0);
+    @include margin('top', 0);
   }
 
   & > h2,
   & > h3 {
-    @include margin(top, 5);
+    @include margin('top', 5);
   }
 
   & > h4,
   & > h5,
   & > h6 {
-    @include margin(top, 3);
+    @include margin('top', 3);
   }
 
   & > h1,
@@ -20,7 +20,7 @@
   & > h4,
   & > h5,
   & > h6 {
-    @include margin(bottom, 0);
+    @include margin('bottom', 0);
   }
 
   & > h1 + *,
@@ -29,13 +29,13 @@
   & > h4 + *,
   & > h5 + *,
   & > h6 + * {
-    @include margin(top, 1);
+    @include margin('top', 1);
   }
 
   & > p,
   & > ul,
   & > ol {
-    @include margin(y, 3);
+    @include margin('y', 3);
     line-height: 1.5;
   }
 
@@ -50,6 +50,6 @@
   }
 
   & > *:last-child {
-    @include margin(bottom, 0);
+    @include margin('bottom', 0);
   }
 }

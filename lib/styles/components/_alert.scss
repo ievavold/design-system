@@ -1,21 +1,19 @@
-@import '../variables/typography';
-@import '../variables/borders';
-@import '../variables/spacing';
-@import '../variables/colors';
 @import '../assets/icons';
+@import '../tokens';
+@import '../mixins';
 
 $alert-icon-size: 2rem;
 
 .uw-alert {
-  @include padding(all, 2);
+  @include padding('all', 2);
+  @include border-radius();
   display: flex;
   flex-direction: row;
   border-left-width: 0.5rem;
   border-left-style: solid;
-  border-radius: $border-radius;
 
   & + & {
-    @include margin(top, 2);
+    @include margin('top', 2);
   }
 
   &__icon {
@@ -29,37 +27,37 @@ $alert-icon-size: 2rem;
   }
 
   &__info {
-    @include padding(left, 2);
+    @include padding('left', 2);
     flex-grow: 1;
   }
 
   &__title {
-    @include margin(all, 0);
+    @include margin('all', 0);
+    @include font-size(md);
     padding-top: 4px;
     font-weight: 700;
-    font-size: $type-scale-sm;
     line-height: 1.2;
   }
 
   &__description {
-    @include margin(top, 2);
-    @include margin(bottom, 1);
-    font-size: 1rem;
+    @include margin('top', 2);
+    @include margin('bottom', 1);
+    @include font-size(sm);
     line-height: 1.5;
 
     & > p,
     & > ul,
     & > ol {
-      @include margin(y, 3);
+      @include margin('y', 3);
       line-height: 1.5;
     }
 
     & > :first-child {
-      @include margin(top, 0);
+      @include margin('top', 0);
     }
 
     & > :last-child {
-      @include margin(bottom, 0);
+      @include margin('bottom', 0);
     }
   }
 }
@@ -74,47 +72,59 @@ $alert-icon-size: 2rem;
 }
 
 .uw-alert--info {
-  @include alert-status($color-blue-dark, $color-blue-light, $icon-circle-info);
+  @include alert-status(
+    utility-color('blue', 'dark'),
+    utility-color('blue', 'light'),
+    $icon-circle-info
+  );
 }
 
 .uw-alert--success {
   @include alert-status(
-    $color-green-medium,
-    $color-green-light,
+    utility-color('green', 'medium'),
+    utility-color('green', 'light'),
     $icon-circle-check
   );
 }
 
 .uw-alert--warning {
   @include alert-status(
-    $color-orange-medium,
-    $color-orange-light,
+    utility-color('orange', 'medium'),
+    utility-color('orange', 'light'),
     $icon-triangle-exclamation
   );
 }
 
 .uw-alert--danger {
-  @include alert-status($color-red-dark, $color-red-light, $icon-circle-times);
+  @include alert-status(
+    utility-color('red', 'medium'),
+    utility-color('red', 'light'),
+    $icon-circle-times
+  );
 }
 
 .uw-alert-group {
+  @include margin('all', 0);
+  @include padding('all', 0);
   list-style: none;
-  @include margin(all, 0);
-  @include padding(all, 0);
 
   & > .uw-alert {
     border-radius: 0;
 
     &:first-child {
-      border-radius: $border-radius $border-radius 0 0;
+      @include border-radius();
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
 
     &:last-child {
-      border-radius: 0 0 $border-radius $border-radius;
+      @include border-radius();
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
   }
 
   & > .uw-alert + .uw-alert {
-    @include margin(top, 1);
+    @include margin('top', 1);
   }
 }

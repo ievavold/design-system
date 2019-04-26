@@ -1,0 +1,17 @@
+@import '../utils/math';
+
+@function major-second($step: 0) {
+  @return pow(1.125, $step);
+}
+
+$type-scale-base: 1rem;
+
+$type-scale-token-values: (
+  'xs': major-second(-1),
+  'sm': major-second(0),
+  'md': major-second(2),
+  'lg': major-second(6),
+  'xl': major-second(9)
+);
+
+$type-scale-tokens: map-keys($type-scale-token-values);

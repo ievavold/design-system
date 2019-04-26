@@ -1,18 +1,6 @@
-@import 'normalize';
-@import 'typography';
-@import 'screen-reader';
-
-@import 'utilities/borders';
-@import 'utilities/display';
-@import 'utilities/grid';
-@import 'utilities/line-length';
-@import 'utilities/spacing';
-
-@import 'elements/buttons';
-@import 'elements/container';
-@import 'elements/forms';
-@import 'elements/prose';
-@import 'elements/tables';
+@import 'core';
+@import 'tokens';
+@import 'mixins';
 
 @import 'components/alert';
 @import 'components/modal';

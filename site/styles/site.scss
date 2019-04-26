@@ -5,7 +5,7 @@
   height: 3px;
   border-style: none;
   margin: 2rem 0 0 0;
-  background: $color-gray-light;
+  background: utility-color('gray', 'light');
 }
 
 .docs-example {
@@ -14,8 +14,8 @@
   &__screen-indicator {
     margin-top: 0;
     text-align: right;
-    color: $color-gray-dark;
-    font-size: $type-scale-14;
+    color: utility-color('gray', 'dark');
+    @include font-size('xs');
   }
 
   &__live {
@@ -29,7 +29,7 @@
     }
 
     .uw-grid + .uw-grid {
-      margin-top: 1rem;
+      @include margin(top, 2);
     }
 
     .inner {
@@ -98,11 +98,11 @@
     }
 
     &--light {
-      background: $color-white;
+      background: foreground-color('light');
     }
 
     &--dark {
-      background: $color-black;
+      background: foreground-color('dark');
     }
   }
 

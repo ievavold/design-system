@@ -1,0 +1,12 @@
+@import '../tokens';
+@import '../mixins';
+
+body {
+  font-size: 16px;
+  font-family: $typeface-sans-serif;
+}
+
+code,
+pre {
+  font-family: $typeface-monospace;
+}

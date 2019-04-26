@@ -1,8 +1,5 @@
 @import '../assets/icons';
-@import '../variables/colors';
-@import '../variables/borders';
-@import '../variables/typography';
-@import '../variables/breakpoints';
+@import '../tokens';
 
 .uw-modal-open {
   overflow: hidden;
@@ -16,7 +13,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: transparentize($color-gray-dark, 0.25);
+  background: transparentize(utility-color('gray', 'dark'), 0.25);
   overflow: scroll;
 
   &[aria-hidden='false'] {
@@ -24,60 +21,59 @@
   }
 
   &__window {
-    max-width: breakpoint-size(md);
+    @include padding('all', 3);
+    @include border-radius();
+    max-width: breakpoint-size('md');
     margin: 0 auto;
-    @include padding(all, 3);
     position: relative;
     flex-grow: 0;
     background: white;
-    border-radius: $border-radius;
 
-    @include screen-taller-than(md) {
+    @include screen-taller-than('md') {
       margin-top: 10rem;
     }
   }
 
-  @each $breakpoint-token in $breakpoint-tokens {
-    &__window--size-#{$breakpoint-token} {
-      max-width: breakpoint-size($breakpoint-token);
+  @each $screen-size-token in $screen-size-tokens {
+    &__window--size-#{$screen-size-token} {
+      max-width: screen-size($screen-size-token);
     }
   }
 
   &__close {
     $close-btn-padding: 0.25rem;
-    @include button-filled($color-accent);
 
-    width: $type-scale-md + (2 * $close-btn-padding);
-    height: $type-scale-md + (2 * $close-btn-padding);
-    padding: $close-btn-padding;
     @include margin(all, 0);
+    @include border-radius();
+    width: font-size('md') + (2 * $close-btn-padding);
+    height: font-size('md') + (2 * $close-btn-padding);
+    padding: $close-btn-padding;
     position: absolute;
     top: 1.5rem - $close-btn-padding;
     right: 1.5rem - $close-btn-padding;
     border-style: none;
     cursor: pointer;
     background: none;
-    border-radius: $border-radius;
 
     svg {
       width: 22px;
       height: 22px;
       margin: 2px;
-      fill: $color-gray-dark;
+      fill: utility-color('gray', 'dark');
     }
   }
 
   &__header {
-    @include margin(bottom, 3);
+    @include margin('bottom', 3);
     line-height: 1;
 
     > * {
-      font-size: $type-scale-md;
+      @include font-size('md');
     }
   }
 
   &__footer {
-    @include margin(top, 3);
+    @include margin('top', 3);
     display: flex;
     justify-content: flex-end;
   }
@@ -86,11 +82,11 @@
   &__body,
   &__footer {
     & > :first-child {
-      @include margin(top, 0);
+      @include margin('top', 0);
     }
 
     & > :last-child {
-      @include margin(bottom, 0);
+      @include margin('bottom', 0);
     }
   }
 }

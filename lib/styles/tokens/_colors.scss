@@ -1,0 +1,50 @@
+$identity-color-token-values: (
+  'primary': #c50505,
+  'accent': #0479a8
+);
+
+$identity-color-tokens: map-keys($identity-color-token-values);
+
+$utility-color-token-values: (
+  'orange': (
+    'light': #ffb74d,
+    'medium': #ff9800,
+    'dark': #ef6c00
+  ),
+  'yellow': (
+    'light': #ffe082,
+    'medium': #ffc82c,
+    'dark': #f8b700
+  ),
+  'green': (
+    'light': #81b184,
+    'medium': #2e7d32,
+    'dark': #1b4b1e
+  ),
+  'red': (
+    'light': #d79999,
+    'medium': #d62e2e,
+    'dark': #9b0000
+  ),
+  'blue': (
+    'light': #9ac9dc,
+    'medium': #1aa4db,
+    'dark': #034e6c
+  ),
+  'gray': (
+    'light': #dfdfdf,
+    'medium': #adadad,
+    'dark': #494949
+  )
+);
+
+$utility-color-tokens: map-keys($utility-color-token-values);
+
+$utility-modifier-tokens: 'light', 'medium', 'dark';
+
+$foreground-color-token-values: (
+  'light': #f9f9f9,
+  'dark': #282728
+);
+
+$foreground-color-tokens: map-keys($foreground-color-token-values);

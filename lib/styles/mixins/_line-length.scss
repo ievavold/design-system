@@ -1,0 +1,13 @@
+@import '../tokens';
+
+@function line-length($line-length-token) {
+  @if index($line-length-tokens, $line-length-token) == null {
+    @error "no line-length token: '#{$line-length-token}'";
+  }
+
+  @return map-get($line-length-token-values, $line-length-token);
+}
+
+@mixin line-length($line-length-token) {
+  max-width: line-length($line-length-token) !important;
+}

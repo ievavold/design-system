@@ -1,11 +1,11 @@
 {{ define "main" }}
-  <div id="list-summary">
+  <div id="list-summary" class="uw-prose uw-font-size-md">
     <h1>{{ .Title }}</h1>
     {{ if isset .Params "summary" }}
-      <p class="uw-font-size-sm">{{ .Param "summary" }}</p>
+      <p class="uw-line-length-sm">{{ .Param "summary" }}</p>
     {{ end }}
     {{ if gt (len .Pages) 0 }}
-      <ul class="uw-font-size-sm">
+      <ul>
         {{ range .Pages }}
           <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
         {{ end }}

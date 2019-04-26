@@ -1,0 +1,8 @@
+$line-length-token-values: (
+  'sm': 48ex,
+  'md': 64ex,
+  'lg': 80ex,
+  'none': none
+);
+
+$line-length-tokens: map-keys($line-length-token-values);

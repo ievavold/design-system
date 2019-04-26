@@ -1,7 +1,0 @@
-@import '../variables/line-length';
-
-@each $token in map-keys($line-length-tokens) {
-  .uw-line-length-#{$token} {
-    @include line-length($token);
-  }
-}

@@ -1,0 +1,13 @@
+@import '../tokens';
+
+@function font-size($font-size-token) {
+  @if not map-has-key($type-scale-token-values, $font-size-token) {
+    @error "unknown font-size token: '#{$font-size-token}'";
+  }
+
+  @return $type-scale-base * map-get($type-scale-token-values, $font-size-token);
+}
+
+@mixin font-size($font-size-token) {
+  font-size: font-size($font-size-token);
+}
