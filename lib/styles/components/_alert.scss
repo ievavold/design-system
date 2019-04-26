@@ -73,7 +73,7 @@ $alert-icon-size: 2rem;
 
 .uw-alert--info {
   @include alert-status(
-    utility-color('blue', 'dark'),
+    utility-color('blue', 'medium'),
     utility-color('blue', 'light'),
     $icon-circle-info
   );
