@@ -42,7 +42,7 @@ within the application's framework.
     <header class="uw-modal__header">
       <h1 id="example-modal__title">Modal title</h1>
     </header>
-    <div class="uw-modal__body uw-prose">
+    <div class="uw-modal__body uw-typeset">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius
         luctus viverra. Aenean <a href="#">blandit et magna nec</a> molestie. Ut
