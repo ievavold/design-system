@@ -52,9 +52,9 @@ more than one piece of information at a time.
 
 {{< swatches title="Yellow" >}}
 
-{{< swatch name="Light Yellow"  hex="#ffe082" text="dark"  >}}
-{{< swatch name="Medium Yellow" hex="#ffc82c" text="dark"  >}}
-{{< swatch name="Dark Yellow"   hex="#f8b700" text="dark"  >}}
+{{< swatch name="Light Yellow"  hex="#ffe082" text="dark" >}}
+{{< swatch name="Medium Yellow" hex="#ffc82c" text="dark" >}}
+{{< swatch name="Dark Yellow"   hex="#f8b700" text="dark" >}}
 
 {{< /swatches >}}
 
@@ -62,7 +62,7 @@ more than one piece of information at a time.
 
 {{< swatch name="Light Orange"  hex="#ffb74d" text="dark" >}}
 {{< swatch name="Medium Orange" hex="#ff9800" text="dark" >}}
-{{< swatch name="Dark Orange"   hex="#ef6c00" text="both"  >}}
+{{< swatch name="Dark Orange"   hex="#ef6c00" text="both" >}}
 
 {{< /swatches >}}
 
@@ -84,8 +84,8 @@ more than one piece of information at a time.
 
 {{< swatches title="Gray" >}}
 
-{{< swatch name="Light Gray"  hex="#dfdfdf" text="dark" >}}
-{{< swatch name="Medium Gray" hex="#adadad" text="dark" >}}
+{{< swatch name="Light Gray"  hex="#dfdfdf" text="dark"  >}}
+{{< swatch name="Medium Gray" hex="#adadad" text="dark"  >}}
 {{< swatch name="Dark Gray"   hex="#494949" text="light" >}}
 
 {{< /swatches >}}
