@@ -13,6 +13,10 @@ a:link {
   text-decoration: none;
 }
 
+code {
+  @include font-size('xs');
+}
+
 *:focus,
 .uw-checkbox__input:focus + .uw-checkbox__label:before,
 .uw-radio__input:focus + .uw-radio__label:before {
