@@ -110,3 +110,20 @@
     float: right;
   }
 }
+
+.uw-table__container code {
+  background: none;
+  white-space: nowrap;
+}
+
+.uw-table__container .token {
+  @include border-radius();
+  margin: 0 1px;
+  padding: 0.1rem 0.3rem;
+  position: relative;
+  top: -1px;
+  font-size: 90%;
+  background: utility-color('gray', 'light');
+  display: inline-block;
+  color: foreground-color('dark');
+}
