@@ -62,13 +62,15 @@ the font sizes in the type scale.
 
 {{< table >}}
 
-| Token  | Size (`rem`) | Size (`px`) | Example                                            |
-| ------ | ------------ | ----------- | -------------------------------------------------- |
-| `'xs'` | `0.888rem`   | `14.222px`  | <span class="uw-font-size-xs">Design System</span> |
-| `'sm'` | `1rem`       | `16px`      | <span class="uw-font-size-sm">Design System</span> |
-| `'md'` | `1.265rem`   | `20.25px`   | <span class="uw-font-size-md">Design System</span> |
-| `'lg'` | `2.027rem`   | `32.436px`  | <span class="uw-font-size-lg">Design System</span> |
-| `'xl'` | `2.886rem`   | `46.184px`  | <span class="uw-font-size-xl">Design System</span> |
+| Token   | Size (`rem`) | Example                                             |
+| ------- | ------------ | --------------------------------------------------- |
+| `'xxs'` | `0.790rem`   | <span class="uw-font-size-xxs">Design System</span> |
+| `'xs'`  | `0.889rem`   | <span class="uw-font-size-xs">Design System</span>  |
+| `'sm'`  | `1rem`       | <span class="uw-font-size-sm">Design System</span>  |
+| `'md'`  | `1.266rem`   | <span class="uw-font-size-md">Design System</span>  |
+| `'lg'`  | `1.602rem`   | <span class="uw-font-size-lg">Design System</span>  |
+| `'xl'`  | `2.027rem`   | <span class="uw-font-size-xl">Design System</span>  |
+| `'xxl'` | `2.566rem`   | <span class="uw-font-size-xxl">Design System</span> |
 
 {{< /table >}}
 

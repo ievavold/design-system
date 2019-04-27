@@ -7,11 +7,13 @@
 $type-scale-base: 1rem;
 
 $type-scale-token-values: (
+  'xxs': major-second(-2),
   'xs': major-second(-1),
   'sm': major-second(0),
   'md': major-second(2),
-  'lg': major-second(6),
-  'xl': major-second(9)
+  'lg': major-second(4),
+  'xl': major-second(6),
+  'xxl': major-second(8)
 );
 
 $type-scale-tokens: map-keys($type-scale-token-values);

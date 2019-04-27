@@ -7,26 +7,27 @@ body {
 }
 
 h1 {
-  @include font-size('xl');
+  @include font-size('xxl');
 }
 
 h2 {
+  @include font-size('xl');
+}
+
+h3 {
   @include font-size('lg');
 }
 
-h3,
 h4 {
   @include font-size('md');
 }
 
-h4 {
-  font-weight: 400;
+h5 {
+  @include font-size('sm');
 }
 
-h5,
 h6 {
-  @include font-size('sm');
-  font-weight: 700;
+  @include font-size('xs');
 }
 
 code,
