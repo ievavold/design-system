@@ -22,7 +22,7 @@
 
       <article class="uw-container--lg uw-container--center">
         
-  <div id="page-summary" class="uw-prose uw-font-size-md">
+  <div id="page-summary" class="uw-typeset uw-font-size-md">
     <h1>Typography</h1>
     
       <p class="uw-line-length-sm">Guidelines for consistent typography accross apps and websites.</p>
@@ -30,88 +30,150 @@
     
       <ul>
         
-          <li><a href="#typefaces">Typefaces</a></li>
+          <li><a href="#font-families">Font families</a></li>
         
-          <li><a href="#font-sizes">Font Sizes</a></li>
+          <li><a href="#font-sizes">Font sizes</a></li>
         
-          <li><a href="#font-weights">Font Weights</a></li>
+          <li><a href="#line-heights">Line heights</a></li>
+        
+          <li><a href="#line-lengths">Line lengths</a></li>
         
       </ul>
     
   </div>
   <hr>
-  <div class="uw-prose uw-line-length-md">
-  <h2 id="typefaces">Typefaces</h2>
+  <div class="uw-typeset uw-line-length-md">
+  <h2 id="font-families">Font families</h2>
 
-<p>The <a href="https://fonts.google.com/specimen/Roboto">Roboto</a> typeface is used by the
-design system. If Roboto cannot be used, the following fallback typefaces may be
-used:</p>
+<p>The design system provides the following font families. The <code>sans</code> font family
+is used by default. The <code>mono</code> font family is used for snippets of code.</p>
 
-<ul>
-<li><code>Helvetica</code></li>
-<li><code>Arial</code></li>
-<li><code>sans-serif</code></li>
-</ul>
-
-<h2 id="font-sizes">Font Sizes</h2>
-
-<p>The design system uses a
-<a href="https://type-scale.com/?size=16&amp;scale=1.125&amp;font=Roboto">major second</a> type
-scale that has been rounded to the nearest whole pixel. The body font size is
-set to <code>16px</code>.</p>
-
-<p>To maintain consistency when using the design system, font sizes shouldn&rsquo;t be
-set to a size not represented by this type scale. In order to make it easy to
-use the font sizes in this scale, the design system provides the following CSS
-classes:</p>
-
+<h3 id="font-family-tokens">Font family tokens</h3>
 </div>
 
 
-<div class="uw-table__container uw-prose">
+<div class="uw-table__container uw-mar-top-2">
   <table>
 <thead>
 <tr>
-<th>CSS classes</th>
-<th>rem</th>
-<th>Use</th>
-<th>Sample</th>
+<th>Token</th>
+<th>Family</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-<td><code>.uw-font-size-xs</code></td>
+<td><code>'sans'</code></td>
+<td><code>'Public Sans', 'Arial', sans-serif</code></td>
+</tr>
+
+<tr>
+<td><code>'mono'</code></td>
+<td><code>'SFMono-Regular', 'Consolas', monospace</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="uw-typeset uw-line-length-md">
+  <h3 id="using-font-family-tokens">Using font family tokens</h3>
+</div>
+
+
+<div class="uw-table__container uw-mar-top-2">
+  <table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Usage</th>
+<th>Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>SCSS function</strong></td>
+<td><code>font-family(<span class="token">family</span>)</td>
+<td><code>font-family('sans')</code></td>
+</tr>
+
+<tr>
+<td><strong>SCSS mixin</strong></td>
+<td><code>@include font-family(<span class="token">family</span>);</code></td>
+<td><code>@include font-family('mono');</code></td>
+</tr>
+
+<tr>
+<td><strong>CSS class</strong></td>
+<td><code>.uw-font-family-<span class="token">family</span></code></td>
+<td><code>.uw-font-family-mono</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="uw-typeset uw-line-length-md">
+  <h2 id="font-sizes">Font Sizes</h2>
+
+<p>The design system uses a major second type scale. The body font size is set to
+<code>16px</code>.</p>
+
+<p>To maintain consistency, font sizes shouldn’t be set to a size not represented
+by this type scale. In order to make it easy to use the font sizes in this
+scale, the design system provides SCSS utilities and CSS classes that implement
+the font sizes in the type scale.</p>
+
+<h3 id="font-size-tokens">Font size tokens</h3>
+
+</div>
+
+
+<div class="uw-table__container uw-mar-top-2">
+  <table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Size (<code>rem</code>)</th>
+<th>Size (<code>px</code>)</th>
+<th>Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>'xs'</code></td>
 <td><code>0.888rem</code></td>
-<td></td>
+<td><code>14.222px</code></td>
 <td><span class="uw-font-size-xs">Design System</span></td>
 </tr>
 
 <tr>
-<td><code>.uw-font-size-sm</code></td>
+<td><code>'sm'</code></td>
 <td><code>1rem</code></td>
-<td>Default</td>
+<td><code>16px</code></td>
 <td><span class="uw-font-size-sm">Design System</span></td>
 </tr>
 
 <tr>
-<td><code>.uw-font-size-md</code></td>
-<td><code>1.266rem</code></td>
-<td><code>&lt;h3&gt;</code> <code>&lt;h4&gt;</code></td>
+<td><code>'md'</code></td>
+<td><code>1.265rem</code></td>
+<td><code>20.25px</code></td>
 <td><span class="uw-font-size-md">Design System</span></td>
 </tr>
 
 <tr>
-<td><code>.uw-font-size-lg</code></td>
+<td><code>'lg'</code></td>
 <td><code>2.027rem</code></td>
-<td><code>&lt;h2&gt;</code></td>
+<td><code>32.436px</code></td>
 <td><span class="uw-font-size-lg">Design System</span></td>
 </tr>
 
 <tr>
-<td><code>.uw-font-size-xl</code></td>
-<td><code>2.887rem</code></td>
-<td><code>&lt;h1&gt;</code></td>
+<td><code>'xl'</code></td>
+<td><code>2.886rem</code></td>
+<td><code>46.184px</code></td>
 <td><span class="uw-font-size-xl">Design System</span></td>
 </tr>
 </tbody>
@@ -119,30 +181,224 @@ classes:</p>
 </div>
 
 
-<div class="uw-prose uw-line-length-md">
-  <h3 id="responsive-font-sizes">Responsive Font Sizes</h3>
+<div class="uw-typeset uw-line-length-md">
+  <h3 id="using-font-size-tokens">Using font size tokens</h3>
+</div>
 
-<p>Each font size class also has responsive variants that only apply when the
-screen is wider than the breakpoint. All of the font size classes above can
-become responsive by adding a breakpoint suffix:</p>
 
-<p><code>.uw-font-size-{size}-{breakpoint}</code></p>
+<div class="uw-table__container uw-mar-top-2">
+  <table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Usage</th>
+<th>Example</th>
+</tr>
+</thead>
 
-<p>Where <em>size</em> is one of the font sizes from the type scale.</p>
+<tbody>
+<tr>
+<td><strong>SCSS function</strong></td>
+<td><code>font-size(<span class="token">size</span>)</td>
+<td><code>font-size('sm')</code></td>
+</tr>
 
-<p>Where <em>breakpoint</em> is one of:</p>
+<tr>
+<td><strong>SCSS mixin</strong></td>
+<td><code>@include font-size(<span class="token">size</span>);</code></td>
+<td><code>@include font-size('md');</code></td>
+</tr>
 
-<ul>
-<li><code>sm</code> for screens larger than <code>32em</code></li>
-<li><code>md</code> for screens larger than <code>48rem</code></li>
-<li><code>lg</code> for screens larger than <code>64rem</code></li>
-</ul>
+<tr>
+<td><strong>CSS class</strong></td>
+<td><code>.uw-font-size-<span class="token">size</span></code></td>
+<td><code>.uw-font-size-lg</code></td>
+</tr>
+</tbody>
+</table>
+</div>
 
-<h2 id="font-weights">Font Weights</h2>
 
-<p>The design system uses <code>400</code> as the default font weight and the <code>700</code> weight for
-bold text.</p>
+<div class="uw-typeset uw-line-length-md">
+  <h2 id="line-heights">Line heights</h2>
 
+<p>Appropriate line heights make text more readable. Larger line heights should be
+used with longer sections of text.</p>
+
+<h3 id="line-height-tokens">Line height tokens</h3>
+</div>
+
+
+<div class="uw-table__container uw-mar-top-2">
+  <table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+<th>Usage</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>'xs'</code></td>
+<td><code>1</code></td>
+<td>Buttons, navigation, and other short bits of text not meant to break over a line.</td>
+</tr>
+
+<tr>
+<td><code>'sm'</code></td>
+<td><code>1.15</code></td>
+<td>Headings, text less than 2 or 3 sentences</td>
+</tr>
+
+<tr>
+<td><code>'md'</code></td>
+<td><code>1.35</code></td>
+<td>Captions, text less than 1 paragraph</td>
+</tr>
+
+<tr>
+<td><code>'lg'</code></td>
+<td><code>1.62</code></td>
+<td>Long passages of text</td>
+</tr>
+
+<tr>
+<td><code>'xl'</code></td>
+<td><code>1.75</code></td>
+<td>Pullquotes, short text meant to be distinguished</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="uw-typeset uw-line-length-md">
+  <h3 id="using-line-height-tokens">Using line height tokens</h3>
+</div>
+
+
+<div class="uw-table__container uw-mar-top-2">
+  <table>
+<thead>
+<tr>
+<th></th>
+<th>Usage</th>
+<th>Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>SCSS function</strong></td>
+<td><code>line-height(<span class="token">height</span>)</td>
+<td><code>line-height('sm')</code></td>
+</tr>
+
+<tr>
+<td><strong>SCSS mixin</strong></td>
+<td><code>@include line-height(<span class="token">height</span>);</code></td>
+<td><code>@include line-height('md');</code></td>
+</tr>
+
+<tr>
+<td><strong>CSS class</strong></td>
+<td><code>.uw-line-height-<span class="token">height</span></code></td>
+<td><code>.uw-line-height-lg</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="uw-typeset uw-line-length-md">
+  <h2 id="line-lengths">Line lengths</h2>
+
+<p>The readability of text can benefit from limiting the maximum number of
+characters per line. The design system provides a number of presets that can be
+used to prevent text elements from becoming too wide.</p>
+
+<p>The line lengths in the design system are set using the somewhat unusual
+<a href="https://stackoverflow.com/questions/918612/what-is-the-value-of-the-css-ex-unit">CSS <code>ex</code> unit</a>.
+The <code>ex</code> unit has a width equivalent to the x-height of the current font. This
+is a better approximation for the width of a character than more common relative
+units like <code>rem</code> and <code>em</code>.</p>
+
+<h3 id="line-length-tokens">Line length tokens</h3>
+
+</div>
+
+
+<div class="uw-table__container uw-mar-top-2">
+  <table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>'sm'</code></td>
+<td><code>48ex</code></td>
+</tr>
+
+<tr>
+<td><code>'md'</code></td>
+<td><code>64ex</code></td>
+</tr>
+
+<tr>
+<td><code>'lg'</code></td>
+<td><code>80ex</code></td>
+</tr>
+
+<tr>
+<td><code>'none'</code></td>
+<td>no upper limit (useful for overriding previously applied limits)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="uw-typeset uw-line-length-md">
+  <h3 id="using-line-length-tokens">Using line length tokens</h3>
+</div>
+
+
+<div class="uw-table__container uw-mar-top-2">
+  <table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Usage</th>
+<th>Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>SCSS function</strong></td>
+<td><code>line-length(<span class="token">length</span>)</td>
+<td><code>line-length('sm')</code></td>
+</tr>
+
+<tr>
+<td><strong>SCSS mixin</strong></td>
+<td><code>@include line-length(<span class="token">length</span>);</code></td>
+<td><code>@include line-length('md');</code></td>
+</tr>
+
+<tr>
+<td><strong>CSS class</strong></td>
+<td><code>.uw-line-length-<span class="token">length</span></code></td>
+<td><code>.uw-line-length-lg</code></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
