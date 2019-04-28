@@ -1,26 +1,30 @@
 @import '../tokens';
 
+@function spacing($token) {
+  @if index($spacing-tokens, $token) == null {
+    @error "no spacing token: '#{$token}'";
+  }
+
+  @return map-get($spacing-token-values, $token);
+}
+
 @mixin spacing($property, $direction, $token) {
   @if index($spacing-properties, $property) == null {
     @error "no spacing property: '#{$property}'";
   } @else if index($spacing-directions, $direction) == null {
     @error "no spacing direction: '#{$direction}'";
-  } @else if index($spacing-tokens, $token) == null {
-    @error "no spacing token: '#{$token}'";
   }
 
-  $value: map-get($spacing-token-values, $token);
-
   @if $direction == all {
-    #{$property}: $value;
+    #{$property}: spacing($token);
   } @else if $direction == x {
-    #{$property}-left: $value;
-    #{$property}-right: $value;
+    #{$property}-left: spacing($token);
+    #{$property}-right: spacing($token);
   } @else if $direction == y {
-    #{$property}-top: $value;
-    #{$property}-bottom: $value;
+    #{$property}-top: spacing($token);
+    #{$property}-bottom: spacing($token);
   } @else {
-    #{$property}-#{$direction}: $value;
+    #{$property}-#{$direction}: spacing($token);
   }
 }
 
