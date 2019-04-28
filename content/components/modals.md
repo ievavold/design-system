@@ -4,18 +4,15 @@ summary:
   A modal is a smaller window displayed on top of the application with a
   darkened background.
 links:
-  - Overview
+  - Example
 ---
 
 {{< typeset >}}
 
-## Overview
+## Example
 
-Showing and hiding modals is complex and depends on the idioms of the
-application's framework. For that reason this documentation won't prescribe
-_how_ a modal should be triggered and instead describes how modals should be
-represented on a page. It will be up to developers to implement these guidelines
-within the application's framework.
+An example of a simple modal that can be closed by clicking the 'X' button,
+clicking the 'Close' button, or clicking the shadow behind the modal window.
 
 {{< /typeset >}}
 
@@ -31,6 +28,7 @@ within the application's framework.
   role="dialog"
   aria-hidden="true"
   aria-labelledby="example-modal__title"
+  data-modal-close="example-modal"
   tabindex="-1">
   <div class="uw-modal__window uw-modal__window--size-md">
     <button data-modal-close="example-modal" class="uw-modal__close">

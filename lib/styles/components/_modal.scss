@@ -1,4 +1,3 @@
-@import '../assets/icons';
 @import '../tokens';
 
 .uw-modal-open {
@@ -6,7 +5,7 @@
 }
 
 .uw-modal {
-  @include padding(all, 2);
+  @include padding('all', 2);
   display: none;
   position: fixed;
   top: 0;
@@ -20,55 +19,53 @@
     display: block;
   }
 
+  &__close {
+    @include button-filled(identity-color('accent'));
+    @include border-radius();
+
+    padding: 0.25rem;
+    position: absolute;
+    top: spacing(3) - 0.25rem;
+    right: spacing(3) - 0.25rem;
+    border: none;
+    background: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+
+    svg {
+      width: font-size('lg');
+      height: font-size('lg');
+      display: block;
+      fill: utility-color('gray', 'dark');
+    }
+  }
+
   &__window {
     @include padding('all', 3);
     @include border-radius();
     max-width: breakpoint-size('md');
     margin: 0 auto;
     position: relative;
-    flex-grow: 0;
     background: white;
 
     @include screen-taller-than('md') {
       margin-top: 10rem;
     }
-  }
 
-  @each $screen-size-token in $screen-size-tokens {
-    &__window--size-#{$screen-size-token} {
-      max-width: screen-size($screen-size-token);
-    }
-  }
-
-  &__close {
-    $close-btn-padding: 0.25rem;
-
-    @include margin(all, 0);
-    @include border-radius();
-    width: font-size('md') + (2 * $close-btn-padding);
-    height: font-size('md') + (2 * $close-btn-padding);
-    padding: $close-btn-padding;
-    position: absolute;
-    top: 1.5rem - $close-btn-padding;
-    right: 1.5rem - $close-btn-padding;
-    border-style: none;
-    cursor: pointer;
-    background: none;
-
-    svg {
-      width: 22px;
-      height: 22px;
-      margin: 2px;
-      fill: utility-color('gray', 'dark');
+    @each $screen-size-token in $screen-size-tokens {
+      &--size-#{$screen-size-token} {
+        max-width: screen-size($screen-size-token);
+      }
     }
   }
 
   &__header {
     @include margin('bottom', 3);
-    line-height: 1;
 
-    > * {
-      @include font-size('md');
+    & > h1 {
+      @include font-size('lg');
+      margin: 0;
     }
   }
 
@@ -82,11 +79,11 @@
   &__body,
   &__footer {
     & > :first-child {
-      @include margin('top', 0);
+      margin-top: 0;
     }
 
     & > :last-child {
-      @include margin('bottom', 0);
+      margin-top: 0;
     }
   }
 }
