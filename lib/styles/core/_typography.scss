@@ -1,9 +1,6 @@
-@import '../tokens';
-@import '../mixins';
-
 body {
   font-size: 16px;
-  font-family: $typeface-sans-serif;
+  @include font-family('sans');
 }
 
 h1 {
@@ -32,5 +29,5 @@ h6 {
 
 code,
 pre {
-  font-family: $typeface-monospace;
+  @include font-family('mono');
 }

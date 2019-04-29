@@ -1,8 +1,0 @@
-@import '../../tokens';
-@import '../../mixins';
-
-@each $line-length-token in $line-length-tokens {
-  .uw-line-length-#{$line-length-token} {
-    @include line-length($line-length-token);
-  }
-}

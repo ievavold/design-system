@@ -1,5 +1,3 @@
-@import '../tokens';
-
 @function spacing($token) {
   @if index($spacing-tokens, $token) == null {
     @error "no spacing token: '#{$token}'";

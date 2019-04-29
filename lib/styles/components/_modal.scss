@@ -53,9 +53,9 @@
       margin-top: 10rem;
     }
 
-    @each $screen-size-token in $screen-size-tokens {
+    @each $screen-size-token in map-keys($breakpoint-tokens) {
       &--size-#{$screen-size-token} {
-        max-width: screen-size($screen-size-token);
+        max-width: breakpoint($screen-size-token);
       }
     }
   }

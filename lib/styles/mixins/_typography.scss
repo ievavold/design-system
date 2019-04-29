@@ -1,0 +1,53 @@
+@function font-family($family) {
+  @if map-has-key($font-family-tokens, $family) {
+    @return map-get($font-family-tokens, $family);
+  } @else {
+    @error "no font family token: '#{$family}'";
+  }
+}
+
+@mixin font-family($family) {
+  font-family: font-family($family);
+}
+
+@function font-size($size) {
+  @if map-has-key($font-size-tokens, $size) {
+    @return map-get($font-size-tokens, $size);
+  } @else {
+    @error "no font size token: '#{$size}'";
+  }
+}
+
+@mixin font-size($size, $breakpoint: null) {
+  @if $breakpoint {
+    @include screen-wider-than($breakpoint) {
+      font-size: font-size($size);
+    }
+  } @else {
+    font-size: font-size($size);
+  }
+}
+
+@function line-height($height) {
+  @if map-has-key($line-height-tokens, $height) {
+    @return map-get($line-height-tokens, $height);
+  } @else {
+    @error "no line height token: '#{$height}'";
+  }
+}
+
+@mixin line-height($height) {
+  line-height: line-height($height);
+}
+
+@function line-length($length) {
+  @if map-has-key($line-length-tokens, $length) {
+    @return map-get($line-length-tokens, $length);
+  } @else {
+    @error "no line length token: '#{$length}'";
+  }
+}
+
+@mixin line-length($length) {
+  max-width: line-length($length);
+}

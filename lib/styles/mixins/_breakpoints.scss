@@ -1,0 +1,19 @@
+@function breakpoint($breakpoint) {
+  @if not map-has-key($breakpoint-tokens, $breakpoint) {
+    @error "no breakpoint token: '#{$breakpoint}'";
+  }
+
+  @return map-get($breakpoint-tokens, $breakpoint);
+}
+
+@mixin screen-wider-than($breakpoint) {
+  @media screen and (min-width: breakpoint($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin screen-taller-than($breakpoint) {
+  @media screen and (min-height: breakpoint($breakpoint)) {
+    @content;
+  }
+}

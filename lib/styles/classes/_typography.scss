@@ -1,0 +1,33 @@
+@each $family in map-keys($font-family-tokens) {
+  .uw-font-family-#{$family} {
+    @include font-family($family);
+  }
+}
+
+@each $size in map-keys($font-size-tokens) {
+  .uw-font-size-#{$size} {
+    @include font-size($size);
+  }
+}
+
+@each $breakpoint in map-keys($breakpoint-tokens) {
+  @include screen-wider-than($breakpoint) {
+    @each $size in map-keys($font-size-tokens) {
+      .uw-font-size-#{$size}-#{$breakpoint} {
+        @include font-size($size);
+      }
+    }
+  }
+}
+
+@each $height in map-keys($line-height-tokens) {
+  .uw-line-height-#{$height} {
+    @include line-height($height);
+  }
+}
+
+@each $length in map-keys($line-length-tokens) {
+  .uw-line-length-#{$length} {
+    @include line-length($length);
+  }
+}

@@ -1,6 +1,3 @@
-@import '../../tokens';
-@import '../../mixins';
-
 @each $direction in (top, right, bottom, left) {
   $border-color: utility-color('gray', 'light');
   .uw-border-#{$direction} {

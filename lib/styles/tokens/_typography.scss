@@ -1,0 +1,39 @@
+@import '../utils/type-scale';
+
+$font-family-tokens: (
+  'sans': (
+    'Public Sans',
+    Arial,
+    sans-serif
+  ),
+  'mono': (
+    'SFMono-Regular',
+    Consolas,
+    monospace
+  )
+);
+
+$font-size-tokens: (
+  'xxs': major-second(-2) * 1rem,
+  'xs': major-second(-1) * 1rem,
+  'sm': major-second(0) * 1rem,
+  'md': major-second(2) * 1rem,
+  'lg': major-second(4) * 1rem,
+  'xl': major-second(6) * 1rem,
+  'xxl': major-second(8) * 1rem
+);
+
+$line-height-tokens: (
+  'xs': 1,
+  'sm': 1.15,
+  'md': 1.35,
+  'lg': 1.62,
+  'xl': 1.75
+);
+
+$line-length-tokens: (
+  'sm': 48ex,
+  'md': 64ex,
+  'lg': 80ex,
+  'none': none
+);

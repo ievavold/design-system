@@ -1,6 +1,3 @@
-@import '../tokens';
-@import '../mixins';
-
 /**
  * GRID SYSTEM
  */
@@ -66,7 +63,7 @@ $grid-gutter-width: spacing-units(2);
 
 // Column precedence rule 3 (treat breakpoints that don't match the current
 // screen size as `.uw-col`)
-@each $screen-size-token in $screen-size-tokens {
+@each $screen-size-token in map-keys($breakpoint-tokens) {
   @for $span from 1 through $grid-columns {
     .uw-col-#{$span}-#{$screen-size-token} {
       @extend %column;
@@ -82,7 +79,7 @@ $grid-gutter-width: spacing-units(2);
 }
 
 // Column precedence rule 1
-@each $screen-size-token in $screen-size-tokens {
+@each $screen-size-token in map-keys($breakpoint-tokens) {
   @include screen-wider-than($screen-size-token) {
     @for $span from 1 through $grid-columns {
       .uw-col-#{$span}-#{$screen-size-token} {
@@ -108,7 +105,7 @@ $grid-gutter-width: spacing-units(2);
   }
 }
 
-@each $screen-size-token in $screen-size-tokens {
+@each $screen-size-token in map-keys($breakpoint-tokens) {
   @include screen-wider-than($screen-size-token) {
     @each $spacing-token in $spacing-tokens {
       @each $direction in $spacing-directions {
@@ -136,7 +133,7 @@ $display-tokens: (none, inline, inline-block, block);
   }
 }
 
-@each $screen-size-token in $screen-size-tokens {
+@each $screen-size-token in map-keys($breakpoint-tokens) {
   @include screen-wider-than($screen-size-token) {
     @each $display-token in $display-tokens {
       .uw-display-#{$display-token}-#{$screen-size-token} {
@@ -161,9 +158,9 @@ $display-tokens: (none, inline, inline-block, block);
   margin-right: auto;
 }
 
-@each $screen-size-token in $screen-size-tokens {
+@each $screen-size-token in map-keys($breakpoint-tokens) {
   .uw-container--#{$screen-size-token} {
     @extend %container;
-    max-width: screen-size($screen-size-token);
+    max-width: breakpoint($screen-size-token);
   }
 }

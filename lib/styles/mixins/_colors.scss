@@ -1,5 +1,3 @@
-@import '../tokens';
-
 @function identity-color($color-token) {
   @if index($identity-color-tokens, $color-token) == null {
     @error "unknown identity color: '#{$color-token}'";
