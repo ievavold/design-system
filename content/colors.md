@@ -1,5 +1,8 @@
 ---
 title: Colors
+summary:
+  A collection of colors and color aliases for use across the design system and
+  components.
 links:
   - Accessibility
   - Color tokens
