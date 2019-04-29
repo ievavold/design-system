@@ -2,6 +2,6 @@
   border-radius: $border-radius;
 }
 
-@mixin border($color: utility-color('gray', 'light')) {
+@mixin border($color: color('border')) {
   border: $border-width solid $color;
 }

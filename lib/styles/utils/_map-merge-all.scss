@@ -1,0 +1,9 @@
+@function map-merge-all($maps...) {
+  $merged: ();
+
+  @each $map in $maps {
+    $merged: map-merge($merged, $map);
+  }
+
+  @return $merged;
+}

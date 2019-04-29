@@ -1,5 +1,5 @@
 @each $direction in (top, right, bottom, left) {
-  $border-color: utility-color('gray', 'light');
+  $border-color: color('border');
   .uw-border-#{$direction} {
     border-#{$direction}: $border-width solid $border-color !important;
   }

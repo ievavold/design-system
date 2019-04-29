@@ -28,82 +28,156 @@
   -webkit-appearance: none;
 
   &:disabled {
-    color: utility-color('gray', 'dark');
     pointer-events: none;
   }
 }
 
 .uw-button--filled {
-  @include button-filled(identity-color('accent'), foreground-color('light'));
+  @include background-color('button-default');
+  @include border-color('button-default');
+  @include text-color('text-light');
 
-  &.uw-button--success {
-    @include button-filled(
-      utility-color('green', 'medium'),
-      foreground-color('light')
-    );
+  &:hover {
+    @include background-color('button-default-hover');
+    @include border-color('button-default-hover');
   }
 
-  &.uw-button--danger {
-    @include button-filled(
-      utility-color('red', 'medium'),
-      foreground-color('light')
-    );
+  &:active {
+    @include background-color('button-default-active');
+    @include border-color('button-default-active');
   }
 
   &:disabled {
-    background: utility-color('gray', 'light');
-    border-color: utility-color('gray', 'light');
+    @include background-color('button-disabled');
+    @include border-color('button-disabled');
+  }
+}
+
+.uw-button--filled.uw-button--success {
+  @include background-color('button-success');
+  @include border-color('button-success');
+
+  &:hover {
+    @include background-color('button-success-hover');
+    @include border-color('button-success-hover');
+  }
+
+  &:active {
+    @include background-color('button-success-active');
+    @include border-color('button-success-active');
+  }
+}
+
+.uw-button--filled.uw-button--danger {
+  @include background-color('button-danger');
+  @include border-color('button-danger');
+
+  &:hover {
+    @include background-color('button-danger-hover');
+    @include border-color('button-danger-hover');
+  }
+
+  &:active {
+    @include background-color('button-danger-active');
+    @include border-color('button-danger-active');
   }
 }
 
 .uw-button--outlined {
-  @include button-outlined(identity-color('accent'));
+  @include border-color('button-default');
+  @include text-color('button-default');
+  background: transparent;
 
-  &.uw-button--success {
-    @include button-outlined(utility-color('green', 'medium'));
+  &:hover {
+    @include border-color('button-default-hover');
+    @include text-color('button-default-hover');
   }
 
-  &.uw-button--danger {
-    @include button-outlined(utility-color('red', 'medium'));
+  &:active {
+    @include border-color('button-default-active');
+    @include text-color('button-default-active');
   }
 
   &:disabled {
-    background: transparent;
-    border-color: utility-color('gray', 'medium');
+    @include border-color('button-disabled');
+    @include text-color('button-disabled');
+  }
+}
+
+.uw-button--outlined.uw-button--success {
+  @include border-color('button-success');
+  @include text-color('button-success');
+  background: transparent;
+
+  &:hover {
+    @include border-color('button-success-hover');
+    @include text-color('button-success-hover');
+  }
+
+  &:active {
+    @include border-color('button-success-active');
+    @include text-color('button-success-active');
+  }
+}
+
+.uw-button--outlined.uw-button--danger {
+  @include border-color('button-danger');
+  @include text-color('button-danger');
+  background: transparent;
+
+  &:hover {
+    @include border-color('button-danger-hover');
+    @include text-color('button-danger-hover');
+  }
+
+  &:active {
+    @include border-color('button-danger-active');
+    @include text-color('button-danger-active');
   }
 }
 
 .uw-button--plain {
-  text-decoration: none;
-  background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  font-weight: 400;
+  @include text-color('button-default');
   margin: 0;
   padding: 0;
-  text-align: left;
-  cursor: pointer;
-  display: inline-block;
+  border: none;
   appearance: none;
   -webkit-appearance: none;
 
+  &:hover {
+    @include text-color('button-default-hover');
+  }
+
+  &:active {
+    @include text-color('button-default-active');
+  }
+
   &:disabled {
-    background: transparent;
-    color: utility-color('gray', 'dark');
-    pointer-events: none;
+    @include text-color('button-disabled');
   }
 }
 
-.uw-button--plain {
-  @include button-plain(identity-color('accent'));
+.uw-button--plain.uw-button--success {
+  @include text-color('button-success');
 
-  &.uw-button--success {
-    @include button-plain(utility-color('green', 'medium'));
+  &:hover {
+    @include text-color('button-success-hover');
   }
 
-  &.uw-button--danger {
-    @include button-plain(utility-color('red', 'medium'));
+  &:active {
+    @include text-color('button-success-active');
+  }
+}
+
+.uw-button--plain.uw-button--danger {
+  @include text-color('button-danger');
+
+  &:hover {
+    @include text-color('button-danger-hover');
+  }
+
+  &:active {
+    @include text-color('button-danger-active');
   }
 }
 
@@ -143,21 +217,21 @@
       left: 2px;
       background: white;
       line-height: 1.25rem;
-      box-shadow: 0 0 0 2px utility-color('gray', 'dark');
+      box-shadow: 0 0 0 2px color('gray-dark');
     }
   }
 
   &__input:checked + &__label:before {
-    background-color: identity-color('accent');
-    box-shadow: 0 0 0 2px identity-color('accent');
+    @include background-color('accent');
+    box-shadow: 0 0 0 2px color('accent');
   }
 
   &__input:disabled + &__label {
-    color: utility-color('gray', 'medium');
+    @include text-color('gray');
 
     &:before {
-      background: utility-color('gray', 'light');
-      box-shadow: 0 0 0 2px utility-color('gray', 'medium');
+      @include background-color('gray-light');
+      box-shadow: 0 0 0 2px color('gray');
       cursor: not-allowed;
     }
   }
@@ -183,6 +257,6 @@
   }
 
   &__input:checked + &__label:before {
-    box-shadow: 0 0 0 2px identity-color('accent'), inset 0 0 0 2px #fff;
+    box-shadow: 0 0 0 2px color('accent'), inset 0 0 0 2px #fff;
   }
 }

@@ -10,7 +10,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: transparentize(utility-color('gray', 'dark'), 0.25);
+  background: transparentize(color('gray'), 0.25);
   overflow: scroll;
 
   &[aria-hidden='false'] {
@@ -18,7 +18,6 @@
   }
 
   &__close {
-    @include button-filled(identity-color('accent'));
     @include border-radius();
 
     padding: 0.25rem;
@@ -35,7 +34,17 @@
       width: font-size('lg');
       height: font-size('lg');
       display: block;
-      fill: utility-color('gray', 'dark');
+      fill: color('gray-dark');
+    }
+
+    &:hover {
+      @include background-color('button-default-hover');
+      @include border-color('button-default-hover');
+    }
+
+    &:active {
+      @include background-color('button-default-active');
+      @include border-color('button-default-active');
     }
   }
 

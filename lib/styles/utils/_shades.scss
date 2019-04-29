@@ -1,0 +1,26 @@
+@function shades($name, $base) {
+  $color-10: scale-color($base, $lightness: -80%);
+  $color-20: scale-color($base, $lightness: -60%);
+  $color-30: scale-color($base, $lightness: -40%);
+  $color-40: scale-color($base, $lightness: -20%);
+  $color-50: $base;
+  $color-60: scale-color($base, $lightness: +20%, $saturation: -5%);
+  $color-70: scale-color($base, $lightness: +40%, $saturation: -10%);
+  $color-80: scale-color($base, $lightness: +60%, $saturation: -15%);
+  $color-90: scale-color($base, $lightness: +90%, $saturation: -20%);
+
+  @return (
+    '#{$name}-10': $color-10,
+    '#{$name}-20': $color-20,
+    '#{$name}-30': $color-30,
+    '#{$name}-dark': $color-30,
+    '#{$name}-40': $color-40,
+    '#{$name}-50': $color-50,
+    '#{$name}': $color-50,
+    '#{$name}-60': $color-60,
+    '#{$name}-70': $color-70,
+    '#{$name}-light': $color-70,
+    '#{$name}-80': $color-80,
+    '#{$name}-90': $color-90
+  );
+}

@@ -1,26 +1,24 @@
-@function identity-color($color-token) {
-  @if index($identity-color-tokens, $color-token) == null {
-    @error "unknown identity color: '#{$color-token}'";
+@function color($name) {
+  $real-name: $name;
+  @if map-has-key($color-aliases, $name) {
+    $real-name: map-get($color-aliases, $name);
   }
 
-  @return map-get($identity-color-token-values, $color-token);
+  @if not map-has-key($color-tokens, $real-name) {
+    @error "no color token: '#{$real-name}'";
+  }
+
+  @return map-get($color-tokens, $real-name);
 }
 
-@function utility-color($color-token, $modifier-token: 'medium') {
-  @if index($utility-color-tokens, $color-token) == null {
-    @error "unknown utility color: '#{$color-token}'";
-  } @else if index($utility-modifier-tokens, $modifier-token) == null {
-    @error "unknown utility color modifier: '#{$modifier-token}'";
-  }
-
-  $color-group: map-get($utility-color-token-values, $color-token);
-  @return map-get($color-group, $modifier-token);
+@mixin background-color($name) {
+  background-color: color($name);
 }
 
-@function foreground-color($color-token) {
-  @if index($foreground-color-tokens, $color-token) == null {
-    @error "unknown foreground color: '#{$color-token}'";
-  }
+@mixin text-color($name) {
+  color: color($name);
+}
 
-  @return map-get($foreground-color-token-values, $color-token);
+@mixin border-color($name) {
+  border-color: color($name);
 }

@@ -1,50 +1,29 @@
-$identity-color-token-values: (
-  'primary': #c50505,
-  'accent': #0479a8
+@import '../utils/shades';
+@import '../utils/map-merge-all';
+
+$color-tokens: map-merge-all(
+  shades('identity', #c50505),
+  shades('accent', #0479a8),
+  shades('orange', #ff9800),
+  shades('yellow', #ffc82c),
+  shades('green', #2e7d32),
+  shades('red', #cb3a3a),
+  shades('blue', #32a1cd),
+  shades('gray', #adadad)
 );
 
-$identity-color-tokens: map-keys($identity-color-token-values);
-
-$utility-color-token-values: (
-  'orange': (
-    'light': #ffb74d,
-    'medium': #ff9800,
-    'dark': #ef6c00
-  ),
-  'yellow': (
-    'light': #ffe082,
-    'medium': #ffc82c,
-    'dark': #f8b700
-  ),
-  'green': (
-    'light': #81b184,
-    'medium': #2e7d32,
-    'dark': #1b4b1e
-  ),
-  'red': (
-    'light': #d79999,
-    'medium': #cb3a3a,
-    'dark': #9b0000
-  ),
-  'blue': (
-    'light': #9ac9dc,
-    'medium': #32a1cd,
-    'dark': #034e6c
-  ),
-  'gray': (
-    'light': #dfdfdf,
-    'medium': #adadad,
-    'dark': #494949
-  )
+$color-aliases: (
+  'text-light': 'gray-90',
+  'text-dark': 'gray-10',
+  'border': 'gray-70',
+  'button-default': 'accent-50',
+  'button-default-hover': 'accent-40',
+  'button-default-active': 'accent-30',
+  'button-success': 'green-50',
+  'button-success-hover': 'green-40',
+  'button-success-active': 'green-30',
+  'button-danger': 'red-50',
+  'button-danger-hover': 'red-40',
+  'button-danger-active': 'red-30',
+  'button-disabled': 'gray-light'
 );
-
-$utility-color-tokens: map-keys($utility-color-token-values);
-
-$utility-modifier-tokens: 'light', 'medium', 'dark';
-
-$foreground-color-token-values: (
-  'light': #f9f9f9,
-  'dark': #282728
-);
-
-$foreground-color-tokens: map-keys($foreground-color-token-values);

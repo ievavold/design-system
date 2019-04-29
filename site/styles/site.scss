@@ -5,7 +5,7 @@
   height: 3px;
   border-style: none;
   margin: 2rem 0 0 0;
-  background: utility-color('gray', 'light');
+  @include background-color('gray-light');
 }
 
 .docs-example {
@@ -14,7 +14,7 @@
   &__screen-indicator {
     margin-top: 0;
     text-align: right;
-    color: utility-color('gray', 'dark');
+    @include text-color('gray-dark');
     @include font-size('xs');
   }
 
@@ -98,16 +98,28 @@
     }
 
     &--light {
-      background: foreground-color('light');
+      @include background-color('text-light');
     }
 
     &--dark {
-      background: foreground-color('dark');
+      @include background-color('text-dark');
     }
   }
 
   &__description button {
     float: right;
+  }
+}
+
+.docs-small-swatch {
+  @include border-radius();
+  @include font-size('xxs');
+  width: 4rem;
+  padding: 0.1rem 0.3rem;
+  display: inline-block;
+
+  &:before {
+    content: '\a0';
   }
 }
 
@@ -118,12 +130,10 @@
 
 .uw-table__container .token {
   @include border-radius();
+  @include background-color('gray-80');
+  @include font-family('mono');
+  @include font-size('xxs');
   margin: 0 1px;
   padding: 0.1rem 0.3rem;
-  position: relative;
-  top: -1px;
-  font-size: 90%;
-  background: utility-color('gray', 'light');
   display: inline-block;
-  color: foreground-color('dark');
 }

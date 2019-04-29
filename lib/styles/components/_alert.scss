@@ -60,9 +60,9 @@ $alert-icon-size: 2rem;
   }
 }
 
-@mixin alert-status($border, $background, $icon) {
-  border-left-color: $border;
-  background: transparentize($background, 0.8);
+@mixin alert-status($color, $icon) {
+  @include border-color($color);
+  @include background-color('#{$color}-90');
 
   .uw-alert__icon {
     background-image: $icon;
@@ -70,35 +70,19 @@ $alert-icon-size: 2rem;
 }
 
 .uw-alert--info {
-  @include alert-status(
-    utility-color('blue', 'medium'),
-    utility-color('blue', 'light'),
-    $icon-circle-info
-  );
+  @include alert-status('blue', $icon-circle-info);
 }
 
 .uw-alert--success {
-  @include alert-status(
-    utility-color('green', 'medium'),
-    utility-color('green', 'light'),
-    $icon-circle-check
-  );
+  @include alert-status('green', $icon-circle-check);
 }
 
 .uw-alert--warning {
-  @include alert-status(
-    utility-color('orange', 'medium'),
-    utility-color('orange', 'light'),
-    $icon-triangle-exclamation
-  );
+  @include alert-status('orange', $icon-triangle-exclamation);
 }
 
 .uw-alert--danger {
-  @include alert-status(
-    utility-color('red', 'medium'),
-    utility-color('red', 'light'),
-    $icon-circle-times
-  );
+  @include alert-status('red', $icon-circle-times);
 }
 
 .uw-alert-group {
