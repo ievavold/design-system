@@ -21,10 +21,10 @@ is used by default. The `mono` font family is used for snippets of code.
 
 {{< table >}}
 
-| Token    | Family                                    |
-| -------- | ----------------------------------------- |
-| `'sans'` | `'Public Sans', 'Arial', sans-serif`      |
-| `'mono'` | `'SFMono-Regular', 'Consolas', monospace` |
+| Token    | Family                                                   |
+| -------- | -------------------------------------------------------- |
+| `'sans'` | `'Public Sans', 'Arial', sans-serif`                     |
+| `'mono'` | `'Roboto Mono', 'SFMono-Regular', 'Consolas', monospace` |
 
 {{< /table >}}
 
