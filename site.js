@@ -62,14 +62,6 @@
       close(modalId);
       return;
     }
-
-    /**
-     * If the mouse clicked on the modal shadow, close the modal.
-     */
-    const modalElem = event.target.closest(MODAL_SELECTOR);
-    if (event.target === modalElem) {
-      close(modalElem.id);
-    }
   }
 
   function handleKeydown(event) {

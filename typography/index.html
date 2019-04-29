@@ -226,6 +226,41 @@ the font sizes in the type scale.</p>
 
 
 <div class="uw-typeset uw-line-length-md">
+  <h3 id="using-responsive-font-sizes">Using responsive font sizes</h3>
+
+<p>Combining a font size with a breakpoint will only apply that font size when the
+screen is as large or larger than the breakpoint.
+</div>
+
+
+<div class="uw-table__container uw-mar-top-2">
+  <table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Usage</th>
+<th>Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>SCSS mixin</strong></td>
+<td><code>@include font-size(<span class="token">size</span>, <span class="token">breakpoint</span>);</code></td>
+<td><code>@include font-size('md', 'sm');</code></td>
+</tr>
+
+<tr>
+<td><strong>CSS class</strong></td>
+<td><code>.uw-font-size-<span class="token">size</span>-<span class="token">breakpoint</span></code></td>
+<td><code>.uw-font-size-lg-xl</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="uw-typeset uw-line-length-md">
   <h2 id="line-heights">Line heights</h2>
 
 <p>Appropriate line heights make text more readable. Larger line heights should be
