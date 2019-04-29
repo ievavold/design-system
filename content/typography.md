@@ -92,6 +92,24 @@ the font sizes in the type scale.
 
 {{< typeset >}}
 
+### Using responsive font sizes
+
+Combining a font size with a breakpoint will only apply that font size when the
+screen is as large or larger than the breakpoint.
+
+{{< /typeset >}}
+
+{{< table >}}
+
+| Context        | Usage                                                                                                    | Example                           |
+| -------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| **SCSS mixin** | <code>@include font-size(<span class="token">size</span>, <span class="token">breakpoint</span>);</code> | `@include font-size('md', 'sm');` |
+| **CSS class**  | <code>.uw-font-size-<span class="token">size</span>-<span class="token">breakpoint</span></code>         | `.uw-font-size-lg-md`             |
+
+{{< /table >}}
+
+{{< typeset >}}
+
 ## Line heights
 
 Appropriate line heights make text more readable. Larger line heights should be
