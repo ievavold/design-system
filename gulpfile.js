@@ -2,7 +2,6 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-dart-sass');
 const concat = require('gulp-concat');
 const rollup = require('rollup');
-const typescript = require('rollup-plugin-typescript2');
 
 const stylesConfig = {
   includePaths: ['node_modules'],
@@ -31,8 +30,7 @@ exports.buildVendorScripts = function buildVendorScripts() {
 exports.buildSiteScripts = function buildSiteScripts() {
   return rollup
     .rollup({
-      input: 'site/scripts/site.ts',
-      plugins: [typescript()],
+      input: 'site/scripts/site.js',
       external: ['clipboard']
     })
     .then(bundle => {
