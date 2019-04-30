@@ -1,14 +1,28 @@
-@function color($name) {
-  $real-name: $name;
+@import '../utils/to-string';
+
+@function resolve-color-alias($name, $past: ()) {
   @if map-has-key($color-aliases, $name) {
-    $real-name: map-get($color-aliases, $name);
+    $alias: map-get($color-aliases, $name);
+    @if index($past, $alias) != null {
+      $aliases: join($past, ($name, nth($past, 1)));
+      $aliases-str: to-string($aliases, $glue: ' ->');
+      @error "self-referential color alias: #{$aliases-str}";
+    }
+
+    @return resolve-color-alias($alias, append($past, $name));
   }
 
-  @if not map-has-key($color-tokens, $real-name) {
-    @error "no color token: '#{$real-name}'";
+  @return $name;
+}
+
+@function color($name) {
+  $name: resolve-color-alias($name);
+
+  @if not map-has-key($color-tokens, $name) {
+    @error "no color token: '#{$name}'";
   }
 
-  @return map-get($color-tokens, $real-name);
+  @return map-get($color-tokens, $name);
 }
 
 @mixin background-color($name) {
