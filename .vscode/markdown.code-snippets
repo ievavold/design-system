@@ -4,6 +4,11 @@
     "body": ["{{< example >}}", "", "$0", "", "{{< /example >}}"],
     "description": "Insert 'example' shortcode"
   },
+  "Table_Block": {
+    "prefix": "table",
+    "body": ["{{< table >}}", "", "$0", "", "{{< /table >}}"],
+    "description": "Insert 'table' shortcode"
+  },
   "Typeset_Block": {
     "prefix": "typeset",
     "body": ["{{< typeset >}}", "", "$0", "", "{{< /typeset >}}"],
