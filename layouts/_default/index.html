@@ -5,7 +5,7 @@
 {{ define "main" }}
   <div id="site-summary" class="uw-typeset uw-font-size-md">
     <h2>Core</h2>
-    <ul class="uw-mar-top-0">
+    <ul class="uw-mar-top-none">
       {{ range where .Pages "Section" "" }}
         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
       {{ end }}
@@ -13,7 +13,7 @@
 
     {{ range .Sections }}
       <h2>{{ .Title }}</h2>
-      <ul class="uw-mar-top-0">
+      <ul class="uw-mar-top-none">
         {{ range .Pages }}
           <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
         {{ end }}

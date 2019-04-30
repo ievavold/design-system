@@ -29,7 +29,7 @@
     }
 
     .uw-grid + .uw-grid {
-      @include margin(top, 2);
+      @include margin-top('sm');
     }
 
     .inner {
@@ -71,6 +71,15 @@
     .s {
       color: #008000;
     }
+  }
+}
+
+.docs-spacing {
+  background: #dbeaff;
+  outline: 1px dashed #97c1ff;
+
+  & > div {
+    background: #edf4ff;
   }
 }
 

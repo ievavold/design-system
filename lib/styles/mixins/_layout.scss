@@ -1,0 +1,155 @@
+@function spacing($spacing) {
+  @if not map-has-key($spacing-tokens, $spacing) {
+    @error "no spacing token: '#{$spacing}'";
+  }
+
+  @return map-get($spacing-tokens, $spacing);
+}
+
+@mixin margin-all($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    margin: spacing($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      margin: spacing($spacing);
+    }
+  }
+}
+
+@mixin margin-top($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    margin-top: spacing($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      margin-top: spacing($spacing);
+    }
+  }
+}
+
+@mixin margin-right($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    margin-right: spacing($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      margin-right: spacing($spacing);
+    }
+  }
+}
+
+@mixin margin-bottom($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    margin-bottom: spacing($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      margin-bottom: spacing($spacing);
+    }
+  }
+}
+
+@mixin margin-left($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    margin-left: spacing($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      margin-left: spacing($spacing);
+    }
+  }
+}
+
+@mixin margin-x($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    @include margin-left($spacing);
+    @include margin-right($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      @include margin-left($spacing);
+      @include margin-right($spacing);
+    }
+  }
+}
+
+@mixin margin-y($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    @include margin-top($spacing);
+    @include margin-bottom($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      @include margin-top($spacing);
+      @include margin-bottom($spacing);
+    }
+  }
+}
+
+@mixin padding-all($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    padding: spacing($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      padding: spacing($spacing);
+    }
+  }
+}
+
+@mixin padding-top($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    padding-top: spacing($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      padding-top: spacing($spacing);
+    }
+  }
+}
+
+@mixin padding-right($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    padding-right: spacing($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      padding-right: spacing($spacing);
+    }
+  }
+}
+
+@mixin padding-bottom($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    padding-bottom: spacing($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      padding-bottom: spacing($spacing);
+    }
+  }
+}
+
+@mixin padding-left($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    padding-left: spacing($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      padding-left: spacing($spacing);
+    }
+  }
+}
+
+@mixin padding-x($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    @include padding-left($spacing);
+    @include padding-right($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      @include padding-left($spacing);
+      @include padding-right($spacing);
+    }
+  }
+}
+
+@mixin padding-y($spacing, $breakpoint: null) {
+  @if not $breakpoint {
+    @include padding-top($spacing);
+    @include padding-bottom($spacing);
+  } @else {
+    @include screen-larger-than($breakpoint) {
+      @include padding-top($spacing);
+      @include padding-bottom($spacing);
+    }
+  }
+}

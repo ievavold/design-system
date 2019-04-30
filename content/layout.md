@@ -176,52 +176,142 @@ Where _breakpoint_ is one of:
 
 {{< typeset >}}
 
-## Margins and Padding
+## Spacing
 
-Element margins and padding can be set with built-in utility classes. Spacing
-utility classes are written in the form:
+_TODO_
 
-`.uw-{property}-{sides}-{size}`
-
-Where _property_ is one of:
-
-- `mar` for classes that set `margin`
-- `pad` for classes that set `padding`
-
-Where _sides_ is one of:
-
-- `top`
-- `right`
-- `bottom`
-- `left`
-- `x` for classes that set both `top` and `bottom`
-- `y` for classes that set both `left` and `right`
-- `all` for classes that set all sides
-
-Where _size_ is one of:
-
-- `0` for classes that remove the margin or padding
-- `1` for classes that set the margin or padding to `0.5rem`
-- `2` for classes that set the margin or padding to `1rem`
-- `3` for classes that set the margin or padding to `1.5rem`
-- `4` for classes that set the margin or padding to `2rem`
-- `5` for classes that set the margin or padding to `2.5rem`
-- `6` for classes that set the margin or padding to `3rem`
-
-### Responsive Margins and Padding
-
-Element margins and padding can be tailored to specific screen sizes by adding a
-breakpoint to a spacing utility class. Responsive spacing utility classes are
-written in the form:
-
-`.uw-{property}-{sides}-{size}-{breakpoint}`
-
-Where _property_, _sides_, and _size_ are the same as above.
-
-Where _breakpoint_ is one of:
-
-- `sm` for screens larger than `32em`
-- `md` for screens larger than `48rem`
-- `lg` for screens larger than `64rem`
+### Spacing tokens
 
 {{< /typeset >}}
+
+{{< table >}}
+
+| Token    | Value    | Example                                                            |
+| -------- | -------- | ------------------------------------------------------------------ |
+| `'none'` | `0rem`   | <div class="docs-spacing uw-pad-all-none"><div>Content</div></div> |
+| `'xs'`   | `0.5rem` | <div class="docs-spacing uw-pad-all-xs"><div>Content</div></div>   |
+| `'sm'`   | `1rem`   | <div class="docs-spacing uw-pad-all-sm"><div>Content</div></div>   |
+| `'md'`   | `1.5rem` | <div class="docs-spacing uw-pad-all-md"><div>Content</div></div>   |
+| `'lg'`   | `2rem`   | <div class="docs-spacing uw-pad-all-lg"><div>Content</div></div>   |
+| `'xl'`   | `2.5rem` | <div class="docs-spacing uw-pad-all-xl"><div>Content</div></div>   |
+
+{{< /table >}}
+
+{{< typeset >}}
+
+### Using spacing tokens
+
+{{< /typeset >}}
+
+{{< table >}}
+
+<table>
+  <thead>
+    <tr>
+      <th>Context</th>
+      <th>Usage</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>SCSS function</strong></td>
+      <td><code>spacing(<span class="token">spacing</span>)</code></td>
+      <td><code>spacing('sm')</code></td>
+    </tr>
+    <tr>
+      <td>
+        <strong>SCSS mixins</strong><br>Margin
+      </td>
+      <td>
+        <code>@include margin-all(<span class="token">spacing</span>)</code><br>
+        <code>@include margin-top(<span class="token">spacing</span>)</code><br>
+        <code>@include margin-right(<span class="token">spacing</span>)</code><br>
+        <code>@include margin-bottom(<span class="token">spacing</span>)</code><br>
+        <code>@include margin-left(<span class="token">spacing</span>)</code><br>
+        <code>@include margin-x(<span class="token">spacing</span>)</code><br>
+        <code>@include margin-y(<span class="token">spacing</span>)</code>
+      </td>
+      <td>
+        <code>@include margin-all('none')</code><br>
+        <code>@include margin-top('xs')</code><br>
+        <code>@include margin-right('sm')</code><br>
+        <code>@include margin-bottom('md')</code><br>
+        <code>@include margin-left('lg')</code><br>
+        <code>@include margin-x('xl')</code><br>
+        <code>@include margin-y('none')</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>SCSS mixins</strong><br>Padding
+      </td>
+      <td>
+        <code>@include padding-all(<span class="token">spacing</span>)</code><br>
+        <code>@include padding-top(<span class="token">spacing</span>)</code><br>
+        <code>@include padding-right(<span class="token">spacing</span>)</code><br>
+        <code>@include padding-bottom(<span class="token">spacing</span>)</code><br>
+        <code>@include padding-left(<span class="token">spacing</span>)</code><br>
+        <code>@include padding-x(<span class="token">spacing</span>)</code><br>
+        <code>@include padding-y(<span class="token">spacing</span>)</code>
+      </td>
+      <td>
+        <code>@include padding-all('none')</code><br>
+        <code>@include padding-top('xs')</code><br>
+        <code>@include padding-right('sm')</code><br>
+        <code>@include padding-bottom('md')</code><br>
+        <code>@include padding-left('lg')</code><br>
+        <code>@include padding-x('xl')</code><br>
+        <code>@include padding-y('none')</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>CSS classes</strong><br>Margin
+      </td>
+      <td>
+        <code>.uw-mar-all-<span class="token">spacing</span></code><br>
+        <code>.uw-mar-top-<span class="token">spacing</span></code><br>
+        <code>.uw-mar-right-<span class="token">spacing</span></code><br>
+        <code>.uw-mar-bottom-<span class="token">spacing</span></code><br>
+        <code>.uw-mar-left-<span class="token">spacing</span></code><br>
+        <code>.uw-mar-x-<span class="token">spacing</span></code><br>
+        <code>.uw-mar-y-<span class="token">spacing</span></code>
+      </td>
+      <td>
+        <code>.uw-mar-all-none</code><br>
+        <code>.uw-mar-top-xs</code><br>
+        <code>.uw-mar-right-sm</code><br>
+        <code>.uw-mar-bottom-md</code><br>
+        <code>.uw-mar-left-lg</code><br>
+        <code>.uw-mar-x-xl</code><br>
+        <code>.uw-mar-y-none</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>CSS classes</strong><br>Padding
+      </td>
+      <td>
+        <code>.uw-pad-all-<span class="token">spacing</span></code><br>
+        <code>.uw-pad-top-<span class="token">spacing</span></code><br>
+        <code>.uw-pad-right-<span class="token">spacing</span></code><br>
+        <code>.uw-pad-bottom-<span class="token">spacing</span></code><br>
+        <code>.uw-pad-left-<span class="token">spacing</span></code><br>
+        <code>.uw-pad-x-<span class="token">spacing</span></code><br>
+        <code>.uw-pad-y-<span class="token">spacing</span></code>
+      </td>
+      <td>
+        <code>.uw-pad-all-none</code><br>
+        <code>.uw-pad-top-xs</code><br>
+        <code>.uw-pad-right-sm</code><br>
+        <code>.uw-pad-bottom-md</code><br>
+        <code>.uw-pad-left-lg</code><br>
+        <code>.uw-pad-x-xl</code><br>
+        <code>.uw-pad-y-none</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+{{< /table >}}

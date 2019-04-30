@@ -3,7 +3,7 @@
 $alert-icon-size: 2rem;
 
 .uw-alert {
-  @include padding('all', 2);
+  @include padding-all('sm');
   @include border-radius();
   display: flex;
   flex-direction: row;
@@ -11,7 +11,7 @@ $alert-icon-size: 2rem;
   border-left-style: solid;
 
   & + & {
-    @include margin('top', 2);
+    @include margin-top('sm');
   }
 
   &__icon {
@@ -25,12 +25,12 @@ $alert-icon-size: 2rem;
   }
 
   &__info {
-    @include padding('left', 2);
+    @include padding-left('sm');
     flex-grow: 1;
   }
 
   &__title {
-    @include margin('all', 0);
+    @include margin-all('none');
     @include font-size(md);
     padding-top: 4px;
     font-weight: 700;
@@ -38,24 +38,24 @@ $alert-icon-size: 2rem;
   }
 
   &__description {
-    @include margin('top', 2);
-    @include margin('bottom', 1);
+    @include margin-top('sm');
+    @include margin-bottom('xs');
     @include font-size(sm);
     line-height: 1.5;
 
     & > p,
     & > ul,
     & > ol {
-      @include margin('y', 3);
+      @include margin-y('md');
       line-height: 1.5;
     }
 
     & > :first-child {
-      @include margin('top', 0);
+      @include margin-top('none');
     }
 
     & > :last-child {
-      @include margin('bottom', 0);
+      @include margin-bottom('none');
     }
   }
 }
@@ -86,8 +86,8 @@ $alert-icon-size: 2rem;
 }
 
 .uw-alert-group {
-  @include margin('all', 0);
-  @include padding('all', 0);
+  @include margin-all('none');
+  @include padding-all('none');
   list-style: none;
 
   & > .uw-alert {
@@ -107,6 +107,6 @@ $alert-icon-size: 2rem;
   }
 
   & > .uw-alert + .uw-alert {
-    @include margin('top', 1);
+    @include margin-top('xs');
   }
 }

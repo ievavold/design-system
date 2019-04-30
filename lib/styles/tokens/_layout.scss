@@ -1,0 +1,10 @@
+$spacing-unit: 0.5rem;
+
+$spacing-tokens: (
+  'none': 0 * $spacing-unit,
+  'xs': 1 * $spacing-unit,
+  'sm': 2 * $spacing-unit,
+  'md': 3 * $spacing-unit,
+  'lg': 4 * $spacing-unit,
+  'xl': 5 * $spacing-unit
+);

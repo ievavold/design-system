@@ -3,7 +3,7 @@
  */
 
 $grid-columns: 12;
-$grid-gutter-width: spacing-units(2);
+$grid-gutter-width: spacing('sm');
 
 @mixin grid() {
   display: flex;
@@ -93,29 +93,121 @@ $grid-gutter-width: spacing-units(2);
  * MARGINS and PADDING
  */
 
-@each $spacing-token in $spacing-tokens {
-  @each $direction in $spacing-directions {
-    .uw-mar-#{$direction}-#{$spacing-token} {
-      @include margin($direction, $spacing-token);
-    }
+@each $spacing in map-keys($spacing-tokens) {
+  .uw-mar-all-#{$spacing} {
+    @include margin-all($spacing);
+  }
 
-    .uw-pad-#{$direction}-#{$spacing-token} {
-      @include padding($direction, $spacing-token);
-    }
+  .uw-mar-top-#{$spacing} {
+    @include margin-top($spacing);
+  }
+
+  .uw-mar-right-#{$spacing} {
+    @include margin-right($spacing);
+  }
+
+  .uw-mar-bottom-#{$spacing} {
+    @include margin-bottom($spacing);
+  }
+
+  .uw-mar-left-#{$spacing} {
+    @include margin-left($spacing);
+  }
+
+  .uw-mar-x-#{$spacing} {
+    @include margin-x($spacing);
+  }
+
+  .uw-mar-y-#{$spacing} {
+    @include margin-y($spacing);
+  }
+
+  .uw-pad-all-#{$spacing} {
+    @include padding-all($spacing);
+  }
+
+  .uw-pad-top-#{$spacing} {
+    @include padding-top($spacing);
+  }
+
+  .uw-pad-right-#{$spacing} {
+    @include padding-right($spacing);
+  }
+
+  .uw-pad-bottom-#{$spacing} {
+    @include padding-bottom($spacing);
+  }
+
+  .uw-pad-left-#{$spacing} {
+    @include padding-left($spacing);
+  }
+
+  .uw-pad-x-#{$spacing} {
+    @include padding-x($spacing);
+  }
+
+  .uw-pad-y-#{$spacing} {
+    @include padding-y($spacing);
   }
 }
 
 @each $screen-size-token in map-keys($breakpoint-tokens) {
   @include screen-wider-than($screen-size-token) {
-    @each $spacing-token in $spacing-tokens {
-      @each $direction in $spacing-directions {
-        .uw-mar-#{$direction}-#{$spacing-token}-#{$screen-size-token} {
-          @include margin($direction, $spacing-token);
-        }
+    @each $spacing in map-keys($spacing-tokens) {
+      .uw-mar-all-#{$spacing}-#{$screen-size-token} {
+        @include margin-all($spacing);
+      }
 
-        .uw-pad-#{$direction}-#{$spacing-token}-#{$screen-size-token} {
-          @include padding($direction, $spacing-token);
-        }
+      .uw-mar-top-#{$spacing}-#{$screen-size-token} {
+        @include margin-top($spacing);
+      }
+
+      .uw-mar-right-#{$spacing}-#{$screen-size-token} {
+        @include margin-right($spacing);
+      }
+
+      .uw-mar-bottom-#{$spacing}-#{$screen-size-token} {
+        @include margin-bottom($spacing);
+      }
+
+      .uw-mar-left-#{$spacing}-#{$screen-size-token} {
+        @include margin-left($spacing);
+      }
+
+      .uw-mar-x-#{$spacing}-#{$screen-size-token} {
+        @include margin-x($spacing);
+      }
+
+      .uw-mar-y-#{$spacing}-#{$screen-size-token} {
+        @include margin-y($spacing);
+      }
+
+      .uw-pad-all-#{$spacing}-#{$screen-size-token} {
+        @include padding-all($spacing);
+      }
+
+      .uw-pad-top-#{$spacing}-#{$screen-size-token} {
+        @include padding-top($spacing);
+      }
+
+      .uw-pad-right-#{$spacing}-#{$screen-size-token} {
+        @include padding-right($spacing);
+      }
+
+      .uw-pad-bottom-#{$spacing}-#{$screen-size-token} {
+        @include padding-bottom($spacing);
+      }
+
+      .uw-pad-left-#{$spacing}-#{$screen-size-token} {
+        @include padding-left($spacing);
+      }
+
+      .uw-pad-x-#{$spacing}-#{$screen-size-token} {
+        @include padding-x($spacing);
+      }
+
+      .uw-pad-y-#{$spacing}-#{$screen-size-token} {
+        @include padding-y($spacing);
       }
     }
   }
@@ -148,7 +240,7 @@ $display-tokens: (none, inline, inline-block, block);
  */
 
 %container {
-  @include padding('x', 3);
+  @include padding-x('md');
   max-width: 100%;
 }
 

@@ -201,12 +201,12 @@
   }
 
   &__label {
-    @include padding('left', 4);
+    @include padding-left('lg');
     display: inherit;
     margin-bottom: 0.75rem;
     display: inherit;
     position: relative;
-    text-indent: -1 * spacing-units(4);
+    text-indent: -4 * $spacing-unit;
     cursor: pointer;
 
     &:before {

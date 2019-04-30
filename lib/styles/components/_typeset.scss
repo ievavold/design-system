@@ -1,17 +1,17 @@
 .uw-typeset {
   & > h1 {
-    @include margin('top', 0);
+    @include margin-top('none');
   }
 
   & > h2,
   & > h3 {
-    @include margin('top', 5);
+    @include margin-top('xl');
   }
 
   & > h4,
   & > h5,
   & > h6 {
-    @include margin('top', 3);
+    @include margin-top('md');
   }
 
   & > h1,
@@ -20,7 +20,7 @@
   & > h4,
   & > h5,
   & > h6 {
-    @include margin('bottom', 0);
+    @include margin-bottom('none');
   }
 
   & > h1 + *,
@@ -29,13 +29,13 @@
   & > h4 + *,
   & > h5 + *,
   & > h6 + * {
-    @include margin('top', 1);
+    @include margin-top('xs');
   }
 
   & > p,
   & > ul,
   & > ol {
-    @include margin('y', 3);
+    @include margin-y('md');
     line-height: 1.5;
   }
 
@@ -50,6 +50,6 @@
   }
 
   & > *:last-child {
-    @include margin('bottom', 0);
+    @include margin-bottom('none');
   }
 }
