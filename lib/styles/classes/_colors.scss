@@ -1,0 +1,13 @@
+@each $color in join(map-keys($color-tokens), map-keys($color-aliases)) {
+  .uw-background-color-#{$color} {
+    @include background-color($color);
+  }
+
+  .uw-text-color-#{$color} {
+    @include text-color($color);
+  }
+
+  .uw-border-color-#{$color} {
+    @include border-color($color);
+  }
+}
