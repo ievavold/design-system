@@ -2,18 +2,18 @@
 title: Layout
 summary: Utilities for structuring app and website pages.
 links:
-  - Grid System
-  - Margins and Padding
+  - Grid system
+  - Spacing
 ---
 
 {{< typeset >}}
 
-## Grid System
+## Grid system
 
 The grid system is based around a 12 column layout. Layouts built with this
 system are responsive by default and will adapt to mobile and desktop screens.
 
-### Evenly Spaced Columns
+### Evenly spaced columns
 
 An evenly spaced grid can be built by placing one or more `.uw-col` elements
 inside of a container with the `.uw-grid` class. By default, space will be
@@ -57,7 +57,7 @@ allocated evenly between all `.uw-col` elements:
 
 {{< typeset >}}
 
-### Weighted Columns
+### Weighted columns
 
 The grid layout layouts where some columns are wider or narrower than others.
 Weighted columns are configured by appending a number between 1 and 12 to the
@@ -89,7 +89,7 @@ column item class:
 
 {{< typeset >}}
 
-### Mixing Weighted and Unweighted Columns
+### Mixing weighted and unweighted columns
 
 If a grid layout uses both weighted and unweighted columns, the unweighted
 columns will evenly occupy whatever amount of space is leftover after space has
@@ -136,7 +136,7 @@ been given to the weighted columns.
 
 {{< typeset >}}
 
-### Responsive Columns
+### Responsive columns
 
 Responsive columns can change weight based on the width of the screen and are
 specified with the form:
