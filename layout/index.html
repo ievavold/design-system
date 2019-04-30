@@ -44,11 +44,9 @@
 <p>The grid system is based around a 12 column layout. Layouts built with this
 system are responsive by default and will adapt to mobile and desktop screens.</p>
 
-<h3 id="evenly-spaced-columns">Evenly spaced columns</h3>
+<h3 id="simple-columns">Simple columns</h3>
 
-<p>An evenly spaced grid can be built by placing one or more <code>.uw-col</code> elements
-inside of a container with the <code>.uw-grid</code> class. By default, space will be
-allocated evenly between all <code>.uw-col</code> elements:</p>
+<p>By default, columns will evenly allocate space between all sibling columns.</p>
 
 </div>
 
@@ -125,11 +123,9 @@ allocated evenly between all <code>.uw-col</code> elements:</p>
 
 
 <div class="uw-typeset uw-line-length-md">
-  <h3 id="weighted-columns">Weighted columns</h3>
+  <h3 id="proportional-columns">Proportional columns</h3>
 
-<p>The grid layout layouts where some columns are wider or narrower than others.
-Weighted columns are configured by appending a number between 1 and 12 to the
-column item class:
+<p>Columns can occupy a fixed proportion of the parent&rsquo;s width.
 </div>
 
 
@@ -181,11 +177,16 @@ column item class:
 
 
 <div class="uw-typeset uw-line-length-md">
-  <h3 id="mixing-weighted-and-unweighted-columns">Mixing weighted and unweighted columns</h3>
+  <h3 id="using-simple-columns-and-proportional-columns">Using simple columns and proportional columns</h3>
 
-<p>If a grid layout uses both weighted and unweighted columns, the unweighted
-columns will evenly occupy whatever amount of space is leftover after space has
-been given to the weighted columns.
+<p>Grids support using simple columns (with the <code>.uw-col</code> class) and proportional
+columns (with the <code>.uw-col-1</code> through <code>.uw-col-12</code> classes). The proportional
+columns will occupy the same proportion of the parent&rsquo;s width and any leftover
+space in the grid will be evenly allocated between any simple columns.</p>
+
+<p>If the proportional columns take up more than 100% of the parent&rsquo;s width, the
+grid will wrap columns across rows.</p>
+
 </div>
 
 
@@ -349,7 +350,9 @@ when the screen is larger than the breakpoint.</p>
 <div class="uw-typeset uw-line-length-md">
   <h2 id="spacing">Spacing</h2>
 
-<p><em>TODO</em></p>
+<p>The design system provides a collection of design tokens for controlling the
+spacing around elements. These tokens can be used to set element margins and
+padding using either SCSS mixins or CSS classes.</p>
 
 <h3 id="spacing-tokens">Spacing tokens</h3>
 </div>
