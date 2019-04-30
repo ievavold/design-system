@@ -13,11 +13,9 @@ links:
 The grid system is based around a 12 column layout. Layouts built with this
 system are responsive by default and will adapt to mobile and desktop screens.
 
-### Evenly spaced columns
+### Simple columns
 
-An evenly spaced grid can be built by placing one or more `.uw-col` elements
-inside of a container with the `.uw-grid` class. By default, space will be
-allocated evenly between all `.uw-col` elements:
+By default, columns will evenly allocate space between all sibling columns.
 
 {{< /typeset >}}
 
@@ -57,11 +55,9 @@ allocated evenly between all `.uw-col` elements:
 
 {{< typeset >}}
 
-### Weighted columns
+### Proportional columns
 
-The grid layout layouts where some columns are wider or narrower than others.
-Weighted columns are configured by appending a number between 1 and 12 to the
-column item class:
+Columns can occupy a fixed proportion of the parent's width.
 
 {{< /typeset >}}
 
@@ -89,11 +85,15 @@ column item class:
 
 {{< typeset >}}
 
-### Mixing weighted and unweighted columns
+### Using simple columns and proportional columns
 
-If a grid layout uses both weighted and unweighted columns, the unweighted
-columns will evenly occupy whatever amount of space is leftover after space has
-been given to the weighted columns.
+Grids support using simple columns (with the `.uw-col` class) and proportional
+columns (with the `.uw-col-1` through `.uw-col-12` classes). The proportional
+columns will occupy the same proportion of the parent's width and any leftover
+space in the grid will be evenly allocated between any simple columns.
+
+If the proportional columns take up more than 100% of the parent's width, the
+grid will wrap columns across rows.
 
 {{< /typeset >}}
 
@@ -178,7 +178,9 @@ Where _breakpoint_ is one of:
 
 ## Spacing
 
-_TODO_
+The design system provides a collection of design tokens for controlling the
+spacing around elements. These tokens can be used to set element margins and
+padding using either SCSS mixins or CSS classes.
 
 ### Spacing tokens
 
