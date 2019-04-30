@@ -115,10 +115,10 @@ the design system to be extended in a consistent way.
 | ---------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------ |
 | **SCSS function**                  | <code>color(<span class="token">color</span>)                             | `color('identity')`                        |
 | **SCSS mixin**<br>Background color | <code>@include background-color(<span class="token">color</span>);</code> | `@include background-color('accent');`     |
-| **SCSS mixin**<br>Text color       | <code>@include text-color(<span class="token">color</span>);</code>       | `@include text-color('dark-gray');`        |
+| **SCSS mixin**<br>Text color       | <code>@include text-color(<span class="token">color</span>);</code>       | `@include text-color('gray-dark');`        |
 | **SCSS mixin**<br>Border color     | <code>@include border-color(<span class="token">color</span>);</code>     | `@include border-color('button-default');` |
 | **CSS class**<br>Background color  | <code>.uw-background-color-<span class="token">color</span></code>        | `.uw-background-color-accent`              |
-| **CSS class**<br>Text color        | <code>.uw-text-color-<span class="token">color</span></code>              | `.uw-text-color-dark-gray`                 |
+| **CSS class**<br>Text color        | <code>.uw-text-color-<span class="token">color</span></code>              | `.uw-text-color-gray-dark`                 |
 | **CSS class**<br>Border color      | <code>.uw-border-color-<span class="token">color</span></code>            | `.uw-border-color-button-default`          |
 
 {{< /table >}}
