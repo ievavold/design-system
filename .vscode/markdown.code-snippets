@@ -1,12 +1,32 @@
 {
   "Example_Block": {
     "prefix": "example",
-    "body": ["{{< example >}}", "", "$0", "", "{{< /example >}}"],
+    "body": [
+      "{{< /typeset >}}",
+      "",
+      "{{< example >}}",
+      "",
+      "$0",
+      "",
+      "{{< /example >}}",
+      "",
+      "{{< typeset >}}"
+    ],
     "description": "Insert 'example' shortcode"
   },
   "Table_Block": {
     "prefix": "table",
-    "body": ["{{< table >}}", "", "$0", "", "{{< /table >}}"],
+    "body": [
+      "{{< /typeset >}}",
+      "",
+      "{{< table >}}",
+      "",
+      "$0",
+      "",
+      "{{< /table >}}",
+      "",
+      "{{< typeset >}}"
+    ],
     "description": "Insert 'table' shortcode"
   },
   "Typeset_Block": {
