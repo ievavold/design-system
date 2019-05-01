@@ -16,6 +16,18 @@
   td {
     @include padding-all('sm');
     text-align: left;
+
+    &[align='left'] {
+      text-align: left;
+    }
+
+    &[align='center'] {
+      text-align: center;
+    }
+
+    &[align='right'] {
+      text-align: right;
+    }
   }
 
   th {
