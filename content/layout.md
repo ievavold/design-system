@@ -1,186 +1,176 @@
 ---
 title: Layout
-summary: Utilities for structuring app and website pages.
+summary: Utilities for structuring apps and webpages.
 links:
-  - Grid system
+  - Grids
   - Spacing
+  - Breakpoints
 ---
 
 {{< typeset >}}
 
-## Grid system
+## Grids
 
-The grid system is based around a 12 column layout. Layouts built with this
-system are responsive by default and will adapt to mobile and desktop screens.
+The design system provides a 12-column grid system built on the CSS Flexbox API.
+Flexbox was chosen over the CSS Grid API because of greater browser support and
+because it better represented the layout patterns used by the design system.
 
-### Simple columns
+### Grid wrapper
 
-By default, columns will evenly allocate space between all sibling columns.
+All grid columns must have a grid wrapper as a direct parent. A grid wrapper is
+an element with either the class `.uw-grid` or with the SCSS mixin
+`@include grid();` applied.
+
+The following is an example of a grid wrapper:
 
 {{< /typeset >}}
 
-{{< example >}}
+{{< example no-live-example="true" >}}
 
 <div class="uw-grid">
-  <div class="uw-col">
-    <div class="inner"><code>.uw-col</code></div>
-  </div>
-</div>
-
-<div class="uw-grid">
-  <div class="uw-col">
-    <div class="inner"><code>.uw-col</code></div>
-  </div>
-  <div class="uw-col">
-    <div class="inner"><code>.uw-col</code></div>
-  </div>
-</div>
-
-<div class="uw-grid">
-  <div class="uw-col">
-    <div class="inner"><code>.uw-col</code></div>
-  </div>
-  <div class="uw-col">
-    <div class="inner"><code>.uw-col</code></div>
-  </div>
-  <div class="uw-col">
-    <div class="inner"><code>.uw-col</code></div>
-  </div>
-  <div class="uw-col">
-    <div class="inner"><code>.uw-col</code></div>
-  </div>
+  <!-- grid columns will go here -->
 </div>
 
 {{< /example >}}
 
 {{< typeset >}}
 
-### Proportional columns
+### Auto span columns
 
-Columns can occupy a fixed proportion of the parent's width.
+Auto span columns use the class `.uw-col` or the SCSS mixin `@include column();`
+and automatically resize to take up the available space in a grid.
+
+#### Using auto span columns
+
+{{< /typeset >}}
+
+{{< table >}}
+
+| Context        | Usage                |
+| -------------- | -------------------- |
+| **SCSS mixin** | `@include column();` |
+| **CSS class**  | `.uw-col`            |
+
+{{< /table >}}
+
+{{< typeset >}}
+
+#### Auto span column example
 
 {{< /typeset >}}
 
 {{< example >}}
 
 <div class="uw-grid">
-  <div class="uw-col-3">
-    <div class="inner"><code>.uw-col-3</code></div>
-  </div>
-</div>
-
-<div class="uw-grid">
-  <div class="uw-col-6">
-    <div class="inner"><code>.uw-col-6</code></div>
-  </div>
-</div>
-
-<div class="uw-grid">
-  <div class="uw-col-12">
-    <div class="inner"><code>.uw-col-12</code></div>
-  </div>
+  <div class="uw-col"><div class="inner"><code>.uw-col</code></div></div>
+  <div class="uw-col"><div class="inner"><code>.uw-col</code></div></div>
+  <div class="uw-col"><div class="inner"><code>.uw-col</code></div></div>
 </div>
 
 {{< /example >}}
 
 {{< typeset >}}
 
-### Using simple columns and proportional columns
+### Fixed span columns
 
-Grids support using simple columns (with the `.uw-col` class) and proportional
-columns (with the `.uw-col-1` through `.uw-col-12` classes). The proportional
-columns will occupy the same proportion of the parent's width and any leftover
-space in the grid will be evenly allocated between any simple columns.
+Fixed span columns take up a number of grid columns chosen by the developer. The
+number of columns to span can be between `1` and `12`. More information about
+how different span widths are computed is available in the
+[column span token table](#column-span-tokens).
 
-If the proportional columns take up more than 100% of the parent's width, the
-grid will wrap columns across rows.
+#### Using fixed span columns
 
 {{< /typeset >}}
+
+{{< table >}}
+
+| Context        | Usage                                                                               | Example               |
+| -------------- | ----------------------------------------------------------------------------------- | --------------------- |
+| **SCSS mixin** | <code>@include column(<a class="token" href="#column-span-tokens">span</a>);</code> | `@include column(4);` |
+| **CSS class**  | <code>.uw-col-<a class="token" href="#column-span-tokens">span</a></code>           | `.uw-col-9`           |
+
+{{< /table >}}
 
 {{< example >}}
 
 <div class="uw-grid">
-  <div class="uw-col-4">
-    <div class="inner"><code>.uw-col-4</code></div>
-  </div>
-  <div class="uw-col">
-    <div class="inner"><code>.uw-col</code></div>
-  </div>
-  <div class="uw-col">
-    <div class="inner"><code>.uw-col</code></div>
-  </div>
+  <div class="uw-col-4"><div class="inner"><code>.uw-col-4</code></div></div>
 </div>
 
 <div class="uw-grid">
-  <div class="uw-col">
-    <div class="inner"><code>.uw-col</code></div>
-  </div>
-  <div class="uw-col-6">
-    <div class="inner"><code>.uw-col-6</code></div>
-  </div>
-  <div class="uw-col">
-    <div class="inner"><code>.uw-col</code></div>
-  </div>
+  <div class="uw-col-8"><div class="inner"><code>.uw-col-8</code></div></div>
 </div>
 
 <div class="uw-grid">
-  <div class="uw-col">
-    <div class="inner"><code>.uw-col</code></div>
-  </div>
-  <div class="uw-col-8">
-    <div class="inner"><code>.uw-col-8</code></div>
-  </div>
+  <div class="uw-col-12"><div class="inner"><code>.uw-col-12</code></div></div>
 </div>
 
 {{< /example >}}
 
 {{< typeset >}}
 
-### Responsive columns
+### Responsive span columns
 
-Responsive columns can change weight based on the width of the screen and are
-specified with the form:
+Often a column span that makes sense on desktops is too narrow on mobile or a
+span that makes sense on mobile is too wide for desktops. Responsive span
+columns help fix this problem by changing column span based on the width of the
+screen.
 
-`.uw-col-{span}-{breakpoint}`
+Responsive span column classes and mixins require a span value and one of the
+[breakpoint tokens](#). The span value will be applied to the column whenever
+the screen is equal-to or larger-than the breakpoint. If multiple responsive
+column classes or mixins apply at the same time, the span value associated with
+the largest breakpoint is used.
 
-Where _span_ is a number from `1` to `12`. This sets the width of the column
-when the screen is larger than the breakpoint.
-
-Where _breakpoint_ is one of:
-
-- `sm` for screens larger than `32em`
-- `md` for screens larger than `48rem`
-- `lg` for screens larger than `64rem`
+#### Using responsive span columns
 
 {{< /typeset >}}
 
-{{< example responsive >}}
+{{< table >}}
 
-<div class="uw-grid">
-  <div class="uw-col-12 uw-col-6-md">
-    <div class="inner">
-      <span>
-        <code>.uw-col-12</code>
-        <code>.uw-col-6-md</code>
-      </span>
-    </div>
-  </div>
-  <div class="uw-col">
-    <div class="inner">
-      <code>.uw-col</code>
-    </div>
-  </div>
-</div>
+| Context        | Usage                                                                                                                                          | Example                     |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| **SCSS mixin** | <code>@include column(<a class="token" href="#column-span-tokens">span</a>, <a class="token" href="#breakpoint-tokens">breakpoint</a>);</code> | `@include column(6, 'md');` |
+| **CSS class**  | <code>.uw-col-<a class="token" href="#column-span-tokens">span</a>-<a class="token" href="#breakpoint-tokens">breakpoint</a></code>            | `.uw-col-6-md`              |
 
-{{< /example >}}
+{{< /table >}}
+
+{{< typeset >}}
+
+### Column span tokens
+
+The following span tokens are supported by the design system grid. If an element
+uses a span token not supported by the grid, that element will behave as an auto
+span column.
+
+{{< /typeset >}}
+
+{{< table >}}
+
+| Token | Percent   | Example                                                                                                            |
+| ----- | --------- | ------------------------------------------------------------------------------------------------------------------ |
+| `1`   | `8.333%`  | <div class="uw-grid docs-span-example"><div class="uw-col-1"><div class="inner"><code>1</code></div></div></div>   |
+| `2`   | `16.667%` | <div class="uw-grid docs-span-example"><div class="uw-col-2"><div class="inner"><code>2</code></div></div></div>   |
+| `3`   | `25%`     | <div class="uw-grid docs-span-example"><div class="uw-col-3"><div class="inner"><code>3</code></div></div></div>   |
+| `4`   | `33.333%` | <div class="uw-grid docs-span-example"><div class="uw-col-4"><div class="inner"><code>4</code></div></div></div>   |
+| `5`   | `41.667%` | <div class="uw-grid docs-span-example"><div class="uw-col-5"><div class="inner"><code>5</code></div></div></div>   |
+| `6`   | `50%`     | <div class="uw-grid docs-span-example"><div class="uw-col-6"><div class="inner"><code>6</code></div></div></div>   |
+| `7`   | `58.333%` | <div class="uw-grid docs-span-example"><div class="uw-col-7"><div class="inner"><code>7</code></div></div></div>   |
+| `8`   | `66.667%` | <div class="uw-grid docs-span-example"><div class="uw-col-8"><div class="inner"><code>8</code></div></div></div>   |
+| `9`   | `75%`     | <div class="uw-grid docs-span-example"><div class="uw-col-9"><div class="inner"><code>9</code></div></div></div>   |
+| `10`  | `83.333%` | <div class="uw-grid docs-span-example"><div class="uw-col-10"><div class="inner"><code>10</code></div></div></div> |
+| `11`  | `91.667%` | <div class="uw-grid docs-span-example"><div class="uw-col-11"><div class="inner"><code>11</code></div></div></div> |
+| `12`  | `100%`    | <div class="uw-grid docs-span-example"><div class="uw-col-12"><div class="inner"><code>12</code></div></div></div> |
+
+{{< /table >}}
 
 {{< typeset >}}
 
 ## Spacing
 
 The design system provides a collection of design tokens for controlling the
-spacing around elements. These tokens can be used to set element margins and
-padding using either SCSS mixins or CSS classes.
+spacing around elements. These tokens can be used to set margins and padding
+with either SCSS mixins or CSS classes.
 
 ### Spacing tokens
 
@@ -217,22 +207,17 @@ padding using either SCSS mixins or CSS classes.
   </thead>
   <tbody>
     <tr>
-      <td><strong>SCSS function</strong></td>
-      <td><code>spacing(<span class="token">spacing</span>)</code></td>
-      <td><code>spacing('sm')</code></td>
-    </tr>
-    <tr>
       <td>
         <strong>SCSS mixins</strong><br>Margin
       </td>
       <td>
-        <code>@include margin-all(<span class="token">spacing</span>)</code><br>
-        <code>@include margin-top(<span class="token">spacing</span>)</code><br>
-        <code>@include margin-right(<span class="token">spacing</span>)</code><br>
-        <code>@include margin-bottom(<span class="token">spacing</span>)</code><br>
-        <code>@include margin-left(<span class="token">spacing</span>)</code><br>
-        <code>@include margin-x(<span class="token">spacing</span>)</code><br>
-        <code>@include margin-y(<span class="token">spacing</span>)</code>
+        <code>@include margin-all(<a class="token" href="#spacing-tokens">spacing</a>)</code><br>
+        <code>@include margin-top(<a class="token" href="#spacing-tokens">spacing</a>)</code><br>
+        <code>@include margin-right(<a class="token" href="#spacing-tokens">spacing</a>)</code><br>
+        <code>@include margin-bottom(<a class="token" href="#spacing-tokens">spacing</a>)</code><br>
+        <code>@include margin-left(<a class="token" href="#spacing-tokens">spacing</a>)</code><br>
+        <code>@include margin-x(<a class="token" href="#spacing-tokens">spacing</a>)</code><br>
+        <code>@include margin-y(<a class="token" href="#spacing-tokens">spacing</a>)</code>
       </td>
       <td>
         <code>@include margin-all('none')</code><br>
@@ -249,13 +234,13 @@ padding using either SCSS mixins or CSS classes.
         <strong>SCSS mixins</strong><br>Padding
       </td>
       <td>
-        <code>@include padding-all(<span class="token">spacing</span>)</code><br>
-        <code>@include padding-top(<span class="token">spacing</span>)</code><br>
-        <code>@include padding-right(<span class="token">spacing</span>)</code><br>
-        <code>@include padding-bottom(<span class="token">spacing</span>)</code><br>
-        <code>@include padding-left(<span class="token">spacing</span>)</code><br>
-        <code>@include padding-x(<span class="token">spacing</span>)</code><br>
-        <code>@include padding-y(<span class="token">spacing</span>)</code>
+        <code>@include padding-all(<a class="token" href="#spacing-tokens">spacing</a>)</code><br>
+        <code>@include padding-top(<a class="token" href="#spacing-tokens">spacing</a>)</code><br>
+        <code>@include padding-right(<a class="token" href="#spacing-tokens">spacing</a>)</code><br>
+        <code>@include padding-bottom(<a class="token" href="#spacing-tokens">spacing</a>)</code><br>
+        <code>@include padding-left(<a class="token" href="#spacing-tokens">spacing</a>)</code><br>
+        <code>@include padding-x(<a class="token" href="#spacing-tokens">spacing</a>)</code><br>
+        <code>@include padding-y(<a class="token" href="#spacing-tokens">spacing</a>)</code>
       </td>
       <td>
         <code>@include padding-all('none')</code><br>
@@ -272,13 +257,13 @@ padding using either SCSS mixins or CSS classes.
         <strong>CSS classes</strong><br>Margin
       </td>
       <td>
-        <code>.uw-mar-all-<span class="token">spacing</span></code><br>
-        <code>.uw-mar-top-<span class="token">spacing</span></code><br>
-        <code>.uw-mar-right-<span class="token">spacing</span></code><br>
-        <code>.uw-mar-bottom-<span class="token">spacing</span></code><br>
-        <code>.uw-mar-left-<span class="token">spacing</span></code><br>
-        <code>.uw-mar-x-<span class="token">spacing</span></code><br>
-        <code>.uw-mar-y-<span class="token">spacing</span></code>
+        <code>.uw-mar-all-<a class="token" href="#spacing-tokens">spacing</a></code><br>
+        <code>.uw-mar-top-<a class="token" href="#spacing-tokens">spacing</a></code><br>
+        <code>.uw-mar-right-<a class="token" href="#spacing-tokens">spacing</a></code><br>
+        <code>.uw-mar-bottom-<a class="token" href="#spacing-tokens">spacing</a></code><br>
+        <code>.uw-mar-left-<a class="token" href="#spacing-tokens">spacing</a></code><br>
+        <code>.uw-mar-x-<a class="token" href="#spacing-tokens">spacing</a></code><br>
+        <code>.uw-mar-y-<a class="token" href="#spacing-tokens">spacing</a></code>
       </td>
       <td>
         <code>.uw-mar-all-none</code><br>
@@ -295,13 +280,13 @@ padding using either SCSS mixins or CSS classes.
         <strong>CSS classes</strong><br>Padding
       </td>
       <td>
-        <code>.uw-pad-all-<span class="token">spacing</span></code><br>
-        <code>.uw-pad-top-<span class="token">spacing</span></code><br>
-        <code>.uw-pad-right-<span class="token">spacing</span></code><br>
-        <code>.uw-pad-bottom-<span class="token">spacing</span></code><br>
-        <code>.uw-pad-left-<span class="token">spacing</span></code><br>
-        <code>.uw-pad-x-<span class="token">spacing</span></code><br>
-        <code>.uw-pad-y-<span class="token">spacing</span></code>
+        <code>.uw-pad-all-<a class="token" href="#spacing-tokens">spacing</a></code><br>
+        <code>.uw-pad-top-<a class="token" href="#spacing-tokens">spacing</a></code><br>
+        <code>.uw-pad-right-<a class="token" href="#spacing-tokens">spacing</a></code><br>
+        <code>.uw-pad-bottom-<a class="token" href="#spacing-tokens">spacing</a></code><br>
+        <code>.uw-pad-left-<a class="token" href="#spacing-tokens">spacing</a></code><br>
+        <code>.uw-pad-x-<a class="token" href="#spacing-tokens">spacing</a></code><br>
+        <code>.uw-pad-y-<a class="token" href="#spacing-tokens">spacing</a></code>
       </td>
       <td>
         <code>.uw-pad-all-none</code><br>
@@ -317,3 +302,39 @@ padding using either SCSS mixins or CSS classes.
 </table>
 
 {{< /table >}}
+
+{{< typeset >}}
+
+## Breakpoints
+
+The design system defines the following breakpoints. The accompanying breakpoint
+tokens are used throughout the design system to adapt apps and webpages to
+different screen sizes.
+
+### Breakpoint tokens
+
+{{< /typeset >}}
+
+{{< table >}}
+
+| Token  | Size (`rem`) | Size (`px`) |
+| ------ | ------------ | ----------- |
+| `'sm'` | `32rem`      | `512px`     |
+| `'md'` | `48rem`      | `768px`     |
+| `'lg'` | `64rem`      | `1024px`    |
+
+{{< /table >}}
+
+{{< typeset >}}
+
+### Using breakpoint tokens
+
+The breakpoint tokens are used throughout the design system to create
+[responsive span columns](#using-responsive-span-columns) and
+[responsive font sizes](../typography#using-responsive-font-sizes).
+
+Whenever other design system APIs use breakpoints to selectively apply styles,
+those styles will always be applied on screens that are **equal to or larger
+than** the breakpoint's size.
+
+{{< /typeset >}}

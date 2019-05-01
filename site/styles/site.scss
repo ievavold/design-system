@@ -91,6 +91,21 @@
   }
 }
 
+.docs-span-example {
+  min-width: 256px;
+  outline: 1px dashed #97c1ff;
+
+  & > div {
+    background: #dbeaff;
+    outline: 1px dashed #97c1ff;
+  }
+
+  & .inner {
+    background: #edf4ff;
+    text-align: center;
+  }
+}
+
 .docs-swatch {
   @include border-radius();
   @include font-size('xxs');
