@@ -36,11 +36,11 @@ is used by default. The `mono` font family is used for snippets of code.
 
 {{< table >}}
 
-| Context           | Usage                                                                 | Example                         |
-| ----------------- | --------------------------------------------------------------------- | ------------------------------- |
-| **SCSS function** | <code>font-family(<span class="token">family</span>)                  | `font-family('sans')`           |
-| **SCSS mixin**    | <code>@include font-family(<span class="token">family</span>);</code> | `@include font-family('mono');` |
-| **CSS class**     | <code>.uw-font-family-<span class="token">family</span></code>        | `.uw-font-family-mono`          |
+| Context           | Usage                                                                                      | Example                         |
+| ----------------- | ------------------------------------------------------------------------------------------ | ------------------------------- |
+| **SCSS function** | <code>font-family(<a class="token" href="#font-family-tokens">family</a>)                  | `font-family('sans')`           |
+| **SCSS mixin**    | <code>@include font-family(<a class="token" href="#font-family-tokens">family</a>);</code> | `@include font-family('mono');` |
+| **CSS class**     | <code>.uw-font-family-<a class="token" href="#font-family-tokens">family</a></code>        | `.uw-font-family-mono`          |
 
 {{< /table >}}
 
@@ -82,11 +82,11 @@ the font sizes in the type scale.
 
 {{< table >}}
 
-| Context           | Usage                                                             | Example                     |
-| ----------------- | ----------------------------------------------------------------- | --------------------------- |
-| **SCSS function** | <code>font-size(<span class="token">size</span>)                  | `font-size('sm')`           |
-| **SCSS mixin**    | <code>@include font-size(<span class="token">size</span>);</code> | `@include font-size('md');` |
-| **CSS class**     | <code>.uw-font-size-<span class="token">size</span></code>        | `.uw-font-size-lg`          |
+| Context           | Usage                                                                                | Example                     |
+| ----------------- | ------------------------------------------------------------------------------------ | --------------------------- |
+| **SCSS function** | <code>font-size(<a class="token" href="#font-size-tokens">size</a>)                  | `font-size('sm')`           |
+| **SCSS mixin**    | <code>@include font-size(<a class="token" href="#font-size-tokens">size</a>);</code> | `@include font-size('md');` |
+| **CSS class**     | <code>.uw-font-size-<a class="token" href="#font-size-tokens">size</a></code>        | `.uw-font-size-lg`          |
 
 {{< /table >}}
 
@@ -101,10 +101,10 @@ screen is as large or larger than the breakpoint.
 
 {{< table >}}
 
-| Context        | Usage                                                                                                    | Example                           |
-| -------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| **SCSS mixin** | <code>@include font-size(<span class="token">size</span>, <span class="token">breakpoint</span>);</code> | `@include font-size('md', 'sm');` |
-| **CSS class**  | <code>.uw-font-size-<span class="token">size</span>-<span class="token">breakpoint</span></code>         | `.uw-font-size-lg-md`             |
+| Context        | Usage                                                                                                                                                     | Example                           |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| **SCSS mixin** | <code>@include font-size(<a class="token" href="#font-size-tokens">size</a>, <a class="token" href="../layout/#breakpoint-tokens">breakpoint</a>);</code> | `@include font-size('md', 'sm');` |
+| **CSS class**  | <code>.uw-font-size-<a class="token" href="#font-size-tokens">size</a>-<a class="token" href="../layout/#breakpoint-tokens">breakpoint</a></code>         | `.uw-font-size-lg-md`             |
 
 {{< /table >}}
 
@@ -139,11 +139,11 @@ used with longer sections of text.
 
 {{< table >}}
 
-|                   | Usage                                                                 | Example                       |
-| ----------------- | --------------------------------------------------------------------- | ----------------------------- |
-| **SCSS function** | <code>line-height(<span class="token">height</span>)                  | `line-height('sm')`           |
-| **SCSS mixin**    | <code>@include line-height(<span class="token">height</span>);</code> | `@include line-height('md');` |
-| **CSS class**     | <code>.uw-line-height-<span class="token">height</span></code>        | `.uw-line-height-lg`          |
+|                   | Usage                                                                                      | Example                       |
+| ----------------- | ------------------------------------------------------------------------------------------ | ----------------------------- |
+| **SCSS function** | <code>line-height(<a class="token" href="#line-height-tokens">height</a>)                  | `line-height('sm')`           |
+| **SCSS mixin**    | <code>@include line-height(<a class="token" href="#line-height-tokens">height</a>);</code> | `@include line-height('md');` |
+| **CSS class**     | <code>.uw-line-height-<a class="token" href="#line-height-tokens">height</a></code>        | `.uw-line-height-lg`          |
 
 {{< /table >}}
 
@@ -184,10 +184,10 @@ units like `rem` and `em`.
 
 {{< table >}}
 
-| Context           | Usage                                                                 | Example                       |
-| ----------------- | --------------------------------------------------------------------- | ----------------------------- |
-| **SCSS function** | <code>line-length(<span class="token">length</span>)                  | `line-length('sm')`           |
-| **SCSS mixin**    | <code>@include line-length(<span class="token">length</span>);</code> | `@include line-length('md');` |
-| **CSS class**     | <code>.uw-line-length-<span class="token">length</span></code>        | `.uw-line-length-lg`          |
+| Context           | Usage                                                                                      | Example                       |
+| ----------------- | ------------------------------------------------------------------------------------------ | ----------------------------- |
+| **SCSS function** | <code>line-length(<a class="token" href="#line-length-tokens">length</a>)                  | `line-length('sm')`           |
+| **SCSS mixin**    | <code>@include line-length(<a class="token" href="#line-length-tokens">length</a>);</code> | `@include line-length('md');` |
+| **CSS class**     | <code>.uw-line-length-<a class="token" href="#line-length-tokens">length</a></code>        | `.uw-line-length-lg`          |
 
 {{< /table >}}

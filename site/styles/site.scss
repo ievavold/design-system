@@ -116,4 +116,11 @@
   margin: 0 1px;
   padding: 0.1rem 0.3rem;
   display: inline-block;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    @include text-color('text-dark');
+  }
 }
