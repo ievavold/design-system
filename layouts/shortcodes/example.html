@@ -16,9 +16,11 @@
     </p>
   {{ end }}
 
-  <div class="docs-example__live uw-typeset">{{ .Inner }}</div>
+  {{ if not (eq (.Get "no-live-example") "true" ) }}
+    <div class="docs-example__live uw-typeset">{{ .Inner }}</div>
+  {{ end }}
 
-  <div class="docs-example__code uw-border uw-border-radius uw-mar-top-sm">
+  <div class="docs-example__code uw-border uw-border-radius">
     {{ highlight (trim .Inner "\n") "html" "" }}
   </div>
 </div>

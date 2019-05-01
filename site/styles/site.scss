@@ -72,6 +72,10 @@
       color: #008000;
     }
   }
+
+  &__live + &__code {
+    @include margin-top('sm');
+  }
 }
 
 .docs-spacing {
