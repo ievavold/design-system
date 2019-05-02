@@ -91,6 +91,12 @@ how different span widths are computed is available in the
 
 {{< /table >}}
 
+{{< typeset >}}
+
+#### Fixed span column example
+
+{{< /typeset >}}
+
 {{< example >}}
 
 <div class="uw-grid">
