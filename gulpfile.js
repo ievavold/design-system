@@ -3,6 +3,24 @@ const sass = require('gulp-dart-sass');
 const concat = require('gulp-concat');
 const rollup = require('rollup');
 
+exports.buildExampleStyles = function buildExampleStyles() {
+  const config = {
+    includePaths: ['lib/styles'],
+    outputStyle: 'compressed'
+  };
+
+  return src('site/styles/examples/*.scss')
+    .pipe(sass(config).on('error', sass.logError))
+    .pipe(dest('static/examples'));
+};
+
+exports.watchExampleStyles = function watchExampleStyles() {
+  return watch(
+    ['site/styles/examples/*', 'lib/styles/**/*'],
+    exports.buildExampleStyles
+  );
+};
+
 const stylesConfig = {
   includePaths: ['node_modules'],
   outputStyle: 'compressed'
@@ -56,11 +74,13 @@ exports.default = parallel(
     parallel(exports.buildVendorScripts, exports.buildSiteScripts),
     exports.watchSiteScripts
   ),
+  series(exports.buildExampleStyles, exports.watchExampleStyles),
   series(exports.buildSiteStyles, exports.watchSiteStyles)
 );
 
 exports.buildAll = parallel(
   exports.buildVendorScripts,
   exports.buildSiteScripts,
+  exports.buildExampleStyles,
   exports.buildSiteStyles
 );

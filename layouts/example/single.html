@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ block "title" . }}{{ .Page.Title }} - {{ .Site.Title }}{{ end }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{ if isset .Params "summary" }}
+      <meta name="description" content="{{ .Param "summary" }}">
+    {{ else }}
+      <meta name="description" content="A design system built for fast, responsive, and accessible websites.">
+    {{ end }}
+
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/site.css" media="screen">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/examples/{{ .File.TranslationBaseName }}.css" media="screen">
+  </head>
+  <body>
+    {{ .Content }}
+    <script src="{{ .Site.BaseURL }}/vendor.js"></script>
+    <script src="{{ .Site.BaseURL }}/site.js"></script>
+  </body>
+</html>

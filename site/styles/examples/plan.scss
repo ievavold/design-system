@@ -1,0 +1,42 @@
+@import 'tokens';
+@import 'mixins';
+
+h1 {
+  @include margin-all('md');
+}
+
+.year {
+  @include margin-all('md');
+
+  .semester {
+    @include margin-y('xs');
+    @include background-color('gray-light');
+  }
+
+  h2 {
+    @include margin-all('none');
+    @include padding-all('sm');
+    @include padding-bottom('none');
+    @include font-size('lg');
+  }
+
+  .courses {
+    list-style: none;
+    @include margin-all('none');
+    @include padding-all('none');
+    @include padding-bottom('sm');
+  }
+
+  .course {
+    @include margin-top('sm');
+    @include margin-x('sm');
+    @include padding-all('xs');
+    @include background-color('gray-90');
+    @include border-radius();
+
+    h3 {
+      @include margin-all('none');
+      @include font-size('md');
+    }
+  }
+}

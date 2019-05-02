@@ -5,6 +5,6 @@
 /.cache
 /dist
 /.rpt2_cache
-/static/site.css
-/static/site.js
-/static/vendor.js
+/static/*.css
+/static/examples/*.css
+/static/*.js
