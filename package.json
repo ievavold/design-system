@@ -4,7 +4,7 @@
   "description": "a design system",
   "scripts": {
     "start": "npm run clean && concurrently 'gulp' 'hugo server --disableLiveReload'",
-    "clean": "rimraf public static/site.css static/vendor.js static/site.js",
+    "clean": "rimraf public static/*.css static/*.js",
     "deploy": "npm run clean && gulp buildAll && hugo -b /design-system && gh-pages -d public"
   },
   "repository": "github:ievavold/design-system",
