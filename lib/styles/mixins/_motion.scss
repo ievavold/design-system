@@ -1,0 +1,24 @@
+@function motion($motion) {
+  @if not map-has-key($motion-tokens, $motion) {
+    @error "no motion function: '#{$motion}'";
+  }
+
+  @return map-get($motion-tokens, $motion);
+}
+
+@mixin motion($motions...) {
+  @if length($motions) == 0 {
+    @error "no motion functions given, expected at least 1";
+  }
+
+  $durations: ();
+  $functions: ();
+
+  @each $motion in $motions {
+    $durations: join($durations, 0.1s, $separator: comma);
+    $functions: join($functions, motion($motion), $separator: comma);
+  }
+
+  animation-duration: $durations;
+  animation-timing-function: $functions;
+}

@@ -1,0 +1,5 @@
+@each $function in map-keys($motion-tokens) {
+  .uw-motion-#{$function} {
+    @include motion($function);
+  }
+}

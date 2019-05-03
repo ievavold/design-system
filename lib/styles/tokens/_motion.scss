@@ -1,0 +1,5 @@
+$motion-tokens: (
+  'standard': cubic-bezier(0.2, 0, 0.38, 0.9),
+  'entrance': cubic-bezier(0, 0, 0.38, 0.9),
+  'exit': cubic-bezier(0.2, 0, 1, 0.9)
+);
