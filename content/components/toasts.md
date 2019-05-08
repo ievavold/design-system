@@ -6,7 +6,6 @@ summary:
 links:
   - Default toasts
   - Toast states
-  - Toast actions
 ---
 
 {{< typeset >}}
