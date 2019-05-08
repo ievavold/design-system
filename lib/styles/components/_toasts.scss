@@ -1,0 +1,166 @@
+@import '../assets/icons';
+
+$toast-spacing-to-screen: 'sm';
+$toast-spacing-to-cards: 'xs';
+
+#uw-toast-container {
+  @include padding-all($toast-spacing-to-screen);
+  @include padding-top('none');
+  width: 100%;
+  max-width: 512px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+/// Toast card visual styles
+.uw-toast {
+  min-width: 100%;
+
+  &--info &__card {
+    @include border-color('blue');
+    @include background-color('blue-90');
+  }
+
+  &--info &__icon {
+    background-image: $icon-circle-info;
+  }
+
+  &--success &__card {
+    @include border-color('green');
+    @include background-color('green-90');
+  }
+
+  &--success &__icon {
+    background-image: $icon-circle-check;
+  }
+
+  &--warning &__card {
+    @include border-color('orange');
+    @include background-color('orange-90');
+  }
+
+  &--warning &__icon {
+    background-image: $icon-triangle-exclamation;
+  }
+
+  &--danger &__card {
+    @include border-color('red');
+    @include background-color('red-90');
+  }
+
+  &--danger &__icon {
+    background-image: $icon-circle-times;
+  }
+
+  & + & {
+    @include margin-top($toast-spacing-to-cards);
+  }
+
+  &__card {
+    @include padding-all('xs');
+    @include background-color('gray-90');
+    @include text-color('text-dark');
+    @include border-radius();
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-left-width: 0.5rem;
+    border-left-style: solid;
+    text-align: left;
+    box-shadow: 0 3px 12px color('gray-50');
+  }
+
+  &__icon {
+    width: spacing('lg');
+    height: spacing('lg');
+    @include margin-right('xs');
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
+  &__body {
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+
+/// Toast animation and visiblity styles
+.uw-toast {
+  display: none;
+
+  &:nth-last-child(1) {
+    display: block;
+    animation-name: toast-enter;
+    @include motion('standard');
+  }
+
+  &:nth-last-child(2) {
+    display: block;
+    animation-name: toast-demote;
+    @include motion('standard');
+  }
+
+  &:nth-last-child(3) {
+    display: block;
+    opacity: 0;
+    animation-name: toast-demote-and-exit;
+    @include motion('standard');
+  }
+
+  @for $i from 1 through 2 {
+    &--removing:nth-last-child(#{$i}) {
+      display: block;
+      opacity: 0;
+      animation-name: toast-exit;
+      @include motion('standard');
+    }
+  }
+}
+
+@keyframes toast-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(100% + #{spacing($toast-spacing-to-cards)}));
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toast-demote {
+  0% {
+    transform: translateY(calc(100% + #{spacing($toast-spacing-to-cards)}));
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes toast-exit {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes toast-demote-and-exit {
+  0% {
+    opacity: 1;
+    transform: translateY(calc(100% + #{spacing($toast-spacing-to-cards)}));
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
