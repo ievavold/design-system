@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Toasts - Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      <meta name="description" content="Status messages that appear for a short amount of time often along the bottom edge of the screen.">
+    
+
+    <link rel="stylesheet" href="/design-system/site.css" media="screen">
+  </head>
+  <body>
+    <main>
+      <header class="uw-border-bottom uw-pad-y-sm uw-mar-bottom-lg">
+        <nav class="uw-container--lg uw-container--center">
+          <p class="uw-font-size-md uw-mar-all-none">
+            <a href="/design-system">Design System</a>
+          </p>
+        </nav>
+      </header>
+
+      <article class="uw-container--lg uw-container--center">
+        
+  <div id="page-summary" class="uw-typeset uw-font-size-md">
+    <h1>Toasts</h1>
+    
+      <p class="uw-line-length-sm">Status messages that appear for a short amount of time often along the bottom edge of the screen.</p>
+    
+    
+      <ul>
+        
+          <li><a href="#default-toasts">Default toasts</a></li>
+        
+          <li><a href="#toast-states">Toast states</a></li>
+        
+          <li><a href="#toast-actions">Toast actions</a></li>
+        
+      </ul>
+    
+  </div>
+  <hr>
+  <div class="uw-typeset uw-line-length-md">
+  <h2 id="default-toasts">Default toasts</h2>
+
+<p>Toasts are created by calling the <code>toast</code> method on the <code>UW</code> global object. The
+method accepts the following options:
+</div>
+
+
+<div class="uw-table__container uw-mar-top-sm">
+  <table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td>Yes</td>
+<td><code>string</code></td>
+<td>Text to display in toast. Should be less than 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>duration</code></td>
+<td>No</td>
+<td><code>number</code></td>
+<td>Number of milliseconds before toast disappears. Defaults to <code>5000</code>.</td>
+</tr>
+
+<tr>
+<td><code>state</code></td>
+<td>No</td>
+<td><code>string</code></td>
+<td>Changes toast color. See the <a href="#toast-states">toast state examples</a>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="docs-example">
+  
+
+  
+    <div class="docs-example__live uw-typeset">
+
+<button id="toast-1" class="uw-button--filled">Show toast</button>
+
+<script>
+  document
+    .querySelector('#toast-1')
+    .addEventListener('click', function () {
+      UW.toast({
+        message: `A short toast message`
+      });
+    }, false);
+</script>
+
+</div>
+  
+
+  <div class="docs-example__code uw-border uw-border-radius">
+    <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;toast-1&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uw-button--filled&#34;</span><span class="p">&gt;</span>Show toast<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="nb">document</span>
+    <span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#toast-1&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="nx">UW</span><span class="p">.</span><span class="nx">toast</span><span class="p">({</span>
+        <span class="nx">message</span><span class="o">:</span> <span class="sb">`A short toast message`</span>
+      <span class="p">});</span>
+    <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></code></pre></div>
+  </div>
+</div>
+
+
+<div class="uw-typeset uw-line-length-md">
+  <h2 id="toast-states">Toast states</h2>
+
+<p>Toasts support the following states:
+</div>
+
+
+<div class="uw-table__container uw-mar-top-sm">
+  <table>
+<thead>
+<tr>
+<th>State</th>
+<th>Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>'info'</code></td>
+<td><button id="toast-state-info" class="uw-button--filled">Info toast</button></td>
+</tr>
+
+<tr>
+<td><code>'success'</code></td>
+<td><button id="toast-state-success" class="uw-button--filled">Success toast</button></td>
+</tr>
+
+<tr>
+<td><code>'warning'</code></td>
+<td><button id="toast-state-warning" class="uw-button--filled">Warning toast</button></td>
+</tr>
+
+<tr>
+<td><code>'danger'</code></td>
+<td><button id="toast-state-danger" class="uw-button--filled">Danger toast</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="uw-typeset uw-line-length-md">
+  <script>
+  document
+    .querySelector('#toast-state-info')
+    .addEventListener('click', function () {
+      UW.toast({
+        state: 'info',
+        message: 'This is an info toast'
+      });
+    }, false);
+
+  document
+    .querySelector('#toast-state-success')
+    .addEventListener('click', function () {
+      UW.toast({
+        state: 'success',
+        message: 'This is a success toast'
+      });
+    }, false);
+
+  document
+    .querySelector('#toast-state-warning')
+    .addEventListener('click', function () {
+      UW.toast({
+        state: 'warning',
+        message: 'This is a warning toast'
+      });
+    }, false);
+
+  document
+    .querySelector('#toast-state-danger')
+    .addEventListener('click', function () {
+      UW.toast({
+        state: 'danger',
+        message: 'This is a danger toast'
+      });
+    }, false);
+</script>
+</div>
+
+
+
+      </article>
+
+      <footer class="uw-border-top uw-pad-y-sm uw-mar-top-lg">
+        <div class="uw-container--lg uw-container--center">
+          <p class="uw-text-align-center"><em>A copyright notice</em></p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="/design-system/vendor.js"></script>
+    <script src="/design-system/site.js"></script>
+  </body>
+</html>
