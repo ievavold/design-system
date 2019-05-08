@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Motion - Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      <meta name="description" content="Guidelines for useful animations and transitions">
+    
+
+    <link rel="stylesheet" href="/design-system/site.css" media="screen">
+  </head>
+  <body>
+    <main>
+      <header class="uw-border-bottom uw-pad-y-sm uw-mar-bottom-lg">
+        <nav class="uw-container--lg uw-container--center">
+          <p class="uw-font-size-md uw-mar-all-none">
+            <a href="/design-system">Design System</a>
+          </p>
+        </nav>
+      </header>
+
+      <article class="uw-container--lg uw-container--center">
+        
+  <div id="page-summary" class="uw-typeset uw-font-size-md">
+    <h1>Motion</h1>
+    
+      <p class="uw-line-length-sm">Guidelines for useful animations and transitions</p>
+    
+    
+      <ul>
+        
+          <li><a href="#easing-functions">Easing functions</a></li>
+        
+      </ul>
+    
+  </div>
+  <hr>
+  <div class="uw-typeset uw-line-length-md">
+  <h2 id="easing-functions">Easing functions</h2>
+
+<p>Easing functions describe the rate of change in an animation or transition over
+time. Linear easing appears unnatural to the human eye because it is so rare in
+the real world. For this reason, timing functions in the design system
+approximate real-world physics by gradually accelerating at the beginning of the
+animation and gradually decelerating at the end.</p>
+
+<h3 id="easing-function-tokens">Easing function tokens</h3>
+
+<p>The design system provides 3 easing functions for use in animations and
+transitions:</p>
+
+</div>
+
+
+<div class="uw-table__container uw-mar-top-sm">
+  <table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>'entrance'</code></td>
+<td><code>cubic-bezier(0, 0, 0.38, 0.9)</code></td>
+</tr>
+
+<tr>
+<td><code>'standard'</code></td>
+<td><code>cubic-bezier(0.2, 0, 0.38, 0.9)</code></td>
+</tr>
+
+<tr>
+<td><code>'exit'</code></td>
+<td><code>cubic-bezier(0.2, 0, 1, 0.9)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="uw-typeset uw-line-length-md">
+  <h3 id="using-easing-functions">Using easing functions</h3>
+
+<p>The following mixin will set the appropriate easing function on an element. It
+will also set the animation duration for consistenty with the rest of the design
+system.
+</div>
+
+
+<div class="uw-table__container uw-mar-top-sm">
+  <table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Usage</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>SCSS mixin</strong></td>
+<td><code>@include motion(<a class="token" href="#easing-function-tokens">function</a>);</code></td>
+</tr>
+
+<tr>
+<td><strong>CSS class</strong></td>
+<td><code>.uw-motion-<a class="token" href="#easing-function-tokens">function</a></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="uw-typeset uw-line-length-md">
+  
+</div>
+
+
+
+      </article>
+
+      <footer class="uw-border-top uw-pad-y-sm uw-mar-top-lg">
+        <div class="uw-container--lg uw-container--center">
+          <p class="uw-text-align-center"><em>A copyright notice</em></p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="/design-system/vendor.js"></script>
+    <script src="/design-system/site.js"></script>
+  </body>
+</html>
