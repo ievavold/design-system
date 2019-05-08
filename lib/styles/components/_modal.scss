@@ -40,11 +40,19 @@
     &:hover {
       @include background-color('button-default-hover');
       @include border-color('button-default-hover');
+
+      svg {
+        fill: color('text-light');
+      }
     }
 
     &:active {
       @include background-color('button-default-active');
       @include border-color('button-default-active');
+
+      svg {
+        fill: color('text-light');
+      }
     }
   }
 
