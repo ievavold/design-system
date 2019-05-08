@@ -9,6 +9,7 @@
   const CLOSE_ATTR = 'data-modal-close';
   const CLOSE_SELECTOR = '[data-modal-close]';
   const MODAL_SELECTOR = '.uw-modal';
+  const MODAL_WINDOW_SELECTOR = '.uw-modal__window';
 
   const MODAL_FOCUSABLES = [
     'a[href]',
@@ -32,15 +33,6 @@
 
   function handleClick(event) {
     /**
-     * If the click even occured _inside_ a modal, prevent it from bubbling up the
-     * DOM tree. This is only relevant when the `init` context parameter is an
-     * element other than `document`.
-     */
-    if (event.target.closest('.uw-modal__window')) {
-      event.stopPropagation();
-    }
-
-    /**
      * If the click event was on an element marked with the `data-modal-trigger`
      * attribute, open the corresponding modal.
      */
@@ -50,6 +42,17 @@
       open(modalId);
       event.preventDefault();
       return;
+    }
+
+    /**
+     * If the modal window element is closer to the event target than a modal
+     * close element, ignore the click.
+     */
+    const windowVsCloseSelector = `${MODAL_WINDOW_SELECTOR}, ${CLOSE_SELECTOR}`;
+    const closerElement = event.target.closest(windowVsCloseSelector);
+    if (closerElement && closerElement.matches(MODAL_WINDOW_SELECTOR)) {
+      event.stopPropagation();
+      return false;
     }
 
     /**
