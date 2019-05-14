@@ -142,6 +142,7 @@
   padding: 0;
   border: none;
   appearance: none;
+  cursor: pointer;
   -webkit-appearance: none;
 
   &:hover {
@@ -153,6 +154,7 @@
   }
 
   &:disabled {
+    pointer-events: none;
     @include text-color('button-disabled');
   }
 }
